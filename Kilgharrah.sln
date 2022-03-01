@@ -7,11 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WWW", "WWW\WWW.csproj", "{0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{188E7412-C77F-421B-BD40-22B7F9CF5AB0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{D2F85FA0-C823-4D72-B49F-0F8FA7270525}"
-	ProjectSection(SolutionItems) = preProject
-		setup.sql = setup.sql
-	EndProjectSection
-EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{29043230-0B1C-42FB-8084-A6E7ED500C48}"
 EndProject
 Global
