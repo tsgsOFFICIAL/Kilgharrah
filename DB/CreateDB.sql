@@ -1,5 +1,4 @@
-﻿-- This code will make the tables for the database
-CREATE TABLE Planets(
+﻿CREATE TABLE Planets(
 	id SERIAL NOT NULL UNIQUE PRIMARY KEY,
 	translation_id INT NOT NULL UNIQUE,
 	distance_from_sun INT NOT NULL,
@@ -16,3 +15,4 @@ CREATE TABLE TranslatedPlanets(
 	description_json TEXT NOT NULL,
 	PRIMARY KEY(id, lang)
 );
+-- comment
