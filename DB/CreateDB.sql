@@ -15,4 +15,4 @@ CREATE TABLE TranslatedPlanets(
 	name VARCHAR(50) NOT NULL,
 	description_json TEXT NOT NULL,
 	PRIMARY KEY(id, lang)
-);.
+);
