@@ -13,10 +13,12 @@ namespace API.DAL
             string sql = "SELECT version()";
             NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection);
             string outPut = cmd.ExecuteScalar().ToString();
-            
+
         }
-        public string GetPlanets()
+        public List<string> GetPlanets()
         {
+            List<string> strings = new List<string>();
+
             string sql = "SELECT * FROM planets";
             using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection))
             {
@@ -24,10 +26,12 @@ namespace API.DAL
                 {
                     while (reader.Read())
                     {
-                        Console.WriteLine($"{reader.GetValue(0)}");
-                        return reader.GetValue(2).ToString();
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            strings.Add(reader.GetValue(i).ToString());
+                        }
                     }
-                    return sql;
+                    return strings;
                 }
             }
         }

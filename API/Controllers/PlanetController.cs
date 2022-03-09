@@ -1,5 +1,6 @@
 ﻿using API.DAL; // API is our project.
 using Microsoft.AspNetCore.Mvc; // AspNetCore is a web framework.
+using System.Text.Json;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,7 +16,7 @@ namespace API.Controllers
         [HttpGet]
         public string Get()
         {
-            return man.GetPlanets();
+            return JsonSerializer.Serialize(man.GetPlanets());
         }
 
         /*
