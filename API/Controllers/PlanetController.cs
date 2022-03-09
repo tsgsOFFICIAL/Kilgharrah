@@ -5,11 +5,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route("api/[controller]")] // Route is for guide you in the web-browser.
+    [ApiController] // ApiController tells a program, that the class is not an object, but a controller.
     public class PlanetController : ControllerBase
     {
         DBManager man = new DBManager();
+
+
+
+
+
+        /*
         // GET: api/<PlanetController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -41,5 +47,6 @@ namespace API.Controllers
         public void Delete(int id)
         {
         }
+        */
     }
 }
