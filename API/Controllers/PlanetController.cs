@@ -1,15 +1,25 @@
-﻿using API.DAL;
-using Microsoft.AspNetCore.Mvc;
+﻿using API.DAL; // API is our project.
+using Microsoft.AspNetCore.Mvc; // AspNetCore is a web framework.
+using System.Text.Json;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route("api/[controller]")] // Route is for guide you in the web-browser.
+    [ApiController] // ApiController tells a program, that the class is not an object, but a controller.
     public class PlanetController : ControllerBase
     {
         DBManager man = new DBManager();
+
+        // GET: api/Planet
+        [HttpGet]
+        public string Get()
+        {
+            return JsonSerializer.Serialize(man.GetPlanets());
+        }
+
+        /*
         // GET: api/<PlanetController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -41,5 +51,6 @@ namespace API.Controllers
         public void Delete(int id)
         {
         }
+        */
     }
 }
