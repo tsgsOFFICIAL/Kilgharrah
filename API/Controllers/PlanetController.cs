@@ -1,5 +1,5 @@
-﻿using API.DAL;
-using Microsoft.AspNetCore.Mvc;
+﻿using API.DAL; // API is our project.
+using Microsoft.AspNetCore.Mvc; // AspNetCore is a web framework.
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,9 +11,12 @@ namespace API.Controllers
     {
         DBManager man = new DBManager();
 
-
-
-
+        // GET: api/Planet
+        [HttpGet]
+        public string Get()
+        {
+            return man.GetPlanets();
+        }
 
         /*
         // GET: api/<PlanetController>
