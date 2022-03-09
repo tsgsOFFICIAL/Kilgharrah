@@ -1,6 +1,9 @@
 ﻿using Npgsql;
 namespace API.DAL
 {
+/// <summary>
+/// Class for managing the DataBase.
+/// </summary>
     public class DBManager
     {
         private NpgsqlConnection Connection;
@@ -15,12 +18,16 @@ namespace API.DAL
             string outPut = cmd.ExecuteScalar().ToString();
 
         }
+        /// <summary>
+        /// Method for getting all planets and all the information.
+        /// </summary>
+        /// <returns></returns>
         public List<string> GetPlanets()
         {
             List<string> strings = new List<string>();
-
             string sql = "SELECT * FROM planets";
-            using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection))
+            
+            using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection)) // "Using" automatically disposes of objects after use.
             {
                 using (NpgsqlDataReader reader = cmd.ExecuteReader())
                 {
