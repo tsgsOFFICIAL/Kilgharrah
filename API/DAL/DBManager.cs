@@ -34,16 +34,17 @@ namespace API.DAL
 
             using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection)) // "Using" automatically disposes of objects after use.
             {
-                using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                using (NpgsqlDataReader reader = cmd.ExecuteReader()) 
                 {
                     while (reader.Read())
                     {
                         Planet planet = new Planet();
                         int i = 0;
 
-                        foreach (PropertyInfo p in planet.GetType().GetProperties().Where(planet => !planet.GetGetMethod().GetParameters().Any()))
+                        // This loop gets all the properties from the DataBase and sets them to the object.
+                        foreach (PropertyInfo property in planet.GetType().GetProperties().Where(PropInfo => !PropInfo.GetGetMethod().GetParameters().Any()))
                         {
-                            p.SetValue(planet, reader.GetValue(i++));
+                            property.SetValue(planet, reader.GetValue(i++));
                             //Console.WriteLine($"{p.Name}: \"{p.GetValue(planet, null)}\"");
                         }
 
