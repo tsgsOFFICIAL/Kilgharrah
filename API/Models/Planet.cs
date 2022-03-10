@@ -29,7 +29,26 @@
         /// <summary>
         /// "Has life" is for where humans and(or) animals do live.
         /// </summary>
-        public bool has_life { get; private set; } 
-        
+        public bool has_life { get; private set; }
+        /// <summary>
+        /// Creates a new instance of the class Planet
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="translation_id"></param>
+        /// <param name="distance_from_sun"></param>
+        /// <param name="diameter"></param>
+        /// <param name="rotation_period"></param>
+        /// <param name="orbital_period"></param>
+        /// <param name="has_life"></param>
+        //public Planet(int id, int translation_id, int distance_from_sun, int diameter, double rotation_period, double orbital_period, bool has_life)
+        //{
+        //    this.id = id;
+        //    this.translation_id = translation_id;
+        //    this.distance_from_sun = distance_from_sun;
+        //    this.diameter = diameter;
+        //    this.rotation_period = rotation_period;
+        //    this.orbital_period = orbital_period;
+        //    this.has_life = has_life;
+        //}
     }
 }

@@ -1,9 +1,12 @@
-﻿using Npgsql;
+﻿using API.Models;
+using Npgsql;
+using System.Reflection;
+
 namespace API.DAL
 {
-/// <summary>
-/// Class for managing the DataBase.
-/// </summary>
+    /// <summary>
+    /// Class for managing the DataBase.
+    /// </summary>
     public class DBManager
     {
         private NpgsqlConnection Connection;
@@ -13,34 +16,82 @@ namespace API.DAL
             Connection = new NpgsqlConnection(_connectionString);
             Connection.Open();
 
-            string sql = "SELECT version()";
-            NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection);
-            string outPut = cmd.ExecuteScalar().ToString();
+            //string sql = "SELECT version()";
+            //NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection);
+            //string outPut = cmd.ExecuteScalar().ToString();
 
         }
         /// <summary>
         /// Method for getting all planets and all the information.
         /// </summary>
         /// <returns></returns>
-        public List<string> GetPlanets()
+        public List<Planet> GetPlanets()
         {
-            List<string> strings = new List<string>();
+            List<Planet> planets = new List<Planet>();
             string sql = "SELECT * FROM planets";
-            
+
+
+
             using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection)) // "Using" automatically disposes of objects after use.
             {
                 using (NpgsqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        for (int i = 0; i < reader.FieldCount; i++)
+                        Planet planet = new Planet();
+                        int i = 0;
+
+                        // This loop gets all the properties from the DataBase and sets them to the object.
+                        foreach (PropertyInfo property in planet.GetType().GetProperties().Where(PropInfo => !PropInfo.GetGetMethod().GetParameters().Any()))
                         {
-                            strings.Add(reader.GetValue(i).ToString());
+                            property.SetValue(planet, reader.GetValue(i++));
+                            //Console.WriteLine($"{p.Name}: \"{p.GetValue(planet, null)}\"");
                         }
+
+                        planets.Add(planet);
                     }
-                    return strings;
+
+                    return planets;
                 }
             }
+        }
+        /// <summary>
+        /// Gets a single Planet Object from an ID.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>This method returns a planet.</returns>
+        public Planet GetPlanet(int id)
+        {
+            string sql = $"SELECT * FROM Planets WHERE id = '{id}'";
+            Planet planet = new Planet();
+
+            using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection))
+            {
+                using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.HasRows == false)
+                    {
+                        return null;
+                    }
+                    while (reader.Read())
+                    {
+                        int i = 0;
+
+                        foreach (PropertyInfo property in planet.GetType().GetProperties().Where(PropInfo => !PropInfo.GetGetMethod().GetParameters().Any()))
+                        {
+                            property.SetValue(planet, reader.GetValue(i++));
+                        }
+
+                    }
+                }
+            }
+            return planet;
+        }
+        public string GetPlanetInfo(int id, string prop)
+        {
+            Planet planet = GetPlanet(id);
+
+            return planet.GetType().GetProperty(prop).GetValue(planet, null).ToString();
         }
     }
 }
