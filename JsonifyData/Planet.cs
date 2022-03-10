@@ -43,7 +43,7 @@ namespace JsonifyData
         /// <summary>
         /// The planets mass.
         /// </summary>
-        public string? Mass { get; set; }
+        public double Mass { get; set; }
         /// <summary>
         /// Highest messured temperature.
         /// </summary>
