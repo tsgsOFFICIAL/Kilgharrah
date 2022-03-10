@@ -34,7 +34,7 @@ namespace API.DAL
 
             using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection)) // "Using" automatically disposes of objects after use.
             {
-                using (NpgsqlDataReader reader = cmd.ExecuteReader()) 
+                using (NpgsqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
@@ -54,6 +54,35 @@ namespace API.DAL
                     return planets;
                 }
             }
+        }
+        /// <summary>
+        /// Gets a single Planet Object from an ID.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>This method returns a planet.</returns>
+        public Planet GetPlanet(int id)
+        {
+            string sql = $"SELECT * FROM Planets WHERE id = '{id}'";
+            Planet planet = new Planet();
+
+            using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection))
+            {
+                using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int i = 0;
+
+                        foreach (PropertyInfo property in planet.GetType().GetProperties().Where(PropInfo => !PropInfo.GetGetMethod().GetParameters().Any()))
+                        {
+                            property.SetValue(planet, reader.GetValue(i++));
+                        }
+
+                    }
+                }
+            }
+
+            return planet;
         }
     }
 }
