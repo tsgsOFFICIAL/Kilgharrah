@@ -31,6 +31,11 @@ namespace API.Controllers
             return JsonSerializer.Serialize(man.GetPlanet(id), new JsonSerializerOptions() { WriteIndented = true });
         }
 
+        [HttpGet("{id}/{prop}")]
+        public string Get(int id, string prop)
+        {
+            return man.GetPlanetInfo(id, prop);
+        }
         /*
         // GET: api/<PlanetController>
         [HttpGet]

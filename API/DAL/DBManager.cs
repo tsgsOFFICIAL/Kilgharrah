@@ -85,8 +85,13 @@ namespace API.DAL
                     }
                 }
             }
-
             return planet;
+        }
+        public string GetPlanetInfo(int id, string prop)
+        {
+            Planet planet = GetPlanet(id);
+
+            return planet.GetType().GetProperty(prop).GetValue(planet, null).ToString();
         }
     }
 }
