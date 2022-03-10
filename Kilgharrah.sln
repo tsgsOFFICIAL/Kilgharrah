@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{1
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DB", "DB\DB.sqlproj", "{9FCC1051-FAEB-4E23-978D-4C23A25E5E0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonifyData", "JsonifyData\JsonifyData.csproj", "{9E3483F8-E92A-4881-8F93-90D5D61305F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonifyData", "JsonifyData\JsonifyData.csproj", "{9E3483F8-E92A-4881-8F93-90D5D61305F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketServer", "WebSocketServer\WebSocketServer.csproj", "{8E8A8373-B779-4091-84B9-414A9FBBF93F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{9E3483F8-E92A-4881-8F93-90D5D61305F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E3483F8-E92A-4881-8F93-90D5D61305F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E3483F8-E92A-4881-8F93-90D5D61305F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E8A8373-B779-4091-84B9-414A9FBBF93F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E8A8373-B779-4091-84B9-414A9FBBF93F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E8A8373-B779-4091-84B9-414A9FBBF93F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E8A8373-B779-4091-84B9-414A9FBBF93F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
