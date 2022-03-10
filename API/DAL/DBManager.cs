@@ -69,6 +69,10 @@ namespace API.DAL
             {
                 using (NpgsqlDataReader reader = cmd.ExecuteReader())
                 {
+                    if (reader.HasRows == false)
+                    {
+                        return null;
+                    }
                     while (reader.Read())
                     {
                         int i = 0;

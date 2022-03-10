@@ -17,7 +17,7 @@ namespace API.Controllers
         [HttpGet]
         public string Get()
         {
-            return JsonSerializer.Serialize(man.GetPlanets());
+            return JsonSerializer.Serialize(man.GetPlanets(), new JsonSerializerOptions() {WriteIndented = true});
         }
         
         // GET: api/Planet/{id}
@@ -28,7 +28,7 @@ namespace API.Controllers
 
             //string json = JsonSerializer.Serialize(planet);
 
-            return JsonSerializer.Serialize(man.GetPlanet(id));
+            return JsonSerializer.Serialize(man.GetPlanet(id), new JsonSerializerOptions() { WriteIndented = true });
         }
 
         /*
