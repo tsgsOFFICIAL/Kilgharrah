@@ -41,9 +41,10 @@ namespace API.DAL
                         Planet planet = new Planet();
                         int i = 0;
 
-                        foreach (PropertyInfo p in planet.GetType().GetProperties().Where(planet => !planet.GetGetMethod().GetParameters().Any()))
+                        // This loop gets all the properties from the DataBase and sets them to the object.
+                        foreach (PropertyInfo property in planet.GetType().GetProperties().Where(PropInfo => !PropInfo.GetGetMethod().GetParameters().Any()))
                         {
-                            p.SetValue(planet, reader.GetValue(i++));
+                            property.SetValue(planet, reader.GetValue(i++));
                             //Console.WriteLine($"{p.Name}: \"{p.GetValue(planet, null)}\"");
                         }
 
@@ -53,6 +54,39 @@ namespace API.DAL
                     return planets;
                 }
             }
+        }
+        /// <summary>
+        /// Gets a single Planet Object from an ID.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>This method returns a planet.</returns>
+        public Planet GetPlanet(int id)
+        {
+            string sql = $"SELECT * FROM Planets WHERE id = '{id}'";
+            Planet planet = new Planet();
+
+            using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection))
+            {
+                using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.HasRows == false)
+                    {
+                        return null;
+                    }
+                    while (reader.Read())
+                    {
+                        int i = 0;
+
+                        foreach (PropertyInfo property in planet.GetType().GetProperties().Where(PropInfo => !PropInfo.GetGetMethod().GetParameters().Any()))
+                        {
+                            property.SetValue(planet, reader.GetValue(i++));
+                        }
+
+                    }
+                }
+            }
+
+            return planet;
         }
     }
 }

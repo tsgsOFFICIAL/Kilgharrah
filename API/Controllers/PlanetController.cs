@@ -1,4 +1,5 @@
 ﻿using API.DAL; // API is our project.
+using API.Models;
 using Microsoft.AspNetCore.Mvc; // AspNetCore is a web framework.
 using System.Text.Json;
 
@@ -16,7 +17,18 @@ namespace API.Controllers
         [HttpGet]
         public string Get()
         {
-            return JsonSerializer.Serialize(man.GetPlanets());
+            return JsonSerializer.Serialize(man.GetPlanets(), new JsonSerializerOptions() {WriteIndented = true});
+        }
+        
+        // GET: api/Planet/{id}
+        [HttpGet("{id}")]
+        public string Get(int id)
+        {
+            //Planet planet = man.GetPlanet(id);
+
+            //string json = JsonSerializer.Serialize(planet);
+
+            return JsonSerializer.Serialize(man.GetPlanet(id), new JsonSerializerOptions() { WriteIndented = true });
         }
 
         /*
