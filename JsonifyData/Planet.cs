@@ -9,10 +9,6 @@ namespace JsonifyData
     internal class Planet
     {
         /// <summary>
-        /// Language for the translation.
-        /// </summary>
-        public int Translation_id { get; set; }
-        /// <summary>
         /// Name of the planet.
         /// </summary>
         public string? Name { get; set; }
