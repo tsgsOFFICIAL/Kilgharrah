@@ -243,7 +243,7 @@ List<Planet> planets_en = new List<Planet>()
                 Quests ={
                     new QuestionAndAnswer{
                         Question="What position does Mars have in the order of the planets when counting from the sun?",
-                        Answers={ "Fourth", "second", "sixth", "ninth" },
+                        Answers={ "Fourth", "Second", "Sixth", "Ninth" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
@@ -317,17 +317,17 @@ List<Planet> planets_en = new List<Planet>()
                     },
                     new QuestionAndAnswer{
                         Question="What was Jupiter the god of?",
-                        Answers={ "The god of the underworld, Hades", "The roman king of the gods, Jupiter", "the goddess of magic, Hecate"},
+                        Answers={ "The god of the underworld, Hades", "The roman king of the gods, Jupiter", "The goddess of magic, Hecate"},
                         CorrectAnswerIndex =1
                     },
                     new QuestionAndAnswer{
                         Question="How long does it take Jupiter to orbitate one round of the Sun?",
-                        Answers={ "Around 22 Years", "Around 600 days", "Around 12 year", "Around 15 years" },
+                        Answers={ "22 Years", "600 days", "12 year", "15 years" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
                         Question="How many moons does Jupiter have?",
-                        Answers={ "Ca. 20 moons", "Ca. 45 moons", "Ca. 70 moons", "Ca. 80 moons" },
+                        Answers={ "20", "45", "70", "80" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
@@ -337,7 +337,7 @@ List<Planet> planets_en = new List<Planet>()
                     },
                     new QuestionAndAnswer{
                         Question="What is the planet composed of?",
-                        Answers={ "Solid surface", "Hydrogen and Helium", "water"},
+                        Answers={ "Solid surface", "Hydrogen and Helium", "Water"},
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
@@ -610,7 +610,7 @@ List<Planet> planets_en = new List<Planet>()
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take Pluto to orbitate one round of the Sun??",
+                        Question="How long does it take Pluto to orbitate one round of the Sun?",
                         Answers={ "248 days", "248 months", "248 years" },
                         CorrectAnswerIndex=2
                     },
@@ -890,7 +890,7 @@ List<Planet> planets_da = new List<Planet>()
                     },
                     new QuestionAndAnswer{
                         Question="Hvad repræsenterede guden Mars?",
-                        Answers={ "Blomster", "Livet", "krig", "døden" },
+                        Answers={ "Blomster", "Livet", "Krig", "Døden" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
@@ -915,7 +915,7 @@ List<Planet> planets_da = new List<Planet>()
                     },
                     new QuestionAndAnswer{
                         Question="Har Mars nogen form for atmosfære?",
-                        Answers={ "Tynd", "stærk", "svag", "høj" },
+                        Answers={ "Tynd", "Stærk", "Svag", "Høj" },
                         CorrectAnswerIndex=0
                     }
                 }
@@ -949,7 +949,7 @@ List<Planet> planets_da = new List<Planet>()
                 Quests ={
                     new QuestionAndAnswer{
                         Question="Hvilken position har Jupiter i planeternes rækkefølge, når man tæller fra solen?",
-                        Answers={ "Femte", "første", "sjette", "syvende" },
+                        Answers={ "Femte", "Første", "Sjette", "Syvende" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
@@ -959,12 +959,12 @@ List<Planet> planets_da = new List<Planet>()
                     },
                     new QuestionAndAnswer{
                         Question="Hvor lang tid tager det Jupiter at kredse en omgang om Solen?",
-                        Answers={ "Omkring 22 år", "Omkring 600 dage", "Omkring 12 år", "Omkring 15 år" },
+                        Answers={ "22 år", "600 dage", "12 år", "15 år" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
                         Question="Hvor mange måner har Jupiter?",
-                        Answers={ "20 måner", "45 måner", "70 måner", "80 måner" },
+                        Answers={ "20", "45", "70", "80" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
@@ -973,7 +973,7 @@ List<Planet> planets_da = new List<Planet>()
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="Hvad består planeten af??",
+                        Question="Hvad består planeten af?",
                         Answers={ "Fast overflade", "Hydrogen og helium", "Vand"},
                         CorrectAnswerIndex=1
                     },
@@ -1316,43 +1316,43 @@ List<Planet> planets_hu = new List<Planet>()
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="How old is Earth?",
-                        Answers={ "100 thousand years", "6 million years", "4.5 billion years", "10 billion years" },
+                        Question="Hány éves a Föld?",
+                        Answers={ "100 ezer éves", "6 millió éves", "4.5 billió éves", "10 billió éves" },
                         CorrectAnswerIndex =2
                     },
                     new QuestionAndAnswer{
-                        Question="What does the earth consist of?",
-                        Answers={ "71% water and 29% land", "29% water and 71% water", "50% water and 50% land", "85% water and 15% land" },
+                        Question="Miből áll a föld?",
+                        Answers={ "71% víz és 29% talaj", "29% víz és 71% víz", "50% víz és 50% talaj", "85% víz és 15% talaj" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="How long does the Earth need to rotate around its own axis?",
-                        Answers={ "12 hours", "6 hours", "24 hours", "48 hours" },
+                        Question="Mennyi időbe telik amíg a Föld megtesz egy teljes kört a saját tengelye körül?",
+                        Answers={ "12 óra", "6 óra", "24 óra", "48 óra" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take the Earth to orbitate one round of the Sun?",
-                        Answers={ "Half a year", "1 year", "5 years", "6 Months" },
+                        Question="Mennyi időbe telik a Földnek amíg megkerüli a Napot?",
+                        Answers={ "fél év", "1 év", "5 év", "6 hónap" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="How many days are there in a year on earth?",
-                        Answers={ "365 days", "366 days", "256 days", "460 days" },
+                        Question="Hány napból áll egy év a földön?",
+                        Answers={ "365 nap", "366 nap", "256 nap", "460 nap" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="For how many years, have there been humans on earth?",
+                        Question="Hány éve élnek emberek a földön?",
                         Answers={ "100.000", "10.000", "600.000", "300.000" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="What does the &#34;Leap Year&#34; mean?",
-                        Answers={ "When we have one less day", "When we have one extra day", "When we have one extra month", "When we have two less months" },
+                        Question="Mit jelent a szökőév?",
+                        Answers={ "Amikor eggyel kevesebb nap van egy évben", "Amikor eggyel több nap van egy évben", "Amikor eggyel több hónap van egy évben", "Amikor 2 hónappal kevesebb van egy évben" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="How big is the human population on Earth?",
-                        Answers={ "4 million", "100.000", "8 billion", "16.000" },
+                        Question="Milyen nagy az emberi lakosság száma a Földön?",
+                        Answers={ "4 millió", "100.000", "8 billió", "16.000" },
                         CorrectAnswerIndex=2
                     },
 
@@ -1364,7 +1364,7 @@ List<Planet> planets_hu = new List<Planet>()
          /// </summary>
             new Planet
             {
-                Name="Mercury",
+                Name="Merkúr",
                 Distance_from_sun = 47000000,
                 Diameter= 4878 ,
                 Age=4600000000,
@@ -1386,38 +1386,38 @@ List<Planet> planets_hu = new List<Planet>()
                 },
                  Quests={
                     new QuestionAndAnswer{
-                        Question="How long does it take Mercury to orbitate one round of the Sun?",
-                        Answers={ "10 days", "88 days", "200 days", "365 days" },
+                        Question="Mennyi időbe telik amíg a Merkúr megtesz egy teljes kört a Nap körül?",
+                        Answers={ "10 nap", "88 nap", "200 nap", "365 nap" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="Who was the planet Mercury named after?",
-                        Answers={ "It isn’t named after anybody", "The Greek god, Hermes", "The Roman god, Mercurius"},
+                        Question="Kiről nevezték el a Merkúrt?",
+                        Answers={ "Senkiről sem lett elnevezve", "A görög Istenről, Hermészről", "Egy római Istenről, Merkuriusról"},
                         CorrectAnswerIndex =2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the maximum temperature on Mercury?",
+                        Question="Mi a legmagasabb hőmérséklet a Merkúron?",
                         Answers={ "166 °C", "512 °C", "427 °C", "400 °C" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the minimum temperature on Mercury?",
+                        Question="Mi a legalacsonyabb hőmérséklet a Merkúron?",
                         Answers={ "-173 °C", "0 °C", "-100 °C", "-386 °C" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="What was the name of the space probe that NASA crashed on Mercury?",
+                        Question="Mi volt a neve annak az űrszondának amivel a NASA landolt a Merkúron?",
                         Answers={ "MESSAGE", "MESSENGER", "MESSAGES", "MESS" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="What does the surface of the planet Mercury look like?",
-                        Answers={ "Smooth", "Small Hills", "Heavily Cratered", "Covered by water" },
+                        Question="Hogyan néz ki a talaj a Merkúron?",
+                        Answers={ "Sima", "Hegyes", "Kráteres", "Vizes" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Mercury is the closest planet to the Sun?",
-                        Answers={ "Yes", "No"},
+                        Question="Igaz, hogy a Merkúr a legközelebbi bolygó a Naphoz?",
+                        Answers={ "Igaz", "Hamis"},
                         CorrectAnswerIndex=0
                     },
 
@@ -1429,7 +1429,7 @@ List<Planet> planets_hu = new List<Planet>()
          /// </summary>
             new Planet
             {
-                Name="Venus",
+                Name="Vénusz",
                 Distance_from_sun = 108208930 ,
                 Diameter= 12104 ,
                 Age=4600000000,
@@ -1452,38 +1452,38 @@ List<Planet> planets_hu = new List<Planet>()
                 },
                  Quests={
                     new QuestionAndAnswer{
-                        Question="What position does Venus have in the order of the planets when counting from the sun?",
-                        Answers={ "First", "Fourth", "Second", "Tenth" },
+                        Question="A Naptól számítva hányadik bolygó a Vénusz?",
+                        Answers={ "Első", "Negyedik", "Második", "Tizedik" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="Which god or goddess was the planet named after?",
-                        Answers={ "The roman goddess, Venus", "The roman goddess, Diana", "The greek goddess, Aphrodite", "The greek goddess, Artemis" },
+                        Question="Melyik Istenről vagy Istennőről nevezték el a bolygót?",
+                        Answers={ "Római istennőről, Vénuszról", "A római Istennőről, Diana-ról", "A görög Istennőről, Afroditéről", "A görög Istennőről, Artemiszről" },
                         CorrectAnswerIndex =0
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take Venus to orbitate one round of the Sun?",
-                        Answers={ "112 days", "225 days", "256 days", "720 days" },
+                        Question="Hány nap szükséges a Vénusznak, hogy megtegyen egy kört a Nap körül?",
+                        Answers={ "112 nap", "225 nap", "256 nap", "720 nap" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="How many moons does Venus have?",
+                        Question="Hány holdja van a Vénusznak?",
                         Answers={ "2", "7", "0", "6" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the maximum temperature on Venus?",
+                        Question="Mi a legmagasabb hőmérséklet a Vénuszon?",
                         Answers={ "1000 °C", "600 °C", "474 °C", "200 °C" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
                         Question="Is it true that Venus is one of the brightest natural objects in the Solar System?",
-                        Answers={ "Yes", "No"},
+                        Answers={ "Igaz", "Hamis"},
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Why can we call Venus, as &#34;Earth's sister&#34;?",
-                        Answers={ "Because of Size and Mass are similar to Earth", "There aren't such a thing like &#34;Earth's sister&#34;"},
+                        Question="Miért hívhatjuk a Vénusz a Föld testvérének?",
+                        Answers={ "Mert a mérete és a tömege hasonlít a Föld méretéhez és tömegéhez", "Nem hívjuk így"},
                         CorrectAnswerIndex=0
                     }
                  }
@@ -1516,43 +1516,43 @@ List<Planet> planets_hu = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="What position does Mars have in the order of the planets when counting from the sun?",
-                        Answers={ "Fourth", "second", "sixth", "ninth" },
+                        Question="A Mars hányadik bolygó a naptól számítva?",
+                        Answers={ "Negyedik", "Második", "Hatodik", "Kilencedik" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Mars is the second smallest planet in the Solar System?",
-                        Answers={ "Yes", "No"},
+                        Question="Igaz-e, hogy a Mars a második legkisebb bolygó a naprendszerben?",
+                        Answers={ "Igaz", "Hamis"},
                         CorrectAnswerIndex =0
                     },
                     new QuestionAndAnswer{
-                        Question="What was Mars the god of?",
-                        Answers={ "Flowers", "Life", "War", "Death" },
+                        Question="Minek az istene volt Mars?",
+                        Answers={ "Virágok", "Élet", "Háború", "Halál" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="We know Mars has two moons. What are they called?",
-                        Answers={ "Triton and Titan", "Callisto and Europa", "Phobos and Deimos"},
+                        Question="Tudjuk, hogy a Marsnak két holdja van. Hogy hívják őket?",
+                        Answers={ "Triton és Titan", "Callisto és Europa", "Phobos és Deimos"},
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the name of the highest known mountain on Mars?",
-                        Answers={ "It hasn’t got any name", "Olympia Moon", "Olympus Mons", "Olympian Field" },
+                        Question="Mi a neve a Mars legmagasabb ismert hegyének?",
+                        Answers={ "Nincs neve", "Olympia Moon", "Olympus Mons", "Olympian Field" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that the planet was visited by several CREWED spacecrafts?",
-                        Answers={ "Yes", "No"},
+                        Question="Igaz-e, hogy a Marson több űrhajó is járt SZEMÉLYZETTEL?",
+                        Answers={ "Igaz", "Hamis"},
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that you can see the planet with naked eye from the Earth?",
-                        Answers={ "Yes", "No"},
+                        Question="Igaz-e, hogy a Mars látható a Földről?",
+                        Answers={ "Igaz", "Hamis"},
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Does Mars have any kind of atmosphere?",
-                        Answers={ "Thin", "Strong", "Weak", "Tall" },
+                        Question="Milyen a Mars légköre?",
+                        Answers={ "Vékony", "Erős", "Gyenge", "Magas" },
                         CorrectAnswerIndex=0
                     }
                 }
@@ -1585,43 +1585,43 @@ List<Planet> planets_hu = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="What position does Jupitor have in the order of the planets when counting from the sun?",
-                        Answers={ "Fifth", "First", "Sixth", "Seventh" },
+                        Question="A Naptól számítva hányadik bolygó a Jupiter?",
+                        Answers={ "Ötödik", "Első", "Hatodik", "Hetedik" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="What was Jupiter the god of?",
-                        Answers={ "The god of the underworld, Hades", "The roman king of the gods, Jupiter", "the goddess of magic, Hecate"},
+                        Question="Minek az istene volt Jupiter?",
+                        Answers={ "Az alvilág istene, Hádész", "A római istenek királya, Jupiter", "A varázslat istennője, Hekaté"},
                         CorrectAnswerIndex =1
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take Jupiter to orbitate one round of the Sun?",
-                        Answers={ "Around 22 Years", "Around 600 days", "Around 12 year", "Around 15 years" },
+                        Question="Mennyi időbe telik a Jupiternek, amíg megtesz egy teljes kört a Nap körül?",
+                        Answers={ "22 év", "600 nap", "12 év", "15 év" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="How many moons does Jupiter have?",
-                        Answers={ "Ca. 20 moons", "Ca. 45 moons", "Ca. 70 moons", "Ca. 80 moons" },
+                        Question="Hány holdja van a Jupiternek?",
+                        Answers={ "20", "45", "70", "80" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="Since when did humans start to observe the planet?",
-                        Answers={ "Since yesterday", "Since last year", "Since prehistoric times", "Since last week" },
+                        Question="Mióta figyelik meg az emberek a Jupitert?",
+                        Answers={ "Tegnap óta", "Tavaly óta", "Az őskor óta", "Múlt hét óta" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the planet composed of?",
-                        Answers={ "Solid surface", "Hydrogen and Helium", "water"},
+                        Question="Miből áll a bolygó felszíne?",
+                        Answers={ "Szilárd felület", "Hidrogén és hélium", "Víz"},
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="What are the four biggest Moon called?",
-                        Answers={ "Io, Callisto, Europa, and Ganymede", "Jupiter, Fo, Callisteo, and Phobos", "Miraculus, Saturn, Ganymede, and Quasimodo"},
+                        Question="Mik a Jupiter négy legnagyobb holdjának nevei?",
+                        Answers={ "Io, Callisto, Europa, és Ganymede", "Jupiter, Fo, Callisteo, és Phobos", "Miraculus, Saturn, Ganymede, és Quasimodo"},
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Jupiter is the biggest planet in the Solar System?",
-                        Answers={ "Yes", "No"},
+                        Question="Igaz-e, hogy a Jupiter a legnagyobb bolygó a naprendszerben?",
+                        Answers={ "Igaz", "Hamis"},
                         CorrectAnswerIndex=0
                     }
                 }
@@ -1632,7 +1632,7 @@ List<Planet> planets_hu = new List<Planet>()
          /// </summary>
             new Planet
             {
-                Name = "Saturn",
+                Name = "Szaturnusz",
                 Distance_from_sun = 1433449370,
                 Diameter = 120500,
                 Age = 4600000000,
@@ -1654,43 +1654,43 @@ List<Planet> planets_hu = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="What position does Saturn have in the order of the planets when counting from the sun?",
-                        Answers={ "First", "Fifth", "Tenth", "Sixth" },
+                        Question="A Naptól számítva hányadik bolygó a Szaturnusz?",
+                        Answers={ "Első", "Ötödik", "Tizedik", "Hatodik" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that it takes 10759 days for Saturn to orbitate one round of the Sun?",
-                        Answers={ "Yes", "No"},
+                        Question=" Igaz-e, hogy a Szaturnusznak 10759 napra van szüksége, hogy megtegyen egy kört a Nap körül?",
+                        Answers={ "Igaz", "Hamis"},
                         CorrectAnswerIndex =0
                     },
                     new QuestionAndAnswer{
-                        Question="How many moons does Saturn have?",
+                        Question="Hány holdja van a Szaturnusznak?",
                         Answers={ "53", "36", "83", "92" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What are the highest measured wind speeds on the planet?",
+                        Question="Milyen gyorsan fúj a szél a bolygón?",
                         Answers={ "100km/h", "1800km/h", "320km/h", "960km/h"},
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Saturn is the third largest planet in the Solar System?",
-                        Answers={ "Yes", "No"},
+                        Question="Igaz-e, hogy a Szaturnusz a harmadik legnagyobb bolygó a naprendszerben?",
+                        Answers={ "Igaz", "Hamis"},
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="Who is the planet named after?",
-                        Answers={ "The greek god of titans, Cronus", "The roman god of wealth and agriculture, Saturn", "The greek goddess of snow, Khione", "The norse god of lightnings, Thor" },
+                        Question="Kiről nevezték el a bolygót?",
+                        Answers={ "A görög Titánok istenéről, Kronoszról", "A római vagyon és mezőgazdaság istenéről, Szaturnuszról", "A görög hó istennőjéről, Khionéről", "A skandináv villámok istenéről, Thorról" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="What does Saturn have that no other planet has?",
-                        Answers={ "A system of rings in orbit", "A special brand of candy", "A high-speed train"},
+                        Question="Mi az ami a Szaturnusznak van és más bolygóknak nincs?",
+                        Answers={ "Gyűrűs rendszer", "Különleges márkájú cukorka", "Nagy sebességű vonat"},
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="What is the largest moon of Saturn, called?",
-                        Answers={ "Ghost", "Titan", "Zeus", "Giant" },
+                        Question="Mi a Szaturnusz legnagyobb holdjának neve?",
+                        Answers={ "Szellem", "Titán", "Zeusz", "Óriás" },
                         CorrectAnswerIndex=1
                     }
                 }
@@ -1701,7 +1701,7 @@ List<Planet> planets_hu = new List<Planet>()
          /// </summary>
             new Planet
             {
-                Name = "Uranus",
+                Name = "Uránusz",
                 Distance_from_sun = 2870972200,
                 Diameter = 51100,
                 Age = 4600000000,
@@ -1725,42 +1725,42 @@ List<Planet> planets_hu = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="What position does Uranus have in the order of the planets when counting from the sun?",
-                        Answers={ "Third", "Seventh", "Fourth", "Eleventh" },
+                        Question="A Naptól számítva hányadik bolygó az Uránusz?",
+                        Answers={ "Harmadik", "Hetedik", "Negyedik", "Tizenegyedik" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take Uranus to orbitate one round of the Sun?",
-                        Answers={ "84 years", "105 years", "140 years", "56 years" },
+                        Question="Hány évbe telik az Uránusznak, hogy megtegyen egy kört a Nap körül?",
+                        Answers={ "84 év", "105 év", "140 év", "56 év" },
                         CorrectAnswerIndex =0
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Uranus doesn't have any solid material on the surface?",
-                        Answers={ "Yes", "No" },
+                        Question="Igaz-e, hogy az Uránusz felszínén nem található szilárd anyag?",
+                        Answers={ "Igaz", "Hamis" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Which planets can Uranus be compared to?",
-                        Answers={ "Neptune and Mercury", "Mars and Venus", "Earth and Moon", "Jupiter and Saturn" },
+                        Question="Melyik bolygókkal lehetne összehasonlítani az Uránuszt?",
+                        Answers={ "Neptunusszal és Merkúrral", "Marssal és Vénusszal", "Földdel és Holddal", "Jupiterrel és Szaturnusszal" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Uranus has the coldest planetary atmosphere in the Solar System?",
-                        Answers={ "Yes", "No" },
+                        Question="Igaz-e, hogy az Uránusznak van a leghidegebb légköre a naprendszerben?",
+                        Answers={ "Igaz", "Hamis" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Who is the planet named after?",
-                        Answers={ "The greek god of the sky, Uranus", "The irish goddess of fate, Morrigan", "It wasn’t named after anybody" },
+                        Question="Kiről nevezték el az Uránuszt?",
+                        Answers={ "A görög ég istenéről, Uránuszról", "Az ír sors istennőjéről, Morriganról", "Senkiről nincs elnevezve" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="How many spacecraft has visited the planet?",
+                        Question="Hány űrhajó látogatta meg az Uránuszt?",
                         Answers={ "2", "5", "1", "10" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What are the highest measured wind speeds on the planet Uranus?",
+                        Question="Milyen sebességgel fúj a szél az Uránuszon?",
                         Answers={ "450 km/h", "900 km/h", "500 km/h", "700 km/h" },
                         CorrectAnswerIndex=1
                     }
@@ -1772,7 +1772,7 @@ List<Planet> planets_hu = new List<Planet>()
          /// </summary>
             new Planet
             {
-                Name = "Neptune",
+                Name = "Neptunusz",
                 Distance_from_sun = 4503443661,
                 Diameter = 49500,
                 Age = 4600000000,
@@ -1795,48 +1795,48 @@ List<Planet> planets_hu = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="Is it true that Neptune is the planet furthest from the Sun?",
-                        Answers={ "Yes", "No"},
+                        Question="Igaz-e, hogy a Neptunusz a Naptól legtávolabbi ismert bolygó?",
+                        Answers={ "Igaz", "Hamis"},
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take Neptune to orbitate one round of the Sun?",
-                        Answers={ "200 years", "172 years", "165 years", "147 years" },
+                        Question="Mennyi év szükséges ahhoz, hogy a Neptunusz megtegyen egy kört a Nap körül?",
+                        Answers={ "200 év", "172 év", "165 év", "147 év" },
                         CorrectAnswerIndex =2
                     },
                     new QuestionAndAnswer{
-                        Question="Who is the planet named after?",
-                        Answers={ "The greek god of the seas, Poseidon", "The roman god of the seas, Neptune", "The egyptian god of the seas, Nu)" },
+                        Question="Kiről nevezték el a Neptunuszt?",
+                        Answers={ "A görög tengerek istenéről, Poszeidonról", "A római tengerek istenéről, Neptunról", "Az egyiptomi tengerek istenéről, Nu-ról)" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="How many moons does Neptune have?",
+                        Question="Hány holdja van a Neptunusznak?",
                         Answers={ "10", "16", "14", "17" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the biggest moon in orbit of Neptune called?",
-                        Answers={ "Triton", "Oceanus", "Styx", "Nereus" },
+                        Question="Hogy hívják a Neptunusz legnagyobb holdját?",
+                        Answers={ "Triton", "Oceanus", "Styx", "Néreusz" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that the planet has been visited by a lot of spacecrafts?",
-                        Answers={ "Yes", "No" },
+                        Question="Igaz-e, hogy sok űrhajó látogatta a bolygót?",
+                        Answers={ "Igaz", "Hamis" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="What is the temperature of Neptune's outer atmosphere?",
+                        Question="Mennyi a  Neptunusz külső légkörének hőmérséklete?",
                         Answers={ "-162 °C", "-346 °C", "-218 °C", "-252 °C" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the temperature in the center Neptune's inner core?",
+                        Question="Mennyi a hőmérséklet a bolygó közepében?",
                         Answers={ "3700 °C", "4600 °C", "6600 °C", "5100 °C" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="What was the name of the spacecraft that visited Neptune?",
-                        Answers={ "Voyeur 2", "MESSENGER", "Apollo 7", "It wasn’t named" },
+                        Question="Mi volt a neve annak az űrhajónak, amelyik járt a Neptunuszon?",
+                        Answers={ "Voyeur 2", "MESSENGER", "Apollo 7", "Nem volt megnevezve" },
                         CorrectAnswerIndex=0
                     },
                 }
@@ -1847,7 +1847,7 @@ List<Planet> planets_hu = new List<Planet>()
          /// </summary>
             new Planet
             {
-                Name = "Pluto",
+                Name = "Plútó",
                 Distance_from_sun = 5906376272,
                 Diameter = 2274,
                 Age = 4600000000,
@@ -1869,43 +1869,43 @@ List<Planet> planets_hu = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="Who is the planet named after?",
-                        Answers={ "The norse goddess of death, Hela", "The greek god of the underworld, Hades", "The greek god of death, Thanatos", "The roman god of the underworld, Pluto" },
+                        Question="Kiről nevezték el a Plútót?",
+                        Answers={ "A skandináv halál istennőjééről, Hélről", "A görög alvilág istenéről, Hádészről", "A görög halál istenéről, Thanatoszról", "A római alvilág istenéről, Plútóról" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question=" Is Pluto a normal planet?",
-                        Answers={ "Yes", "no, It doesn’t exist", "It is unknown", "It is a dwarf planet" },
+                        Question="A Plútó egy normális bolygó?",
+                        Answers={ "Igen", "Nem, nem létezik", "Ismeretlen", "Nem, törpebolygó" },
                         CorrectAnswerIndex =3
                     },
                     new QuestionAndAnswer{
-                        Question="When was Pluto discovered by humans?",
+                        Question="Mikor fedezték fel az emberek a Plútót?",
                         Answers={ "1890", "1910", "1930", "1950" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take Pluto to orbitate one round of the Sun??",
-                        Answers={ "248 days", "248 months", "248 years" },
+                        Question="Hány évbe telik az Plútó megtegyen egy kört a saját tengelye körül?",
+                        Answers={ "248 nap", "248 hónap", "248 év" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="How many moons does Pluto have?",
+                        Question="Hány holdja van a Plútónak, hogy megtegyen egy kört a Nap körül?",
                         Answers={ "15", "22", "5", "10" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What year was Pluto visited by a spacecraft?",
+                        Question="Mikor látogatták meg a Plútót űrhajóval?",
                         Answers={ "2006", "2012", "2009", "2015" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="What was the name of the spacecraft that visited the planet?",
+                        Question="Mi volt annak az űrhajónak a neve amelyik landolt a Plútón?",
                         Answers={ "New Horizons", "Voyeur 5", "Titanic 22", "Crazy Horse" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="What is Pluto composed of?",
-                        Answers={ "Dirt", "Sugar", "Nitrogen Ice", "Salt", "Grass" },
+                        Question="Miből áll a Plútó felszíne?",
+                        Answers={ "Kosz", "Cukor", "Nitrogén jég", "Só", "Fű" },
                         CorrectAnswerIndex=2
                     }
                 }
