@@ -1,4 +1,5 @@
-﻿CREATE TABLE Planets(
+﻿-- Planets table will hold all numeric/boolean information for a planet, aswell as a foreign key for the TranslatedPlanets table
+CREATE TABLE Planets(
 	id SERIAL NOT NULL UNIQUE PRIMARY KEY,
 	translation_id INT NOT NULL UNIQUE,
 	distance_from_sun INT NOT NULL,
@@ -8,6 +9,7 @@
 	has_life BOOL NOT NULL
 );
 
+-- TranslatedPlanets holds all translations for a planet
 CREATE TABLE TranslatedPlanets(
 	id SERIAL NOT NULL UNIQUE,
 	lang VARCHAR(2) NOT NULL,
@@ -15,4 +17,3 @@ CREATE TABLE TranslatedPlanets(
 	description_json TEXT NOT NULL,
 	PRIMARY KEY(id, lang)
 );
--- comment
