@@ -589,6 +589,7 @@ List<Planet> planets_en = new List<Planet>()
                 Lowest_temp = -233,
                 Statements ={
                     "Pluto is a dwarf planet in the Kuiper belt.",
+                    "It's named after the Roman god of the underworld, Pluto.",
                     "After the planet was discovered in 1930, it was declared to be the ninth planet from the Sun. Later this was questioned because of the distance and size, and this led to 2006, when it was reclassified as a dwarf planet.",
                     "It has 5 known moons: Charon, Styx, Nix, Kerberos and Hydra.",
                     "Back in 2015, a spacecraft, named &#34;New Horizons&#34; performed a flyby on Pluto, and it was the only visit to the planet.",
@@ -666,13 +667,13 @@ List<Planet> planets_da = new List<Planet>()
                 Highest_temp=56.7,
                 Lowest_temp=-89.2,
                 Statements={
-                    "Earth only has one moon.",
-                    "Earth is more than 4.5 billion years old.",
-                    "Earth takes a year to orbitate one round of the Sun.",
-                    "Earth rotates around its own axis in 24 hours.",
-                    "Earth is filled by: 71% of water, the rest are land.",
-                    "Humans are only on Earth (yet), and they emerged ca. 300 000 years ago. Nowadays, the human population is around 8 billion already.",
-                    "Every fourth year, we have to add an extra day, now containing 366 days, it's called &#34;Leap year&#34;."
+                    "Jorden har kun én måne.",
+                    "Jorden er mere end 4,5 milliarder år gammel.",
+                    "Det tager et år for Jorden at kredse en omgang om Solen.",
+                    "Jorden roterer om sin egen akse på 24 timer.",
+                    "Jorden består af: 71% vand, og resten er land.",
+                    "Mennesker lever kun på Jorden (endnu), og de opstod for ca. 300.000 år siden. I dag er den menneskelige befolkningstal allerede på ca. 8 milliarder.",
+                    "Hvert fjerde år skal vi tilføje en ekstra dag, der så indeholder 366 dage, det hedder &#34;Skudår&#34;."
                 },
                  Quests={
                     new QuestionAndAnswer{
@@ -741,13 +742,13 @@ List<Planet> planets_da = new List<Planet>()
                 Highest_temp=430,
                 Lowest_temp=-180,
                 Statements={
-                    "Mercury is one of the smallest planets in the Solar System, and it is the closest to the Sun",
-                    "Mercury orbits around the Sun in 88 Days, the shortest of all the Sun's planets.",
-                    "It is named after the Roman god of commerce, and the messenger of the gods, Mercurius.",
-                    "It's surface appears heavily cratered and similar in appearance to the Moon's.",
-                    "Despite the small size, Mercury has a significant, and apparently global magnetic field.",
-                    "It has almost no atmosphere to retain heat, the temperature ranges from -173 °C to 427 °C.",
-                    "The planet experienced a spacecraft crash, back in the 30 of April, 2015; when NASA intentionally let a spacecraft, named &#34;MESSENGER&#34; crash into it."
+                    "Merkur er en af de mindste planeter i solsystemet, og den er tættest på Solen.",
+                    "Merkur kredser om Solen i løbet af 88 dage, hvilket er den korteste kredsløbsperiode af alle Solens planeter.",
+                    "Merkur er opkaldt efter den romerske handelsgud, og gudernes budbringer, Mercurius.",
+                    "Merkur overflade fremstår stærkt krateret og ligner Månens udseende.",
+                    "På trods af den lille størrelse har Merkur et betydeligt, og tilsyneladende globalt magnetfelt.",
+                    "Merkur har næsten ingen atmosfære til at holde på varmen, temperaturen varierer fra -173 °C til 427 °C.",
+                    "Merkur oplevede et rumfartøjsstyrt tilbage den 30. april 2015; da NASA med vilje lod et rumfartøj ved navn &#34;MESSENGER&#34; styrte ind i det."
                 },
                  Quests={
                     new QuestionAndAnswer{
@@ -806,14 +807,14 @@ List<Planet> planets_da = new List<Planet>()
                 Highest_temp=475,
                 Lowest_temp=-173,
                 Statements={
-                    "Venus is the second closest planet from the Sun.",
-                    "It's named after the Roman goddess of love and beauty, Venus.",
-                    "Venus orbits around the Sun in 225 days.",
-                    "Venus is the brightest natural object in the sky, after the Moon, it can cast shadows and can be visible to the naked eye in broad daylight.",
-                    "Like Mercury, Venus does not have any moons also.",
-                    "Though Mercury is closer to the Sun, Venus has the hottest surface of any planet in the Solar System, with the max temperature around 474 °C.",
-                    "It's size and mass are similar to the Earth, often described as &#34;Earth's sister&#34;.",
-                    "It has an theory, which says out, that if Venus had any ocean or even water on it's land, it was evaporated by the heat, and because the lack of the magnetic field, the remaining free hydrogen was swept into interplanetary space by the solar wind."
+                    "Venus er den næst nærmeste planet fra Solen.",
+                    "Den er opkaldt efter den romerske gudinden for kærlighed og skønhed, Venus.",
+                    "Venus kredser om Solen på 225 dage.",
+                    "Venus er det lyseste naturlige objekt på himlen, kun overgået af solen og månen. Den kan det kaste skygger og kan være synligt med det blotte øje ved højlys dag.",
+                    "Ligesom Merkur har Venus heller ingen måner.",
+                    "Selvom Mercur er tættere på Solen, Så er det Venus som har den varmeste overflade af enhver planet i solsystemet, med en top temperatur omkring 474 °C.",
+                    "Dens størrelse og masse ligner Jordens, Derfor bliver Venus ofte betegnet som &#34;Jordens søster&#34;.",
+                    "Der er en teori, som siger, at hvis Venus engang havde et hav eller andet vand, så blev det fordampet af varmen, og på grund af manglen på magnetfeltet, blev den tilbageværende brint fejet ud i rummet af solvinden."
                 },
                  Quests={
                     new QuestionAndAnswer{
@@ -871,13 +872,13 @@ List<Planet> planets_da = new List<Planet>()
                 Highest_temp = 21,
                 Lowest_temp = -128,
                 Statements ={
-                    "Mars is the second-smallest planet in the Solar System and the fourth planet of the Sun.",
-                    "It's named after the Roman god of war, Mars.",
-                    "The planet has two moons, Phobos and Demios.",
-                    "It has a thin atmosphere, with the surface featuring impact craters, valleys, dunes, and polar ice caps.",
-                    "Mars has the largest volcano and the highest known mountain in the Solar System, named Olympus Mons.",
-                    "The planet was visited by several uncrewed spacecraft, for ex.: &#34;Mariner 4, in 1965&#34;",
-                    "It can easily be seen from Earth with naked eye."
+                    "Mars er den næstmindste planet i solsystemet og den fjerde planet, talt fra solen Solen.",
+                    "Mars er opkaldt efter den romerske krigsgud, Mars.",
+                    "Planeten har to måner, Phobos og Demios.",
+                    "Mars har en tynd atmosfære, med en overflade med mange  nedslag kratere, dale, klitter og polare iskapper.",
+                    "Mars har den største vulkan og det højeste kendte bjerg i solsystemet, ved navn Olympus Mons.",
+                    "Planeten blev besøgt af flere ubemandede rumfartøjer, f.eks.: &#34;Mariner 4, i 1965&#34;",
+                    "Mars kan ses fra Jorden med det blotte øje."
                 },
                 Quests ={
                     new QuestionAndAnswer{
@@ -940,13 +941,13 @@ List<Planet> planets_da = new List<Planet>()
                 Highest_temp = 145,
                 Lowest_temp = -195,
                 Statements ={
-                    "Jupiter is the fifth planet from the Sun, and the largest in the Solar System.",
-                    "It's named after the roman god Jupiter, the king of the gods.",
-                    "The planet completes an orbit around the Sun every 11.86 years.",
-                    "Jupiter is the third brightest natural object in the Earth's night sky, after the Moon and Venus.",
-                    "The planet is primarily composed of hydrogen and helium, it lacks a well-defined solid surface.",
-                    "Jupiter has at least 80 known moons and possibly many more, the four biggest are: Io, Europa, Ganymede and Callisto.",
-                    "People have been observing Jupiter since prehistoric times."
+                    "Jupiter er den femte planet fra Solen, og den største planet i solsystemet.",
+                    "Den er opkaldt efter den romerske gud Jupiter, gudernes konge.",
+                    "Planeten fuldfører et kredsløb om Solen i løbet af 11,86 år.",
+                    "Jupiter er det tredje lyseste naturlige objekt på jordens nattehimmel, efter Månen og Venus.",
+                    "Planeten er primært sammensat af brint og helium, den mangler en veldefineret fast overflade.",
+                    "Jupiter har mindst 80 kendte måner og muligvis mange flere som endnu ikke er opdaget, de fire største er: Io, Europa, Ganymedes og Callisto.",
+                    "Menneskeheden har observeret Jupiter siden forhistorisk tid."
                 },
                 Quests ={
                     new QuestionAndAnswer{
@@ -1009,13 +1010,13 @@ List<Planet> planets_da = new List<Planet>()
                 Highest_temp = 57,
                 Lowest_temp = -173,
                 Statements ={
-                    "Saturn is the sixth planet from the Sun and the second-largest in the Solar System.",
-                    "It takes Saturn 10 759 days to finish one revolution around the Sun.",
-                    "The outer atmosphere is generally bland and lacking in contrast, although long-lived features can appear.",
-                    "Wind speeds on the planet can reach 1800 km/h.",
-                    "Saturn's most notable feature is it's prominent ring system, which is composed mainly of ice particles, with a smaller amount of rocky debris and dust.",
-                    "Saturn has at least 83 moons of which 53 are officially named, the largest one called &#34;Titan&#34;.",
-                    "It's named after the roman god of wealth and agriculture and the father of Jupiter, Saturn."
+                    "Saturn er den sjette planet fra Solen og den næststørste i solsystemet.",
+                    "Det tager Saturn 10.759 dage at afslutte en omdrejning omkring Solen.",
+                    "Den ydre atmosfære er generelt intetsigende og kontrastløs, selvom længerevarende variationer kan forekomme.",
+                    "Vindhastigheder på planeten kan nå op på 1800 km/t.",
+                    "Saturns mest bemærkelsesværdige træk, er dets fremtrædende ringsystem, som hovedsageligt består af ispartikler med en mindre mængde isdækkede stenstykker og støv.",
+                    "Saturn har mindst 83 måner, hvoraf 53 er officielt navngivet, den største kaldes &#34;Titan&#34;.",
+                    "Saturner opkaldt efter den romerske gud for rigdom og landbrug og Jupiters far, Saturn."
                 },
                 Quests ={
                     new QuestionAndAnswer{
@@ -1078,15 +1079,15 @@ List<Planet> planets_da = new List<Planet>()
                 Highest_temp = 4982,
                 Lowest_temp = -224,
                 Statements ={
-                    "Uranus is the seventh planet of the Solarsystem.",
-                    "It's named after the Greek god of the Sky, Uranus.",
-                    "the planet orbits the Sun every 84 years.",
-                    "Like Jupiter, it lacks a well-defined solid surface.",
-                    "The planet's atmosphere is similar to Jupiter's and Saturn's in its primary composition of hydrogen and helium, but it contains more &#34;ices&#34;, such as water, or ex: ammonia.",
-                    " Uranus has the coldest planetary atmosphere in the Solar System, with the minimum temperature of -224 °C",
-                    "Wind speeds can reach 900 km/h.",
-                    "The planet has 27 known moons.",
-                    "Only one spacecraft visited the planet, in 1986, the &#34;Voyeur 2&#34;."
+                    "Uranus er solsystemets syvende planet.",
+                    "Planeten er opkaldt efter den græske himmelgud, Uranus.",
+                    "Planeten kredser om Solen i løbet af 84. år.",
+                    "Ligesom Jupiter mangler den en veldefineret fast overflade.",
+                    "Planetens atmosfære ligner Jupiters og Saturns i sin primære sammensætning af brint og helium, men den indeholder mere &#34;is&#34;, såsom vand, samt ammoniak.",
+                    "Uranus er den planet med den koldeste atmosfære i solsystemet, med minimum temperature på ned til -224 °C.",
+                    "Vindhastigheden kan nå op på 900 km/t.",
+                    "Planeten har 27 kendte måner.",
+                    "Kun ét rumfartøj har besøgt planeten, i 1986, &#34;Voyeur 2&#34;."
                 },
                 Quests ={
                     new QuestionAndAnswer{
@@ -1149,14 +1150,14 @@ List<Planet> planets_da = new List<Planet>()
                 Highest_temp = 7000,
                 Lowest_temp = -218,
                 Statements ={
-                    "Neptune is the eighth and the planet furthest from the Sun.",
-                    "It has no well-defined solid surface, as being composed primarily of gasses and liquids.",
-                    "The planet orbits the Sun every 165 years.",
-                    "It's named after the roman god of the seas, Neptune.",
-                    "Neptune has 14 known moons, the largest called Triton.",
-                    "The planet's atmosphere is composed primarily of hydrogen and helium, along with traces of hydrocarbons and possibly nitrogen, though it contains more &#34;ices&#34;, than Jupiter or Saturn.",
-                    "Like Uranus, only one spacecraft visited the planet, in 1989, &#34;The Voyeur 2&#34;.",
-                    "Neptune's outer atmosphere is one of the coldest places in the Solar System, with the temperature around -218 °C, but at the planet's center is much hotter, notedly 5100 °C."
+                    "Neptun er den ottende og er den planet, der er længst væk fra Solen.",
+                    "Den har ingen veldefineret fast overflade, da den primært består af gasser og væsker.",
+                    "Planeten kredser om Solen i løbet af 165. år.",
+                    "Den er opkaldt efter den romerske havgud, Neptun.",
+                    "Neptun har 14 kendte måner. Den største kaldes Triton.",
+                    "Planetens atmosfære består primært af brint og helium sammen med spor af kulbrinter og muligvis nitrogen, selvom den indeholder mere &#34;is&#34;, end Jupiter eller Saturn.",
+                    "Ligesom Uranus besøgte kun ét rumfartøj planeten, i 1989, &#34;The Voyeur 2&#34;.",
+                    "Neptuns ydre atmosfære er et af de koldeste steder i solsystemet, med temperaturen omkring -218 °C, men i planetens centrum er det meget varmere, angiveligt 5100 °C."
                 },
                 Quests ={
                     new QuestionAndAnswer{
@@ -1224,12 +1225,13 @@ List<Planet> planets_da = new List<Planet>()
                 Highest_temp = -223,
                 Lowest_temp = -233,
                 Statements ={
-                    "Pluto is a dwarf planet in the Kuiper belt.",
-                    "After the planet was discovered in 1930, it was declared to be the ninth planet from the Sun. Later this was questioned because of the distance and size, and this led to 2006, when it was reclassified as a dwarf planet.",
-                    "It has 5 known moons: Charon, Styx, Nix, Kerberos and Hydra.",
-                    "Back in 2015, a spacecraft, named &#34;New Horizons&#34; performed a flyby on Pluto, and it was the only visit to the planet.",
-                    "Pluto orbits the Sun every 248 years.",
-                    "The surface of Pluto is composed of more than 98% nitrogen ice, with traces of methane and carbon monoxide."
+                    "Pluto er en dværgplanet i Kuiper bæltet.",
+                    "Den er opkaldt efter den romerske gud for underverdenen, Pluto.",
+                    "Efter at planeten blev opdaget i 1930, blev den erklæret for at være den niende planet fra Solen. Senere blev der sat spørgsmålstegn ved dette på grund af afstanden og størrelsen. Dette førte til 2006, til at den blev omklassificeret til at være en dværgplanet.",
+                    "Pluto har 5 kendte måner: Charon, Styx, Nix, Kerberos og Hydra.",
+                    "I 2015 gennemførte et rumfartøj ved navn &#34;New Horizons&#34; en forbiflyvning på Pluto, og det var det eneste besøg på planeten.",
+                    "Pluto kredser om Solen i løbet af 248 år.",
+                    "Overfladen på Pluto er sammensat af mere end 98 % nitrogen is, med spor af metan og kulilte."
                 },
                 Quests ={
                     new QuestionAndAnswer{
@@ -1302,13 +1304,13 @@ List<Planet> planets_hu = new List<Planet>()
                 Highest_temp=56.7,
                 Lowest_temp=-89.2,
                 Statements={
-                    "Earth only has one moon.",
-                    "Earth is more than 4.5 billion years old.",
-                    "Earth takes a year to orbitate one round of the Sun.",
-                    "Earth rotates around its own axis in 24 hours.",
-                    "Earth is filled by: 71% of water, the rest are land.",
-                    "Humans are only on Earth (yet), and they emerged ca. 300 000 years ago. Nowadays, the human population is around 8 billion already.",
-                    "Every fourth year, we have to add an extra day, now containing 366 days, it's called &#34;Leap year&#34;."
+                    "A Földnek csak egy holdja van.",
+                    "A Föld több mint 4.5 billió éves.",
+                    "A Földnek egy évbe telik amíg megtesz egy kört a Nap körül.",
+                    "A Föld 24 óra alatt tesz meg egy kört a saját tengelye körül.",
+                    "A Föld 71%-a víz, a maradék talaj.",
+                    "A Földön 300 000 éve élnek emberek. A népesség 8 billió körül van.",
+                    "Minden negyedik évben van egy extra napunk, a 366 napos évet szökőévnek hívjuk."
                 },
                  Quests={
                     new QuestionAndAnswer{
@@ -1377,13 +1379,13 @@ List<Planet> planets_hu = new List<Planet>()
                 Highest_temp=430,
                 Lowest_temp=-180,
                 Statements={
-                    "Mercury is one of the smallest planets in the Solar System, and it is the closest to the Sun",
-                    "Mercury orbits around the Sun in 88 Days, the shortest of all the Sun's planets.",
-                    "It is named after the Roman god of commerce, and the messenger of the gods, Mercurius.",
-                    "It's surface appears heavily cratered and similar in appearance to the Moon's.",
-                    "Despite the small size, Mercury has a significant, and apparently global magnetic field.",
-                    "It has almost no atmosphere to retain heat, the temperature ranges from -173 °C to 427 °C.",
-                    "The planet experienced a spacecraft crash, back in the 30 of April, 2015; when NASA intentionally let a spacecraft, named &#34;MESSENGER&#34; crash into it."
+                    "Merkúr az egyik legkisebb bolygó a naprendszerben és ez van legközelebb a Naphoz.",
+                    "Merkúr 88 nap alatt tesz meg egy kört a Nap körül, a többi bolygó közül a legrövidebb idő alatt.",
+                    "A római kereskedelem istenéről és az istenek hírnökéről, Merkúriuszról lett elnevezve.",
+                    "A felszíne kráteres és hasonló a megjelenése a Hold felszínéhez.",
+                    "A kis mérete ellenére Merkúrnak jelentős mágneses mezője van.",
+                    "Szinte nincs légköre ami megtartaná a hőt, így a hőmérséklet -173 °C és 427 °C között változik.",
+                    "A NASA 2015. április 30-án hagyta, hogy a MESSENGER nevű űrhajóra lezuhanjon a bolygóra."
                 },
                  Quests={
                     new QuestionAndAnswer{
@@ -1442,14 +1444,14 @@ List<Planet> planets_hu = new List<Planet>()
                 Highest_temp=475,
                 Lowest_temp=-173,
                 Statements={
-                    "Venus is the second closest planet from the Sun.",
-                    "It's named after the Roman goddess of love and beauty, Venus.",
-                    "Venus orbits around the Sun in 225 days.",
-                    "Venus is the brightest natural object in the sky, after the Moon, it can cast shadows and can be visible to the naked eye in broad daylight.",
-                    "Like Mercury, Venus does not have any moons also.",
-                    "Though Mercury is closer to the Sun, Venus has the hottest surface of any planet in the Solar System, with the max temperature around 474 °C.",
-                    "It's size and mass are similar to the Earth, often described as &#34;Earth's sister&#34;.",
-                    "It has an theory, which says out, that if Venus had any ocean or even water on it's land, it was evaporated by the heat, and because the lack of the magnetic field, the remaining free hydrogen was swept into interplanetary space by the solar wind."
+                    "A Vénusz a második legközelebbi bolygó a Naphoz.",
+                    "A római szerelem és szépség istennőjéről, Vénuszról nevezték el.",
+                    "Vénusz 225 nap alatt tesz meg egy kört a Nap körül.",
+                    "A Vénusz a legvilágosabb természetes bolygó az égen, a Hold után. Árnyékot vethet és látható lehet szabad szemmel is a fényes égbolton.",
+                    "Merkúrhoz hasonlóan a Vénusznak sincsenek holdjai.",
+                    "Annak ellenére, hogy Merkúr van a legközelebb a Naphoz, a Vénusznak van a legforróbb felszíne a többi bolygó közül a naprendszerben. A maximum hőmérséklet 474 °C.",
+                    "A mérete és a tömege hasonlít a Földhöz, ezért néha a Föld testvérének nevezik.",
+                    "Van egy teória, miszerint ha a Vénuszon lenne víz vagy óceán akkor az elpárolgott volna a hő miatt és az erős mágneses mező miatt. A megmaradt hidrogént a bolygóközi térbe söpörte volna  a napszél."
                 },
                  Quests={
                     new QuestionAndAnswer{
@@ -1507,13 +1509,13 @@ List<Planet> planets_hu = new List<Planet>()
                 Highest_temp = 21,
                 Lowest_temp = -128,
                 Statements ={
-                    "Mars is the second-smallest planet in the Solar System and the fourth planet of the Sun.",
-                    "It's named after the Roman god of war, Mars.",
-                    "The planet has two moons, Phobos and Demios.",
-                    "It has a thin atmosphere, with the surface featuring impact craters, valleys, dunes, and polar ice caps.",
-                    "Mars has the largest volcano and the highest known mountain in the Solar System, named Olympus Mons.",
-                    "The planet was visited by several uncrewed spacecraft, for ex.: &#34;Mariner 4, in 1965&#34;",
-                    "It can easily be seen from Earth with naked eye."
+                    "A Mars a második legkisebb bolygó a naprendszerben és a negyedik bolygó a Naptól számítva.",
+                    "A római háború istenéről, Marsról nevezték el.",
+                    "A bolygónak két holdja van, Phobos és Demios.",
+                    "Vékony légköre van, a felszínén kráterekkel, völgyekkel, dűnékkel és poláris jégsapkákkal.",
+                    "Marsnak van a legnagyobb vulkánja és a legmagasabb ismert hegye a naprendszerben, aminek a neve Olympus Mons.",
+                    "A bolygón számos személyzet nélküli űrhajó járt, például a Mariner 4 1965-ben.",
+                    "Könnyen látható a Földről szabad szemmel is."
                 },
                 Quests ={
                     new QuestionAndAnswer{
@@ -1576,13 +1578,13 @@ List<Planet> planets_hu = new List<Planet>()
                 Highest_temp = 145,
                 Lowest_temp = -195,
                 Statements ={
-                    "Jupiter is the fifth planet from the Sun, and the largest in the Solar System.",
-                    "It's named after the roman god Jupiter, the king of the gods.",
-                    "The planet completes an orbit around the Sun every 11.86 years.",
-                    "Jupiter is the third brightest natural object in the Earth's night sky, after the Moon and Venus.",
-                    "The planet is primarily composed of hydrogen and helium, it lacks a well-defined solid surface.",
-                    "Jupiter has at least 80 known moons and possibly many more, the four biggest are: Io, Europa, Ganymede and Callisto.",
-                    "People have been observing Jupiter since prehistoric times."
+                    "A Jupiter az ötödik bolygó a Naptól számítva, és a legnagyobb a naprendszerben.",
+                    "A római istenek királyáról, Jupiterről nevezték el.",
+                    "A bolygó 11.86 év alatt tesz meg egy kört a Nap körül.",
+                    "Jupiter a harmadik legvilágosabb természetes bolygó a Földi égbolton, a Hold és a Vénusz után.",
+                    "A bolygó elsősorban hidrogénből és héliumból áll, nincs egy jól meghatározott szilárd felülete.",
+                    "Jupiternek 80 ismert holdja van és lehetséges hogy még többel is rendelkezik. A négy legnagyobb holdjának nevei: Io, Europa, Ganymede és Callisto.",
+                    "Az emberek az őskor óta megfigyelik a bolygót."
                 },
                 Quests ={
                     new QuestionAndAnswer{
@@ -1645,13 +1647,13 @@ List<Planet> planets_hu = new List<Planet>()
                 Highest_temp = 57,
                 Lowest_temp = -173,
                 Statements ={
-                    "Saturn is the sixth planet from the Sun and the second-largest in the Solar System.",
-                    "It takes Saturn 10 759 days to finish one revolution around the Sun.",
-                    "The outer atmosphere is generally bland and lacking in contrast, although long-lived features can appear.",
-                    "Wind speeds on the planet can reach 1800 km/h.",
-                    "Saturn's most notable feature is it's prominent ring system, which is composed mainly of ice particles, with a smaller amount of rocky debris and dust.",
-                    "Saturn has at least 83 moons of which 53 are officially named, the largest one called &#34;Titan&#34;.",
-                    "It's named after the roman god of wealth and agriculture and the father of Jupiter, Saturn."
+                    "Szaturnusz a hatodik bolygó a Naptól számítva és a második legnagyobb a naprendszerben.",
+                    "Szaturnusznak 10 759 nap szükséges ahhoz, hogy meg tegyen egy kört a Nap körül.",
+                    "A külső légköre lágy és nem kontrasztos, ugyanakkor a hosszú életű jellemzők megjelenhetnek.",
+                    "A szélsebesség a bolygón elérheti az 1800 km/ órát.",
+                    "A Szaturnusz egyik figyelemre méltó jellemzője a kitűnő gyűrűs rendszere, amely főleg jégdarabkákból áll de tartalmaz kisebb mennyiségű sziklás törmeléket és port.",
+                    "Szaturnusznak 83 holdja van, közülük 53-nak adtak nevet és a legnagyobbat Titánnak nevezték el.",
+                    "A bolygó a római gazdagság és mezőgazdaság istenéről, valamint Jupiter apjáról, Szaturnuszról lett elnevezve."
                 },
                 Quests ={
                     new QuestionAndAnswer{
@@ -1714,15 +1716,15 @@ List<Planet> planets_hu = new List<Planet>()
                 Highest_temp = 4982,
                 Lowest_temp = -224,
                 Statements ={
-                    "Uranus is the seventh planet of the Solarsystem.",
-                    "It's named after the Greek god of the Sky, Uranus.",
-                    "the planet orbits the Sun every 84 years.",
-                    "Like Jupiter, it lacks a well-defined solid surface.",
-                    "The planet's atmosphere is similar to Jupiter's and Saturn's in its primary composition of hydrogen and helium, but it contains more &#34;ices&#34;, such as water, or ex: ammonia.",
-                    " Uranus has the coldest planetary atmosphere in the Solar System, with the minimum temperature of -224 °C",
-                    "Wind speeds can reach 900 km/h.",
-                    "The planet has 27 known moons.",
-                    "Only one spacecraft visited the planet, in 1986, the &#34;Voyeur 2&#34;."
+                    "Uránusz a hetedik bolygó a naprendszerben.",
+                    "A görög ég istenéről, Uránuszról nevezték el.",
+                    "A bolygó 84 évente kerüli meg a Napot.",
+                    "Jupiterhez hasonlóan, hiányzik a jól meghatározott szilárd felszín.",
+                    "A bolygó légköre hasonlít a Jupiterhez és a Szaturnuszhoz, elsősorban hidrogénből és héliumból áll, de több jeget tartalmaz és vizet, vagy például ammóniát.",
+                    "Uránusznak van a leghidegebb planetáris légköre a naprendszerben, a minimum hőmérséklete -224 °C.",
+                    "A szélsebesség a bolygón elérheti a 900 km / órát.",
+                    "A bolygónak 27 ismert holdja van.",
+                    "Csak egy űrhajó járt a bolygón 1986-ban, a Voyeur 2."
                 },
                 Quests ={
                     new QuestionAndAnswer{
@@ -1785,14 +1787,14 @@ List<Planet> planets_hu = new List<Planet>()
                 Highest_temp = 7000,
                 Lowest_temp = -218,
                 Statements ={
-                    "Neptune is the eighth and the planet furthest from the Sun.",
-                    "It has no well-defined solid surface, as being composed primarily of gasses and liquids.",
-                    "The planet orbits the Sun every 165 years.",
-                    "It's named after the roman god of the seas, Neptune.",
-                    "Neptune has 14 known moons, the largest called Triton.",
-                    "The planet's atmosphere is composed primarily of hydrogen and helium, along with traces of hydrocarbons and possibly nitrogen, though it contains more &#34;ices&#34;, than Jupiter or Saturn.",
-                    "Like Uranus, only one spacecraft visited the planet, in 1989, &#34;The Voyeur 2&#34;.",
-                    "Neptune's outer atmosphere is one of the coldest places in the Solar System, with the temperature around -218 °C, but at the planet's center is much hotter, notedly 5100 °C."
+                    "Neptunusz a nyolcadik bolygó a naprendszerben és a naptól lévő legtávolabbi.",
+                    "Nincs jól meghatározható szilárd felszíne, főleg gázokból és folyadékokból áll.",
+                    "A bolygó 165 évente kerüli meg a Napot.",
+                    "A római tengerek istenéről, Neptunuszról nevezték el.",
+                    "A Neptunusznak 14 ismert holdja van, a legnagyobbat Tritonnak hívják.",
+                    "A bolygó légköre főként hidrogénből és héliumból áll, de nyomok utalnak a szén hidrogén és nitrogén jelenlétére, valamint több jeget tartalmaz mint a Jupiter vagy a Szaturnusz.",
+                    "Az Uránuszhoz hasonlóan csak egy űrhajó látogatta meg a bolygót 1989-ben, a Voyeur 2.",
+                    "A Neptunusz külső légköre az egyik leghidegebb hely a naprendszerben, a hőmérséklet -218 °C körül van de a bolygó közepe sokkal forróbb, 5100 °C."
                 },
                 Quests ={
                     new QuestionAndAnswer{
@@ -1860,12 +1862,13 @@ List<Planet> planets_hu = new List<Planet>()
                 Highest_temp = -223,
                 Lowest_temp = -233,
                 Statements ={
-                    "Pluto is a dwarf planet in the Kuiper belt.",
-                    "After the planet was discovered in 1930, it was declared to be the ninth planet from the Sun. Later this was questioned because of the distance and size, and this led to 2006, when it was reclassified as a dwarf planet.",
-                    "It has 5 known moons: Charon, Styx, Nix, Kerberos and Hydra.",
-                    "Back in 2015, a spacecraft, named &#34;New Horizons&#34; performed a flyby on Pluto, and it was the only visit to the planet.",
-                    "Pluto orbits the Sun every 248 years.",
-                    "The surface of Pluto is composed of more than 98% nitrogen ice, with traces of methane and carbon monoxide."
+                    "Plútó egy törpe bolygó a Kuiper övön.",
+                    "A római alvilág istenéről, Plútóról nevezték el.",
+                    "Miután a bolygót felfedezték 1930-ban, a kilencedik bolygó lett a Naptól. Később megkérdőjelezhetővé vált a távolsága és a mérete miatt, ezért 2006-ban újra törpebolygóvá nyilvánították.",
+                    "Öt ismert holdja van, Charon, Styx, Nix, Kerberos és Hydra.",
+                    "2015-ben egy New Horizons nevű űrhajó leszállást hajtott végre a Plútón és ez volt az egyetlen látogatás a bolygón.",
+                    "Plútó 248 évente kerüli meg a Napot.",
+                    "A felszíne több mint 98%-a nitrogén jégből áll, de nyomokban metánt és szén-monoxidot is tartalmaz."
                 },
                 Quests ={
                     new QuestionAndAnswer{
