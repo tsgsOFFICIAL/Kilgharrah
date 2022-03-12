@@ -655,7 +655,7 @@ List<Planet> planets_da = new List<Planet>()
          /// </summary>
             new Planet
             {
-                Name="Earth",
+                Name="Jorden",
                 Distance_from_sun = 150000000,
                 Diameter= 12756,
                 Age=4500000000,
@@ -677,48 +677,48 @@ List<Planet> planets_da = new List<Planet>()
                 },
                  Quests={
                     new QuestionAndAnswer{
-                        Question="How many moons does Earth have?",
+                        Question="Hvor mange måner har Jorden?",
                         Answers={ "3", "7", "1", "4" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="How old is Earth?",
-                        Answers={ "100 thousand years", "6 million years", "4.5 billion years", "10 billion years" },
+                        Question="Hvor gammel er jorden?",
+                        Answers={ "100 tusind år", "6 millioner år", "4.5 milliarder år", "10 milliarder år" },
                         CorrectAnswerIndex =2
                     },
                     new QuestionAndAnswer{
-                        Question="What does the earth consist of?",
-                        Answers={ "71% water and 29% land", "29% water and 71% water", "50% water and 50% land", "85% water and 15% land" },
+                        Question="Hvad består jorden af?",
+                        Answers={ "71% vand og 29% land", "29% vand og 71% vand", "50% vand og 50% land", "85% vand og 15% land" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="How long does the Earth need to rotate around its own axis?",
-                        Answers={ "12 hours", "6 hours", "24 hours", "48 hours" },
+                        Question="Hvor lang tid bruger Jorden på at roterer en omgang om sin egen akse?",
+                        Answers={ "12 timer", "6 timer", "24 timer", "48 timer" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take the Earth to orbitate one round of the Sun?",
-                        Answers={ "Half a year", "1 year", "5 years", "6 Months" },
+                        Question="Hvor lang tid tager det Jorden at kredse en omgang om Solen?",
+                        Answers={ "Et halvt år", "1 år", "5 år", "6 måneder" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="How many days are there in a year on earth?",
-                        Answers={ "365 days", "366 days", "256 days", "460 days" },
+                        Question="hvor mange dage er der på et år på jorden?",
+                        Answers={ "365 dage", "366 dage", "256 dage", "460 dage" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="For how many years, have there been humans on earth?",
+                        Question="Hvor mange år, har der været mennesker på jorden?",
                         Answers={ "100.000", "10.000", "600.000", "300.000" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="What does the &#34;Leap Year&#34; mean?",
-                        Answers={ "When we have one less day", "When we have one extra day", "When we have one extra month", "When we have two less months" },
+                        Question="Hvad betyder &#34;skudår&#34;?",
+                        Answers={ "At der er en dag mindre på et år", "At der er en dag ekstra på et år", "At der er en ekstra måned på et år", "At der er to færre måneder på et år" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="How big is the human population on Earth?",
-                        Answers={ "4 million", "100.000", "8 billion", "16.000" },
+                        Question="Hvor mange mennesker lever på Jorden?",
+                        Answers={ "4 millioner", "100.000", "8 milliarder", "16.000" },
                         CorrectAnswerIndex=2
                     },
 
@@ -730,7 +730,7 @@ List<Planet> planets_da = new List<Planet>()
          /// </summary>
             new Planet
             {
-                Name="Mercury",
+                Name="Merkur",
                 Distance_from_sun = 47000000,
                 Diameter= 4878 ,
                 Age=4600000000,
@@ -752,40 +752,40 @@ List<Planet> planets_da = new List<Planet>()
                 },
                  Quests={
                     new QuestionAndAnswer{
-                        Question="How long does it take Mercury to orbitate one round of the Sun?",
-                        Answers={ "10 days", "88 days", "200 days", "365 days" },
+                        Question="Hvor lang tid tager det Merkur at kredse en omgang om Solen?",
+                        Answers={ "10 dage", "88 dage", "200 dage", "365 dage" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="Who was the planet Mercury named after?",
-                        Answers={ "It isn’t named after anybody", "The Greek god, Hermes", "The Roman god, Mercurius"},
+                        Question="Hvem er planeten Mercur opkaldt efter?",
+                        Answers={ "Den er ikke opkaldt efter nogen", "Den græske gud, Hermes", "Den romerske gud Merkurius"},
                         CorrectAnswerIndex =2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the maximum temperature on Mercury?",
+                        Question="Hvad er den højst målte temperatur på Merkur?",
                         Answers={ "166 °C", "512 °C", "427 °C", "400 °C" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the minimum temperature on Mercury?",
+                        Question="Hvad er den laveste målte temperatur på Merkur?",
                         Answers={ "-173 °C", "0 °C", "-100 °C", "-386 °C" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="What was the name of the space probe that NASA crashed on Mercury?",
+                        Question="Hvad var navnet på den rumsonde, som NASA lod styrte ned på Merkur?",
                         Answers={ "MESSAGE", "MESSENGER", "MESSAGES", "MESS" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="What does the surface of the planet Mercury look like?",
-                        Answers={ "Smooth", "Small Hills", "Heavily Cratered", "Covered by water" },
+                        Question="Hvordan ser overfladen ud på planeten Merkur?",
+                        Answers={ "Glat", "Små bakker", "kraterfyldt", "Dækket af vand" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Mercury is the closest planet to the Sun?",
-                        Answers={ "Yes", "No"},
+                        Question="Er det sandt at Merkur er den planet som er tættest på solen?",
+                        Answers={ "Ja", "Nej"},
                         CorrectAnswerIndex=0
-                    },
+                    },  
 
                 }
             },
@@ -818,38 +818,38 @@ List<Planet> planets_da = new List<Planet>()
                 },
                  Quests={
                     new QuestionAndAnswer{
-                        Question="What position does Venus have in the order of the planets when counting from the sun?",
-                        Answers={ "First", "Fourth", "Second", "Tenth" },
+                        Question="Hvilken position har Venus i planeternes rækkefølge, når man tæller fra solen?",
+                        Answers={ "Første", "Fjerde", "Anden", "Tiende" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="Which god or goddess was the planet named after?",
-                        Answers={ "The roman goddess, Venus", "The roman goddess, Diana", "The greek goddess, Aphrodite", "The greek goddess, Artemis" },
+                        Question="Hvilken gud, eller gudinde er planeten opkaldt efter?",
+                        Answers={ "Den romerske gudinde, Venus", "Den romerske gudinde, Diana", "Den græske gudinde, Afrodite", "Den græske gudinde, Artemis" },
                         CorrectAnswerIndex =0
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take Venus to orbitate one round of the Sun?",
-                        Answers={ "112 days", "225 days", "256 days", "720 days" },
+                        Question="Hvor lang tid tager det Merkur at kredse en omgang om Solen?",
+                        Answers={ "112 dage", "225 dage", "256 dage", "720 dage" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="How many moons does Venus have?",
+                        Question="Hvor mange måner har Venus?",
                         Answers={ "2", "7", "0", "6" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the maximum temperature on Venus?",
+                        Question="Hvad er den højst målte temperatur på Venus?",
                         Answers={ "1000 °C", "600 °C", "474 °C", "200 °C" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Venus is one of the brightest natural objects in the Solar System?",
-                        Answers={ "Yes", "No"},
+                        Question="Er det rigtigt, at Venus er et af de lyseste naturlige objekter i solsystemet?",
+                        Answers={ "Ja", "Nej"},
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Why can we call Venus, as &#34;Earth's sister&#34;?",
-                        Answers={ "Because of Size and Mass are similar to Earth", "There aren't such a thing like &#34;Earth's sister&#34;"},
+                        Question="Hvorfor kan vi kalde Venus for en &#34;Jordens søster&#34;?",
+                        Answers={ "På grund af at størrelse og masse er tæt på Jordens", "Jorden har da ingen søskende"},
                         CorrectAnswerIndex=0
                     }
                  }
@@ -882,43 +882,43 @@ List<Planet> planets_da = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="What position does Mars have in the order of the planets when counting from the sun?",
-                        Answers={ "Fourth", "second", "sixth", "ninth" },
+                        Question="Hvilken position har Mars i planeternes rækkefølge, når man tæller fra solen?",
+                        Answers={ "Fjerde", "Anden", "Sjette", "Niende" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Mars is the second smallest planet in the Solar System?",
-                        Answers={ "Yes", "No"},
+                        Question="Er det rigtigt, at Mars er den næstmindste planet i solsystemet?",
+                        Answers={ "Ja", "Nej"},
                         CorrectAnswerIndex =0
                     },
                     new QuestionAndAnswer{
-                        Question="What was Mars the god of?",
-                        Answers={ "Flowers", "Life", "War", "Death" },
+                        Question="Hvad repræsenterede guden Mars?",
+                        Answers={ "Blomster", "Livet", "krig", "døden" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="We know Mars has two moons. What are they called?",
-                        Answers={ "Triton and Titan", "Callisto and Europa", "Phobos and Deimos"},
+                        Question="Vi ved, at Mars har to måner. Hvad hedder de?",
+                        Answers={ "Triton og Titan", "Callisto og Europa", "Phobos og Deimos"},
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the name of the highest known mountain on Mars?",
-                        Answers={ "It hasn’t got any name", "Olympia Moon", "Olympus Mons", "Olympian Field" },
+                        Question="Hvad hedder det højeste bjerg på Mars?",
+                        Answers={ "Det har ikke noget navn", "Olympia Moon", "Olympus Mons", "Olympian Field" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that the planet was visited by several CREWED spacecrafts?",
-                        Answers={ "Yes", "No"},
+                        Question="Er det sandt, at planeten blev besøgt af flere BEMANDEDE rumfartøjer?",
+                        Answers={ "Ja", "Nej"},
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that you can see the planet with naked eye from the Earth?",
-                        Answers={ "Yes", "No"},
+                        Question="Er det sandt at du kan se Planeten Mars med det blotte øje her på Jorden?",
+                        Answers={ "Ja", "Nej"},
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Does Mars have any kind of atmosphere?",
-                        Answers={ "Thin", "Strong", "Weak", "Tall" },
+                        Question="Har Mars nogen form for atmosfære?",
+                        Answers={ "Tynd", "stærk", "svag", "høj" },
                         CorrectAnswerIndex=0
                     }
                 }
@@ -951,43 +951,43 @@ List<Planet> planets_da = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="What position does Jupitor have in the order of the planets when counting from the sun?",
-                        Answers={ "Fifth", "First", "Sixth", "Seventh" },
+                        Question="Hvilken position har Jupiter i planeternes rækkefølge, når man tæller fra solen?",
+                        Answers={ "Femte", "første", "sjette", "syvende" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="What was Jupiter the god of?",
-                        Answers={ "The god of the underworld, Hades", "The roman king of the gods, Jupiter", "the goddess of magic, Hecate"},
+                        Question="Hvad repræsenterede guden Jupiter?",
+                        Answers={ "Underverdenens gud, Hades", "Gudernes romerske konge, Jupiter", "Magiens gudinde, Hecate"},
                         CorrectAnswerIndex =1
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take Jupiter to orbitate one round of the Sun?",
-                        Answers={ "Around 22 Years", "Around 600 days", "Around 12 year", "Around 15 years" },
+                        Question="Hvor lang tid tager det Jupiter at kredse en omgang om Solen?",
+                        Answers={ "Omkring 22 år", "Omkring 600 dage", "Omkring 12 år", "Omkring 15 år" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="How many moons does Jupiter have?",
-                        Answers={ "Ca. 20 moons", "Ca. 45 moons", "Ca. 70 moons", "Ca. 80 moons" },
+                        Question="Hvor mange måner har Jupiter?",
+                        Answers={ "20 måner", "45 måner", "70 måner", "80 måner" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="Since when did humans start to observe the planet?",
-                        Answers={ "Since yesterday", "Since last year", "Since prehistoric times", "Since last week" },
+                        Question="Siden hvornår begyndte mennesker at observere planeten Jupiter?",
+                        Answers={ "Siden i går", "Siden sidste år", "Siden forhistorisk tid", "Siden sidste uge" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the planet composed of?",
-                        Answers={ "Solid surface", "Hydrogen and Helium", "water"},
+                        Question="Hvad består planeten af??",
+                        Answers={ "Fast overflade", "Hydrogen og helium", "Vand"},
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="What are the four biggest Moon called?",
-                        Answers={ "Io, Callisto, Europa, and Ganymede", "Jupiter, Fo, Callisteo, and Phobos", "Miraculus, Saturn, Ganymede, and Quasimodo"},
+                        Question="Hvad hedder de fire største måner?",
+                        Answers={ "Io, Callisto, Europa, og Ganymede", "Jupiter, Fo, Callisteo, og Phobos", "Miraculus, Saturn, Ganymede, og Quasimodo"},
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Jupiter is the biggest planet in the Solar System?",
-                        Answers={ "Yes", "No"},
+                        Question="Er det rigtigt, at Jupiter er den største planet i solsystemet?",
+                        Answers={ "Ja", "Nej"},
                         CorrectAnswerIndex=0
                     }
                 }
@@ -1020,42 +1020,42 @@ List<Planet> planets_da = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="What position does Saturn have in the order of the planets when counting from the sun?",
-                        Answers={ "First", "Fifth", "Tenth", "Sixth" },
+                        Question="Hvilken position har Saturni planeternes rækkefølge, når man tæller fra solen?",
+                        Answers={ "Første", "Femte", "Tiende", "Sjette" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that it takes 10759 days for Saturn to orbitate one round of the Sun?",
-                        Answers={ "Yes", "No"},
+                        Question="Er det rigtigt, at det tager 10759 dage for Saturn at kredse en runde om Solen?",
+                        Answers={ "Ja", "Nej"},
                         CorrectAnswerIndex =0
                     },
                     new QuestionAndAnswer{
-                        Question="How many moons does Saturn have?",
+                        Question="Hvor mange måner har Saturn?",
                         Answers={ "53", "36", "83", "92" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What are the highest measured wind speeds on the planet?",
-                        Answers={ "100km/h", "1800km/h", "320km/h", "960km/h"},
+                        Question="Hvad er de højest målte vindhastigheder på planeten?",
+                        Answers={ "100km/t", "1800km/t", "320km/t", "960km/t"},
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Saturn is the third largest planet in the Solar System?",
-                        Answers={ "Yes", "No"},
+                        Question="Er det rigtigt, at Saturn er den tredjestørste planet i solsystemet?",
+                        Answers={ "Ja", "Nej"},
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="Who is the planet named after?",
-                        Answers={ "The greek god of titans, Cronus", "The roman god of wealth and agriculture, Saturn", "The greek goddess of snow, Khione", "The norse god of lightnings, Thor" },
+                        Question="Hvem er planeten opkaldt efter?",
+                        Answers={ "Den græske gud for titaner, Cronus", "Den romerske gud for rigdom og landbrug, Saturn", "Den græske gudinde for sne, Khione", "Den nordiske Tordengud, Thor" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="What does Saturn have that no other planet has?",
-                        Answers={ "A system of rings in orbit", "A special brand of candy", "A high-speed train"},
+                        Question="Hvad har Saturn, som ingen anden planet har?",
+                        Answers={ "Tydelige ringe i kredsløb om sig", "Et specielt slik mærke", "Et højhastighedstog"},
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="What is the largest moon of Saturn, called?",
+                        Question="Hvad hedder Saturns største måne?",
                         Answers={ "Ghost", "Titan", "Zeus", "Giant" },
                         CorrectAnswerIndex=1
                     }
@@ -1091,43 +1091,43 @@ List<Planet> planets_da = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="What position does Uranus have in the order of the planets when counting from the sun?",
-                        Answers={ "Third", "Seventh", "Fourth", "Eleventh" },
+                        Question="Hvilken position har Uranus i planeternes rækkefølge, når man tæller fra solen?",
+                        Answers={ "Tredje", "Syvende", "Fjerde", "Ellevte" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take Uranus to orbitate one round of the Sun?",
-                        Answers={ "84 years", "105 years", "140 years", "56 years" },
+                        Question="Hvor lang tid tager det Jupiter at kredse en omgang om Solen?",
+                        Answers={ "84 år", "105 år", "140 år", "56 år" },
                         CorrectAnswerIndex =0
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Uranus doesn't have any solid material on the surface?",
-                        Answers={ "Yes", "No" },
+                        Question="Er det rigtigt, at Uranus ikke har noget fast materiale på overfladen?",
+                        Answers={ "Ja", "Nej" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Which planets can Uranus be compared to?",
-                        Answers={ "Neptune and Mercury", "Mars and Venus", "Earth and Moon", "Jupiter and Saturn" },
+                        Question="Hvilke planeter kan Uranus sammenlignes med?",
+                        Answers={ "Neptun og Merkur", "Mars og Venus", "Jorden og Månen", "Jupiter og Saturn" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that Uranus has the coldest planetary atmosphere in the Solar System?",
-                        Answers={ "Yes", "No" },
+                        Question="Er det rigtigt, at Uranus er den planet i solsystemet med den koldeste atmosfære?",
+                        Answers={ "Ja", "Nej" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Who is the planet named after?",
-                        Answers={ "The greek god of the sky, Uranus", "The irish goddess of fate, Morrigan", "It wasn’t named after anybody" },
+                        Question="Hvem er planeten opkaldt efter?",
+                        Answers={ "Himlens græske gud, Uranus", "Den irske skæbnegudinde, Morrigan", "Den er ikke opkaldt efter nogen" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="How many spacecraft has visited the planet?",
+                        Question="Hvor mange rumfartøjer har besøgt planeten?",
                         Answers={ "2", "5", "1", "10" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What are the highest measured wind speeds on the planet Uranus?",
-                        Answers={ "450 km/h", "900 km/h", "500 km/h", "700 km/h" },
+                        Question="Hvad er de højeste målte vindhastigheder på planeten Uranus?",
+                        Answers={ "450 km/t", "900 km/t", "500 km/t", "700 km/t" },
                         CorrectAnswerIndex=1
                     }
                 }
@@ -1138,7 +1138,7 @@ List<Planet> planets_da = new List<Planet>()
          /// </summary>
             new Planet
             {
-                Name = "Neptune",
+                Name = "Neptun",
                 Distance_from_sun = 4503443661,
                 Diameter = 49500,
                 Age = 4600000000,
@@ -1161,48 +1161,48 @@ List<Planet> planets_da = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="Is it true that Neptune is the planet furthest from the Sun?",
-                        Answers={ "Yes", "No"},
+                        Question="Er det rigtigt, at Neptun er den planet, der er længst væk fra Solen?",
+                        Answers={ "Ja", "Nej"},
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take Neptune to orbitate one round of the Sun?",
-                        Answers={ "200 years", "172 years", "165 years", "147 years" },
+                        Question="Hvor lang tid tager det Neptun at kredse en omgang om Solen?",
+                        Answers={ "200 år", "172 år", "165 år", "147 år" },
                         CorrectAnswerIndex =2
                     },
                     new QuestionAndAnswer{
-                        Question="Who is the planet named after?",
-                        Answers={ "The greek god of the seas, Poseidon", "The roman god of the seas, Neptune", "The egyptian god of the seas, Nu)" },
+                        Question="Hvem er planeten opkaldt efter?",
+                        Answers={ "Den græske havgud, Poseidon", "Den romerske havgud, Neptun", "Den egyptiske havgud, Nu)" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="How many moons does Neptune have?",
+                        Question="Hvor mange måner har Neptun?",
                         Answers={ "10", "16", "14", "17" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the biggest moon in orbit of Neptune called?",
+                        Question="Hvad hedder den største måne i kredsløb om Neptun?",
                         Answers={ "Triton", "Oceanus", "Styx", "Nereus" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="Is it true that the planet has been visited by a lot of spacecrafts?",
-                        Answers={ "Yes", "No" },
+                        Question="Er det rigtigt, at planeten er blevet besøgt af en masse rumfartøjer?",
+                        Answers={ "Ja", "Nej" },
                         CorrectAnswerIndex=1
                     },
                     new QuestionAndAnswer{
-                        Question="What is the temperature of Neptune's outer atmosphere?",
+                        Question="Hvordan er temperaturen ved Neptuns ydre atmosfære?",
                         Answers={ "-162 °C", "-346 °C", "-218 °C", "-252 °C" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What is the temperature in the center Neptune's inner core?",
+                        Question="How is the temperature in the center Neptune's inner core?",
                         Answers={ "3700 °C", "4600 °C", "6600 °C", "5100 °C" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="What was the name of the spacecraft that visited Neptune?",
-                        Answers={ "Voyeur 2", "MESSENGER", "Apollo 7", "It wasn’t named" },
+                        Question="Hvad hed det rumfartøj, der besøgte Neptun?",
+                        Answers={ "Voyeur 2", "MESSENGER", "Apollo 7", "Den Havde ikke noget navn" },
                         CorrectAnswerIndex=0
                     },
                 }
@@ -1235,43 +1235,43 @@ List<Planet> planets_da = new List<Planet>()
                 },
                 Quests ={
                     new QuestionAndAnswer{
-                        Question="Who is the planet named after?",
-                        Answers={ "The norse goddess of death, Hela", "The greek god of the underworld, Hades", "The greek god of death, Thanatos", "The roman god of the underworld, Pluto" },
+                        Question="Hvem er planeten opkaldt efter?",
+                        Answers={ "Den nordiske dødsgudinde, Hela", "Den græske gud for underverdenen, Hades", "Den græske dødsgud, Thanatos", "Den romerske gud for underverdenen, Pluto" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question=" Is Pluto a normal planet?",
-                        Answers={ "Yes", "no, It doesn’t exist", "It is unknown", "It is a dwarf planet" },
+                        Question=" Er Pluto en normal planet?",
+                        Answers={ "Ja", "Nej, Den eksisterer ikke", "Det vides ikke", "Det er en dværgplanet" },
                         CorrectAnswerIndex =3
                     },
                     new QuestionAndAnswer{
-                        Question="When was Pluto discovered by humans?",
+                        Question="Hvornår blev Pluto opdaget af mennesker?",
                         Answers={ "1890", "1910", "1930", "1950" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="How long does it take Pluto to orbitate one round of the Sun??",
-                        Answers={ "248 days", "248 months", "248 years" },
+                        Question="Hvor lang tid tager det Pluto at kredse en omgang om Solen?",
+                        Answers={ "248 dage", "248 måneder", "248 år" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="How many moons does Pluto have?",
+                        Question="Hvor mange måner kredser omkring Pluto?",
                         Answers={ "15", "22", "5", "10" },
                         CorrectAnswerIndex=2
                     },
                     new QuestionAndAnswer{
-                        Question="What year was Pluto visited by a spacecraft?",
+                        Question="Hvilket år blev Pluto besøgt af et rumfartøj?",
                         Answers={ "2006", "2012", "2009", "2015" },
                         CorrectAnswerIndex=3
                     },
                     new QuestionAndAnswer{
-                        Question="What was the name of the spacecraft that visited the planet?",
+                        Question="Hvad hed det rumfartøj, der besøgte planeten?",
                         Answers={ "New Horizons", "Voyeur 5", "Titanic 22", "Crazy Horse" },
                         CorrectAnswerIndex=0
                     },
                     new QuestionAndAnswer{
-                        Question="What is Pluto composed of?",
-                        Answers={ "Dirt", "Sugar", "Nitrogen Ice", "Salt", "Grass" },
+                        Question="Hvad består Pluto af?",
+                        Answers={ "Jord", "Sukker", "Nitrogen is", "Salt", "Græssletter" },
                         CorrectAnswerIndex=2
                     }
                 }
@@ -1292,7 +1292,7 @@ List<Planet> planets_hu = new List<Planet>()
          /// </summary>
             new Planet
             {
-                Name="Earth",
+                Name="Föld",
                 Distance_from_sun = 150000000,
                 Diameter= 12756,
                 Age=4500000000,
@@ -1314,7 +1314,7 @@ List<Planet> planets_hu = new List<Planet>()
                 },
                  Quests={
                     new QuestionAndAnswer{
-                        Question="How many moons does Earth have?",
+                        Question="Hány holdja van a Földnek?",
                         Answers={ "3", "7", "1", "4" },
                         CorrectAnswerIndex=2
                     },
