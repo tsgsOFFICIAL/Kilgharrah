@@ -1,4 +1,8 @@
-﻿using System.Net.WebSockets;
+﻿/*
+ * Example code for a WebSocketClient
+*/
+
+using System.Net.WebSockets;
 using System.Text;
 
 while (true)
