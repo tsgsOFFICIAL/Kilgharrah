@@ -23,7 +23,7 @@ static async Task Echo()
             Console.Write("Input message ('exit' to exit): ");
             string msg = Console.ReadLine();
 
-            if (msg == "exit")
+            if (msg == "close")
             {
                 break;
             }
