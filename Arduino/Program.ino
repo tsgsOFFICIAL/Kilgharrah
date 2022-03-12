@@ -1,4 +1,4 @@
-﻿#include <Stepper.h>
+#include <Stepper.h>
 
 // Pin connections:
 
@@ -8,6 +8,9 @@ const short IN2Pin = 3;
 const short IN3Pin = 4;
 const short IN4Pin = 5;
 const short stepsPerRevolution = 2048;
+
+// Create stepper object called 'stepper', note the pin order:
+Stepper stepper = Stepper(stepsPerRevolution, 2, 4, 3, 5);
 
 // UFO
 const short UFOPin1 = A0;
@@ -26,22 +29,13 @@ const short UranusLedPin = A10;
 const short NeptuneLedPin = A11;
 const short PlutoyLedPin = A12;
 
-// Wiring:
-// Pin 8 to IN1 on the ULN2003 driver
-// Pin 9 to IN2 on the ULN2003 driver
-// Pin 10 to IN3 on the ULN2003 driver
-// Pin 11 to IN4 on the ULN2003 driver
-
-// Create stepper object called 'stepper', note the pin order:
-Stepper stepper = Stepper(stepsPerRevolution, 2, 4, 3, 5);
-
 void setup() {
   // Max 15 RPM
-  stepper.setSpeed(5);
+  stepper.setSpeed(15);
 }
 
 void loop() {
-  moveUfo(100);
+  moveUfo(stepsPerRevolution);
   delay(1 * 1000);
 }
 

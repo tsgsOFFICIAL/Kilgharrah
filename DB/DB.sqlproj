@@ -58,6 +58,6 @@
     <Folder Include="Properties" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CreateDB.sql" />
+    <None Include="CreateTables.sql" />
   </ItemGroup>
 </Project>
