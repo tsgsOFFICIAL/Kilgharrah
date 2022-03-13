@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.IO.Ports;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,8 +22,9 @@ namespace WWW
         /// <summary>
         /// The TcpListener / WebSocketServer
         /// </summary>
-        public TcpListener listener { get; private set; }
-        
+        public TcpListener Listener { get; private set; }
+        public SerialPort SerialPort { get; private set; }
+
         /// <summary>
         /// Creates a new instance of the WebSocketServer class
         /// </summary>
@@ -30,7 +32,8 @@ namespace WWW
         {
             Ip = "127.0.0.1";
             Port = 8008;
-            listener = new TcpListener(IPAddress.Parse(Ip), Port);
+            Listener = new TcpListener(IPAddress.Parse(Ip), Port);
+            SerialPort = new SerialPort("COM5", 9600);
         }
 
         /// <summary>
@@ -41,7 +44,8 @@ namespace WWW
         {
             try
             {
-                listener.Start();
+                Listener.Start();
+                SerialPort.Open();
                 Listen();
             }
             catch (Exception)
@@ -55,7 +59,8 @@ namespace WWW
         {
             try
             {
-                listener.Stop();
+                Listener.Stop();
+                SerialPort.Close();
 
                 if (restart)
                 {
@@ -76,7 +81,7 @@ namespace WWW
         {
             while (true)
             {
-                TcpClient client = listener.AcceptTcpClient();
+                TcpClient client = Listener.AcceptTcpClient();
 
                 Console.WriteLine("A client connected.");
 
@@ -162,9 +167,11 @@ namespace WWW
                                 case "moveUfoToMars":
                                     Console.WriteLine("Arduino");
                                     // SERIAL TIL Arduino
+                                    SerialPort.Write("moveUfoToMars");
                                     break;
                                 default:
-                                    Console.WriteLine($"Message Recieved: \"{text}\"");
+                                    SerialPort.Write(text);
+                                    //Console.WriteLine($"Message Recieved: \"{text}\"");
                                     break;
                             }
 
