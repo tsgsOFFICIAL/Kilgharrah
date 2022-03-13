@@ -18,8 +18,10 @@ CREATE TABLE TranslatedPlanets(
 	PRIMARY KEY(id, lang)
 );
 
--- TranslationText holds general text & all translations
+-- TranslationText holds general text translations
 CREATE TABLE TranslationText(
-	id SERIAL NOT NULL UNIQUE,
-
+	id SERIAL NOT NULL UNIQUE PRIMARY KEY,
+	da TEXT NOT NULL,
+	en TEXT NOT NULL,
+	hu TEXT NOT NULL
 );
