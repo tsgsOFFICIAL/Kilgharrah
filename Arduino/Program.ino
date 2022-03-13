@@ -122,7 +122,6 @@ void loop() {
 
       turnOffPlanets();
       moveUfo(stepsToTake);
-      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToMercury")
     {
@@ -137,7 +136,6 @@ void loop() {
       turnOffPlanets();
       moveUfo(stepsToTake);
       turnOnPlanet(PlanetLeds[0]);
-      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToVenus")
     {
@@ -152,7 +150,6 @@ void loop() {
       turnOffPlanets();
       moveUfo(stepsToTake);
       turnOnPlanet(PlanetLeds[1]);
-      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToEarth")
     {
@@ -167,7 +164,6 @@ void loop() {
       turnOffPlanets();
       moveUfo(stepsToTake);
       turnOnPlanet(PlanetLeds[2]);
-      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToMars")
     {
@@ -182,7 +178,6 @@ void loop() {
       turnOffPlanets();
       moveUfo(stepsToTake);
       turnOnPlanet(PlanetLeds[3]);
-      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToJupiter")
     {
@@ -197,7 +192,6 @@ void loop() {
       turnOffPlanets();
       moveUfo(stepsToTake);
       turnOnPlanet(PlanetLeds[4]);
-      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToSaturn")
     {
@@ -212,7 +206,6 @@ void loop() {
       turnOffPlanets();
       moveUfo(stepsToTake);
       turnOnPlanet(PlanetLeds[5]);
-      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToUranus")
     {
@@ -227,7 +220,6 @@ void loop() {
       turnOffPlanets();
       moveUfo(stepsToTake);
       turnOnPlanet(PlanetLeds[6]);
-      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToNeptune")
     {
@@ -242,7 +234,6 @@ void loop() {
       turnOffPlanets();
       moveUfo(stepsToTake);
       turnOnPlanet(PlanetLeds[7]);
-      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToPluto")
     {
@@ -257,7 +248,6 @@ void loop() {
       turnOffPlanets();
       moveUfo(stepsToTake);
       turnOnPlanet(PlanetLeds[8]);
-      CurrentPosition += stepsToTake;
     }
   }
   else
@@ -288,7 +278,91 @@ void loop() {
 // stepsToTake = How many steps to take, negative values is reverse
 void moveUfo(int stepsToTake)
 {
+  // Blink the UFO Leds in a circular motion twice
+  for (int i = 0; i < 2; i++)
+  {
+    for (int j = 0; j < sizeof(UfoLeds); j++)
+    {
+      if (j == 3)
+      {
+        analogWrite(UfoLeds[j], 0);
+        delay(150);
+      }
+      else
+      {
+        analogWrite(UfoLeds[j], 0);
+        delay(150);
+        analogWrite(UfoLeds[j + 1], 255);
+        delay(150);
+      }
+    }
+  }
+  /*
+  for (int i = 0; i < sizeof(UfoLeds); i++)
+  {
+    if (i == 3)
+    {
+      analogWrite(UfoLeds[i], 0);
+      delay(150);
+    }
+    else
+    {
+      analogWrite(UfoLeds[i], 0);
+      delay(150);
+      analogWrite(UfoLeds[i + 1], 255);
+      delay(150);
+    }
+  }
+  */
+  
+  int stepsPerRound = 50;
+
+  while (stepsToTake > stepsPerRound)
+  {
+    stepper.step(stepsPerRound);
+    stepsToTake -= stepsPerRound;
+    
+    CurrentPosition += stepsPerRound;
+    
+    for (int i = 0; i < sizeof(UfoLeds); i++)
+    {
+      if (i == 3)
+      {
+        analogWrite(UfoLeds[i], 0);
+        delay(150);
+      }
+      else
+      {
+        analogWrite(UfoLeds[i], 0);
+        delay(150);
+        analogWrite(UfoLeds[i + 1], 255);
+        delay(150);
+      }
+    }
+  }
+
   stepper.step(stepsToTake);
+  CurrentPosition += stepsToTake;
+  
+  // Blink the UFO Leds in a circular motion twice
+  for (int i = 0; i < 2; i++)
+  {
+    for (int j = 0; j < sizeof(UfoLeds); j++)
+    {
+      if (j == 3)
+      {
+        analogWrite(UfoLeds[j], 0);
+        delay(150);
+      }
+      else
+      {
+        analogWrite(UfoLeds[j], 0);
+        delay(150);
+        analogWrite(UfoLeds[j + 1], 255);
+        delay(150);
+      }
+    }
+  }
 }
 
 void turnOnPlanet(short planetPin)
