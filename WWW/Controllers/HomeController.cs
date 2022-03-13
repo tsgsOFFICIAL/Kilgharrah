@@ -8,7 +8,6 @@ namespace WWW.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IConfiguration configuration;
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -17,7 +16,7 @@ namespace WWW.Controllers
 
         public IActionResult Index()
         {
-            DBManager dbManager = new DBManager(configuration);
+            APIManager apiManager = new APIManager();
             return View();
         }
 
