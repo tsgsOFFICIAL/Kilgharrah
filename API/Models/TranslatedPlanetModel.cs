@@ -1,6 +1,6 @@
 ﻿namespace API.Models
 {
-    public class TranslatedPlanets
+    public class TranslatedPlanetModel
     {
         /// <summary>
         /// Id is for the DataBase Id.

@@ -1,6 +1,6 @@
 ﻿namespace API.Models
 {
-    public class Planet
+    public class PlanetModel_Obsolete
     {
         /// <summary>
         /// Id is the Id for the DataBase.

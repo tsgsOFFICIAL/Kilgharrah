@@ -5,8 +5,7 @@ CREATE TABLE Planets(
 	distance_from_sun INT NOT NULL,
 	diameter INT NOT NULL,
 	rotation_period DOUBLE PRECISION NOT NULL,
-	orbital_period DOUBLE PRECISION NOT NULL,
-	has_life BOOL NOT NULL
+	orbital_period DOUBLE PRECISION NOT NULL
 );
 
 -- TranslatedPlanets holds all translations for a planet

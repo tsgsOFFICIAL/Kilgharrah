@@ -25,9 +25,9 @@ namespace API.DAL
         /// Method for getting all planets and all the information.
         /// </summary>
         /// <returns></returns>
-        public List<Planet> GetPlanets()
+        public List<PlanetModel_Obsolete> GetPlanets()
         {
-            List<Planet> planets = new List<Planet>();
+            List<PlanetModel_Obsolete> planets = new List<PlanetModel_Obsolete>();
             string sql = "SELECT * FROM planets";
 
 
@@ -38,7 +38,7 @@ namespace API.DAL
                 {
                     while (reader.Read())
                     {
-                        Planet planet = new Planet();
+                        PlanetModel_Obsolete planet = new PlanetModel_Obsolete();
                         int i = 0;
 
                         // This loop gets all the properties from the DataBase and sets them to the object.
@@ -60,10 +60,10 @@ namespace API.DAL
         /// </summary>
         /// <param name="id"></param>
         /// <returns>This method returns a planet.</returns>
-        public Planet GetPlanet(int id)
+        public PlanetModel_Obsolete GetPlanet(int id)
         {
             string sql = $"SELECT * FROM Planets WHERE id = '{id}'";
-            Planet planet = new Planet();
+            PlanetModel_Obsolete planet = new PlanetModel_Obsolete();
 
             using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection))
             {
@@ -95,7 +95,7 @@ namespace API.DAL
         /// <returns>This method returns a single property as a string</returns>
         public string GetPlanetInfo(int id, string prop)
         {
-            Planet planet = GetPlanet(id);
+            PlanetModel_Obsolete planet = GetPlanet(id);
 
             return planet.GetType().GetProperty(prop).GetValue(planet, null).ToString();
         }
@@ -103,9 +103,9 @@ namespace API.DAL
         /// Get a list of all TranslationTexts
         /// </summary>
         /// <returns>This method returns a List of TranslationText</returns>
-        public List<TranslationText> GetTranslations()
+        public List<TranslationTextModel> GetTranslations()
         {
-            List<TranslationText> translations = new List<TranslationText>();
+            List<TranslationTextModel> translations = new List<TranslationTextModel>();
             string sql = "SELECT * FROM TranslationText";
 
             using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection))
@@ -114,7 +114,7 @@ namespace API.DAL
                 {
                     while (reader.Read())
                     {
-                        TranslationText translationText = new TranslationText();
+                        TranslationTextModel translationText = new TranslationTextModel();
                         int i = 0;
 
                         // This loop gets all the properties from the DataBase and sets them to the object.

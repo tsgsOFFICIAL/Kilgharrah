@@ -1,4 +1,4 @@
-﻿namespace WWW.Models
+﻿namespace API.Models
 {
     public class PlanetModel
     {
