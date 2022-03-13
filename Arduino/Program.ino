@@ -136,7 +136,7 @@ void loop() {
 
       turnOffPlanets();
       moveUfo(stepsToTake);
-      turnOnPlanet(PlanetLeds[0];
+      turnOnPlanet(PlanetLeds[0]);
       CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToVenus")
@@ -151,7 +151,7 @@ void loop() {
       
       turnOffPlanets();
       moveUfo(stepsToTake);
-      turnOnPlanet(PlanetLeds[1];
+      turnOnPlanet(PlanetLeds[1]);
       CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToEarth")
@@ -166,7 +166,7 @@ void loop() {
       
       turnOffPlanets();
       moveUfo(stepsToTake);
-      turnOnPlanet(PlanetLeds[2];
+      turnOnPlanet(PlanetLeds[2]);
       CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToMars")
@@ -181,7 +181,7 @@ void loop() {
       
       turnOffPlanets();
       moveUfo(stepsToTake);
-      turnOnPlanet(PlanetLeds[3];
+      turnOnPlanet(PlanetLeds[3]);
       CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToJupiter")
@@ -196,7 +196,7 @@ void loop() {
       
       turnOffPlanets();
       moveUfo(stepsToTake);
-      turnOnPlanet(PlanetLeds[4];
+      turnOnPlanet(PlanetLeds[4]);
       CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToSaturn")
@@ -211,7 +211,7 @@ void loop() {
       
       turnOffPlanets();
       moveUfo(stepsToTake);
-      turnOnPlanet(PlanetLeds[5];
+      turnOnPlanet(PlanetLeds[5]);
       CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToUranus")
@@ -226,7 +226,7 @@ void loop() {
       
       turnOffPlanets();
       moveUfo(stepsToTake);
-      turnOnPlanet(PlanetLeds[6];
+      turnOnPlanet(PlanetLeds[6]);
       CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToNeptune")
@@ -241,7 +241,7 @@ void loop() {
       
       turnOffPlanets();
       moveUfo(stepsToTake);
-      turnOnPlanet(PlanetLeds[7];
+      turnOnPlanet(PlanetLeds[7]);
       CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToPluto")
@@ -256,7 +256,7 @@ void loop() {
       
       turnOffPlanets();
       moveUfo(stepsToTake);
-      turnOnPlanet(PlanetLeds[8];
+      turnOnPlanet(PlanetLeds[8]);
       CurrentPosition += stepsToTake;
     }
   }
