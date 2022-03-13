@@ -36,6 +36,7 @@ namespace API.Controllers
         {
             return man.GetPlanetInfo(id, prop);
         }
+
         /*
         // GET: api/<PlanetController>
         [HttpGet]

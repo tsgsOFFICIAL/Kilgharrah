@@ -9,14 +9,14 @@
         /// <summary>
         /// The text in danish
         /// </summary>
-        public string daText { get; private set; }
+        public string da { get; private set; }
         /// <summary>
         /// The text in english
         /// </summary>
-        public string enText { get; private set; }
+        public string en { get; private set; }
         /// <summary>
         /// The text in hungarian
         /// </summary>
-        public string huText { get; private set; }
+        public string hu { get; private set; }
     }
 }
