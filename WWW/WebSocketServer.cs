@@ -11,7 +11,7 @@ namespace WWW
         public int Port { get; private set; }
 
         TcpListener listener;
-
+        
         public WebSocketServer()
         {
             Ip = "127.0.0.1";
@@ -23,28 +23,31 @@ namespace WWW
         /// Starts the listener
         /// </summary>
         /// <returns>This method returns a boolean value indicating the success state of the method call</returns>
-        public bool Start()
+        public void Open()
         {
             try
             {
                 listener.Start();
                 Listen();
-                return true;
             }
             catch (Exception)
-            {
-                return false;
-            }
+            { }
         }
         /// <summary>
         /// Stops the listener
         /// </summary>
         /// <returns>This method returns a boolean value indicating the success state of the method call</returns>
-        public bool Stop()
+        public bool Close(bool restart = false)
         {
             try
             {
                 listener.Stop();
+
+                if (restart)
+                {
+                    Open();
+                }
+
                 return true;
             }
             catch (Exception)
@@ -139,7 +142,7 @@ namespace WWW
                             switch (text)
                             {
                                 case "exit":
-                                    listener.Stop();
+                                    Close(true);
                                     Console.WriteLine("Connection ended, waiting for a new connection...");
                                     break;
                                 case "moveUfoToMars":
