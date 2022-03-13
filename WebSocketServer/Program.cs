@@ -101,6 +101,10 @@ while (true)
                     case "exit":
                         Console.WriteLine("Connection ended, waiting for a new connection...");
                         break;
+                    case "moveUfoToMars":
+                        Console.WriteLine("Arduino");
+                        // SERIAL TIL Arduino
+                        break;
                     default:
                         Console.WriteLine($"Message Recieved: \"{text}\"");
                         break;
