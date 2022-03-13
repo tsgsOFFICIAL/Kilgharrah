@@ -278,6 +278,8 @@ void loop() {
 // stepsToTake = How many steps to take, negative values is reverse
 void moveUfo(int stepsToTake)
 {
+  int stepsPerRound = 50;
+  
   // Blink the UFO Leds in a circular motion twice
   for (int i = 0; i < 2; i++)
   {
@@ -297,25 +299,6 @@ void moveUfo(int stepsToTake)
       }
     }
   }
-  /*
-  for (int i = 0; i < sizeof(UfoLeds); i++)
-  {
-    if (i == 3)
-    {
-      analogWrite(UfoLeds[i], 0);
-      delay(150);
-    }
-    else
-    {
-      analogWrite(UfoLeds[i], 0);
-      delay(150);
-      analogWrite(UfoLeds[i + 1], 255);
-      delay(150);
-    }
-  }
-  */
-  
-  int stepsPerRound = 50;
 
   while (stepsToTake > stepsPerRound)
   {
