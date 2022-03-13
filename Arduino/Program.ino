@@ -1,7 +1,6 @@
 #include <Stepper.h>
 
-// Pin connections:
-
+// Pin connections
 // Stepper motor & driver
 const short IN1Pin = 2;
 const short IN2Pin = 3;
@@ -44,6 +43,7 @@ const short PlutoPosition = 32595;
 // Amount of steps taken
 int CurrentPosition = 0;
 
+// It takes 5.859375ms per step on the motor
 const double msPerStep = 5.859375;
 
 void setup() {
@@ -65,13 +65,14 @@ void loop() {
     {
       int stepsToTake = SunPosition - CurrentPosition;
       int arrivalTime = msPerStep * stepsToTake;
-
+      
       if (arrivalTime < 0)
       {
         arrivalTime = arrivalTime * -1;
       }
       
       moveUfo(stepsToTake);
+      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToMercury")
     {
@@ -84,6 +85,7 @@ void loop() {
       }
       
       moveUfo(stepsToTake);
+      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToVenus")
     {
@@ -96,6 +98,7 @@ void loop() {
       }
       
       moveUfo(stepsToTake);
+      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToEarth")
     {
@@ -108,6 +111,7 @@ void loop() {
       }
       
       moveUfo(stepsToTake);
+      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToMars")
     {
@@ -120,6 +124,7 @@ void loop() {
       }
       
       moveUfo(stepsToTake);
+      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToJupiter")
     {
@@ -132,6 +137,7 @@ void loop() {
       }
       
       moveUfo(stepsToTake);
+      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToSaturn")
     {
@@ -144,6 +150,7 @@ void loop() {
       }
       
       moveUfo(stepsToTake);
+      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToUranus")
     {
@@ -156,6 +163,7 @@ void loop() {
       }
       
       moveUfo(stepsToTake);
+      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToNeptune")
     {
@@ -168,6 +176,7 @@ void loop() {
       }
       
       moveUfo(stepsToTake);
+      CurrentPosition += stepsToTake;
     }
     else if (incomingString == "moveToPluto")
     {
@@ -180,6 +189,7 @@ void loop() {
       }
       
       moveUfo(stepsToTake);
+      CurrentPosition += stepsToTake;
     }
   }
 }
