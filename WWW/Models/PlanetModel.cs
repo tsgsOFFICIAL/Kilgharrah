@@ -1,6 +1,6 @@
 ﻿namespace WWW.Models
 {
-    public class Planet
+    public class PlanetModel
     {
     }
 }

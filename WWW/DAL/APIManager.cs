@@ -23,25 +23,25 @@ namespace WWW.DAL
         /// Get a list of all planets
         /// </summary>
         /// <returns>This method a List of Planets </returns>
-        public async Task<List<Planet>> GetPlanets()
+        public async Task<List<PlanetModel>> GetPlanets()
         {
             string json = await _client.GetStringAsync($"{_client.BaseAddress}/planets");
             
-            List<Planet>? planets = JsonSerializer.Deserialize<List<Planet>>(json);
+            List<PlanetModel>? planets = JsonSerializer.Deserialize<List<PlanetModel>>(json);
 
-            return planets ?? new List<Planet>();
+            return planets ?? new List<PlanetModel>();
         }
         /// <summary>
         /// Get a list of all translations, in all languages available
         /// </summary>
         /// <returns>This method returns a list of TranslationText</returns>
-        public async Task<List<TranslationText>> GetTranslation()
+        public async Task<List<TranslationTextModel>> GetTranslation()
         {
             string json = await _client.GetStringAsync($"{_client.BaseAddress}/translations");
 
-            List<TranslationText>? text = JsonSerializer.Deserialize<List<TranslationText>>(json);
+            List<TranslationTextModel>? text = JsonSerializer.Deserialize<List<TranslationTextModel>>(json);
 
-            return text ?? new List<TranslationText>();
+            return text ?? new List<TranslationTextModel>();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WWW.DAL
 {
-    public class TranslationText
+    public class TranslationTextModel
     {
         /// <summary>
         /// The id from the database
