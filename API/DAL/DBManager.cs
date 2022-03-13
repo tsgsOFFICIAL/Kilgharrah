@@ -87,11 +87,49 @@ namespace API.DAL
             }
             return planet;
         }
+        /// <summary>
+        /// Get a single property from a single planet
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="prop"></param>
+        /// <returns>This method returns a single property as a string</returns>
         public string GetPlanetInfo(int id, string prop)
         {
             Planet planet = GetPlanet(id);
 
             return planet.GetType().GetProperty(prop).GetValue(planet, null).ToString();
+        }
+        /// <summary>
+        /// Get a list of all TranslationTexts
+        /// </summary>
+        /// <returns>This method returns a List of TranslationText</returns>
+        public List<TranslationText> GetTranslations()
+        {
+            List<TranslationText> translations = new List<TranslationText>();
+            string sql = "SELECT * FROM TranslationText";
+
+            using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection))
+            {
+                using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        TranslationText translationText = new TranslationText();
+                        int i = 0;
+
+                        // This loop gets all the properties from the DataBase and sets them to the object.
+                        foreach (PropertyInfo property in translationText.GetType().GetProperties().Where(PropInfo => !PropInfo.GetGetMethod().GetParameters().Any()))
+                        {
+                            property.SetValue(translationText, reader.GetValue(i++));
+                            //Console.WriteLine($"{p.Name}: \"{p.GetValue(planet, null)}\"");
+                        }
+
+                        translations.Add(translationText);
+                    }
+
+                    return translations;
+                }
+            }
         }
     }
 }

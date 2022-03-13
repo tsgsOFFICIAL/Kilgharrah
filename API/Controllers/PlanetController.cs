@@ -1,5 +1,4 @@
 ﻿using API.DAL; // API is our project.
-using API.Models;
 using Microsoft.AspNetCore.Mvc; // AspNetCore is a web framework.
 using System.Text.Json;
 
