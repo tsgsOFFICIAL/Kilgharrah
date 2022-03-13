@@ -17,3 +17,11 @@ CREATE TABLE TranslatedPlanets(
 	description_json TEXT NOT NULL,
 	PRIMARY KEY(id, lang)
 );
+
+-- TranslationText holds general text translations
+CREATE TABLE TranslationText(
+	id SERIAL NOT NULL UNIQUE PRIMARY KEY,
+	da TEXT NOT NULL,
+	en TEXT NOT NULL,
+	hu TEXT NOT NULL
+);
