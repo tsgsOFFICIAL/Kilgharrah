@@ -1,5 +1,4 @@
 using WWW;
-using System.Diagnostics;
 
 WebSocketServer ws = new WebSocketServer();
 

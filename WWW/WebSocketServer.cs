@@ -5,13 +5,27 @@ using System.Text.RegularExpressions;
 
 namespace WWW
 {
+    /// <summary>
+    /// The WebSocketServer handles a connection via a websocket, a client can be used for connecting.
+    /// </summary>
     public class WebSocketServer
     {
+        /// <summary>
+        /// The IP of the server
+        /// </summary>
         public string Ip { get; private set; }
+        /// <summary>
+        /// The Port of the server
+        /// </summary>
         public int Port { get; private set; }
-
-        TcpListener listener;
+        /// <summary>
+        /// The TcpListener / WebSocketServer
+        /// </summary>
+        public TcpListener listener { get; private set; }
         
+        /// <summary>
+        /// Creates a new instance of the WebSocketServer class
+        /// </summary>
         public WebSocketServer()
         {
             Ip = "127.0.0.1";
