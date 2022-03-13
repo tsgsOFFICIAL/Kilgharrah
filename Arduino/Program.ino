@@ -11,6 +11,29 @@ const short stepsPerRevolution = 2048;
 // Create stepper object called 'stepper', note the pin order:
 Stepper stepper = Stepper(stepsPerRevolution, 2, 4, 3, 5);
 
+short UfoLeds[] =
+{
+  A0,
+  A1,
+  A2,
+  A3
+};
+
+short Planets[] =
+{
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  A12
+};
+
+/*
+
 // UFO
 const short UFOPin1 = A0;
 const short UFOPin2 = A1;
@@ -26,7 +49,8 @@ const short JupiterLedPin = A8;
 const short SaturnLedPin = A9;
 const short UranusLedPin = A10;
 const short NeptuneLedPin = A11;
-const short PlutoyLedPin = A12;
+const short PlutoLedPin = A12;
+*/
 
 // Steps from the sun
 const short SunPosition = 0;
@@ -49,6 +73,18 @@ const double msPerStep = 5.859375;
 void setup() {
   // Max 15 RPM @ 5V
   stepper.setSpeed(15);
+
+  // Set all planets as output
+  for (int i = 0; i < sizeof(Planets); i++)
+  {
+    pinMode(Planets[i], OUTPUT);
+  }
+
+  // Set all UFO Leds as output
+  for (int i = 0; i < sizeof(UfoLeds); i++)
+  {
+    pinMode(UfoLeds[i], OUTPUT);
+  }
 }
 
 void loop() {
@@ -58,8 +94,8 @@ void loop() {
     String incomingString = Serial.readString(); // Read the incoming string
     
     // prints the received data
-    Serial.print("I received: ");
-    Serial.println(incomingString);
+    //Serial.print("I received: ");
+    //Serial.println(incomingString);
 
     if (incomingString == "moveToSun")
     {
@@ -190,6 +226,29 @@ void loop() {
       
       moveUfo(stepsToTake);
       CurrentPosition += stepsToTake;
+    }
+  }
+  else
+  {
+    // Make the UFO Led's pulsate
+    for (int i = 0; i < 256; i++)
+    {
+      analogWrite(UfoLeds[0], i);
+      analogWrite(UfoLeds[1], i);
+      analogWrite(UfoLeds[2], i);
+      analogWrite(UfoLeds[3], i);
+
+      delay(1000/256);
+    }
+
+    for (int i = 255; i >= 0; i--)
+    {
+      analogWrite(UfoLeds[0], i);
+      analogWrite(UfoLeds[1], i);
+      analogWrite(UfoLeds[2], i);
+      analogWrite(UfoLeds[3], i);
+
+      delay(1000/256);
     }
   }
 }
