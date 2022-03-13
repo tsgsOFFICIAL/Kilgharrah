@@ -279,6 +279,7 @@ void loop() {
 void moveUfo(int stepsToTake)
 {
   int stepsPerRound = 50;
+  int delayTime = 150;
   
   // Blink the UFO Leds in a circular motion twice
   for (int i = 0; i < 2; i++)
@@ -288,14 +289,14 @@ void moveUfo(int stepsToTake)
       if (j == 3)
       {
         analogWrite(UfoLeds[j], 0);
-        delay(150);
+        delay(delayTime);
       }
       else
       {
         analogWrite(UfoLeds[j], 0);
-        delay(150);
+        delay(delayTime);
         analogWrite(UfoLeds[j + 1], 255);
-        delay(150);
+        delay(delayTime);
       }
     }
   }
@@ -312,14 +313,14 @@ void moveUfo(int stepsToTake)
       if (i == 3)
       {
         analogWrite(UfoLeds[i], 0);
-        delay(150);
+        delay(delayTime);
       }
       else
       {
         analogWrite(UfoLeds[i], 0);
-        delay(150);
+        delay(delayTime);
         analogWrite(UfoLeds[i + 1], 255);
-        delay(150);
+        delay(delayTime);
       }
     }
   }
@@ -335,14 +336,14 @@ void moveUfo(int stepsToTake)
       if (j == 3)
       {
         analogWrite(UfoLeds[j], 0);
-        delay(150);
+        delay(delayTime);
       }
       else
       {
         analogWrite(UfoLeds[j], 0);
-        delay(150);
+        delay(delayTime);
         analogWrite(UfoLeds[j + 1], 255);
-        delay(150);
+        delay(delayTime);
       }
     }
   }
