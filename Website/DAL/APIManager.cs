@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
-using WWW.Models;
+using Website.Models;
 
-namespace WWW.DAL
+namespace Website.DAL
 {
     /// <summary>
     /// Manages the connection to the API
@@ -13,7 +13,7 @@ namespace WWW.DAL
         /// </summary>
         private readonly HttpClient _client = new HttpClient();
         //private readonly string _baseAdress = "https://localhost:7156/api/";
-        private readonly string _baseAdress = "https://10.108.149.15:5000/api/";
+        private readonly string _baseAdress = "http://10.108.149.15:5000/api/";
         /// <summary>
         /// Creates a new instance of the APIManager
         /// </summary>
