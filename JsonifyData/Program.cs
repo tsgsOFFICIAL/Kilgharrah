@@ -1913,15 +1913,22 @@ List<Planet> planets_hu = new List<Planet>()
         };
 
 #endregion
+
+
+
+
 Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine($"{JsonSerializer.Serialize(planets_en)}");
+File.WriteAllText(@$"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\Planets\en.json", JsonSerializer.Serialize(planets_en, new JsonSerializerOptions() { WriteIndented = true }));
 Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine($"{JsonSerializer.Serialize(planets_da)}");
+File.WriteAllText(@$"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\Planets\da.json", JsonSerializer.Serialize(planets_da, new JsonSerializerOptions() { WriteIndented = true }));
 Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine($"{JsonSerializer.Serialize(planets_hu)}");
+File.WriteAllText(@$"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\Planets\hu.json", JsonSerializer.Serialize(planets_hu, new JsonSerializerOptions() { WriteIndented = true }));
 Console.ReadKey();
 
 

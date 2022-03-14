@@ -33,7 +33,7 @@ namespace WWW
             Ip = "127.0.0.1";
             Port = 8008;
             Listener = new TcpListener(IPAddress.Parse(Ip), Port);
-            SerialPort = new SerialPort("COM5", 9600);
+            SerialPort = new SerialPort("COM4", 9600);
         }
 
         /// <summary>

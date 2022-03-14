@@ -5,12 +5,12 @@ CREATE TABLE Planets(
 	distance_from_sun BIGINT NOT NULL,
 	diameter INT NOT NULL,
 	rotation_period INT NOT NULL,
-	rotation_speed FLOAT(24) NOT NULL,
+	rotation_speed DOUBLE PRECISION NOT NULL,
 	orbital_period INT NOT NULL,
 	moons TINYINT NOT NULL,
-	mass FLOAT(53) NOT NULL,
+	mass DECIMAL(53) NOT NULL,
 	highest_temp INT NOT NULL,
-	lowest_temp INT NOT NULL,
+	lowest_temp INT NOT NULL
 );
 
 -- TranslatedPlanets holds all translations for a planet

@@ -17,7 +17,7 @@ namespace WWW.DAL
         /// </summary>
         public APIManager()
         {
-            _client.BaseAddress = new Uri("10.108.149.14/api");
+            //_client.BaseAddress = new Uri("10.108.149.14/api");
         }
         /// <summary>
         /// Get a list of all planets
