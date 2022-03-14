@@ -1,9 +1,9 @@
 using WWW;
 
-WebSocketServer ws = new WebSocketServer();
+//WebSocketServer ws = new WebSocketServer();
 
-Thread wsMan = new Thread(ws.Open); // Make a new thread, with the websocket as an argument
-wsMan.Start(); // Start the new thread
+//Thread wsMan = new Thread(ws.Open); // Make a new thread, with the websocket as an argument
+//wsMan.Start(); // Start the new thread
 
 var builder = WebApplication.CreateBuilder(args);
 

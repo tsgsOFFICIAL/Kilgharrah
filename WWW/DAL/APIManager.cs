@@ -12,6 +12,8 @@ namespace WWW.DAL
         /// The HttpClient
         /// </summary>
         private readonly HttpClient _client = new HttpClient();
+        private readonly string _baseAdress = "https://localhost:7156/api/";
+        //private readonly string _baseAdress = "https://10.108.149.15:7156/api/";
         /// <summary>
         /// Creates a new instance of the APIManager
         /// </summary>
@@ -25,7 +27,7 @@ namespace WWW.DAL
         /// <returns>This method a List of Planets </returns>
         public async Task<List<PlanetModel>> GetPlanets()
         {
-            string json = await _client.GetStringAsync("10.108.149.15/api/Planet/GetPlanets/All");
+            string json = await _client.GetStringAsync($"{_baseAdress}Planet/GetPlanets/All");
             
             List<PlanetModel>? planets = JsonSerializer.Deserialize<List<PlanetModel>>(json);
 
@@ -37,7 +39,7 @@ namespace WWW.DAL
         /// <returns>This method returns a list of TranslationText</returns>
         public async Task<List<TranslationTextModel>> GetTranslation()
         {
-            string json = await _client.GetStringAsync("10.108.149.15/api/Translations/GetTranslations/All");
+            string json = await _client.GetStringAsync($"{_baseAdress}Translations/GetTranslations/All");
 
             List<TranslationTextModel>? text = JsonSerializer.Deserialize<List<TranslationTextModel>>(json);
 
