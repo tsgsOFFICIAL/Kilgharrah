@@ -17,7 +17,7 @@ namespace WWW.DAL
         /// </summary>
         public APIManager()
         {
-            //_client.BaseAddress = new Uri("10.108.149.14/api");
+
         }
         /// <summary>
         /// Get a list of all planets
@@ -25,7 +25,7 @@ namespace WWW.DAL
         /// <returns>This method a List of Planets </returns>
         public async Task<List<PlanetModel>> GetPlanets()
         {
-            string json = await _client.GetStringAsync($"{_client.BaseAddress}/planets");
+            string json = await _client.GetStringAsync("10.108.149.15/api/Planet/GetPlanets/All");
             
             List<PlanetModel>? planets = JsonSerializer.Deserialize<List<PlanetModel>>(json);
 
@@ -37,7 +37,7 @@ namespace WWW.DAL
         /// <returns>This method returns a list of TranslationText</returns>
         public async Task<List<TranslationTextModel>> GetTranslation()
         {
-            string json = await _client.GetStringAsync($"{_client.BaseAddress}/translations");
+            string json = await _client.GetStringAsync("10.108.149.15/api/Translations/GetTranslations/All");
 
             List<TranslationTextModel>? text = JsonSerializer.Deserialize<List<TranslationTextModel>>(json);
 
