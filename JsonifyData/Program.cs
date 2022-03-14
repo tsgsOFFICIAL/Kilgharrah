@@ -11,6 +11,136 @@ using JsonifyData;
 List<Planet> planets_en = new List<Planet>()
         {
          /// <summary>
+         /// Mercury.
+         /// </summary>
+            new Planet
+            {
+                Name="Mercury",
+                Distance_from_sun = 47000000,
+                Diameter= 4878 ,
+                Age=4600000000,
+                Rotation_period=84450,
+                Rotation_speed=10892 ,
+                Orbital_period=88,
+                Moons=0,
+                Mass=3.301*Math.Pow(10,23),
+                Highest_temp=430,
+                Lowest_temp=-180,
+                Statements={
+                    "Mercury is one of the smallest planets in the Solar System, and it is the closest to the Sun",
+                    "Mercury orbits around the Sun in 88 Days, the shortest of all the Sun's planets.",
+                    "It is named after the Roman god of commerce, and the messenger of the gods, Mercurius.",
+                    "It's surface appears heavily cratered and similar in appearance to the Moon's.",
+                    "Despite the small size, Mercury has a significant, and apparently global magnetic field.",
+                    "It has almost no atmosphere to retain heat, the temperature ranges from -173 °C to 427 °C.",
+                    "The planet experienced a spacecraft crash, back in the 30 of April, 2015; when NASA intentionally let a spacecraft, named &#34;MESSENGER&#34; crash into it."
+                },
+                 Quests={
+                    new QuestionAndAnswer{
+                        Question="How long does it take Mercury to orbitate one round of the Sun?",
+                        Answers={ "10 days", "88 days", "200 days", "365 days" },
+                        CorrectAnswerIndex=1
+                    },
+                    new QuestionAndAnswer{
+                        Question="Who was the planet Mercury named after?",
+                        Answers={ "It isn’t named after anybody", "The Greek god, Hermes", "The Roman god, Mercurius"},
+                        CorrectAnswerIndex =2
+                    },
+                    new QuestionAndAnswer{
+                        Question="What is the maximum temperature on Mercury?",
+                        Answers={ "166 °C", "512 °C", "427 °C", "400 °C" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="What is the minimum temperature on Mercury?",
+                        Answers={ "-173 °C", "0 °C", "-100 °C", "-386 °C" },
+                        CorrectAnswerIndex=0
+                    },
+                    new QuestionAndAnswer{
+                        Question="What was the name of the space probe that NASA crashed on Mercury?",
+                        Answers={ "MESSAGE", "MESSENGER", "MESSAGES", "MESS" },
+                        CorrectAnswerIndex=1
+                    },
+                    new QuestionAndAnswer{
+                        Question="What does the surface of the planet Mercury look like?",
+                        Answers={ "Smooth", "Small Hills", "Heavily Cratered", "Covered by water" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Is it true that Mercury is the closest planet to the Sun?",
+                        Answers={ "Yes", "No"},
+                        CorrectAnswerIndex=0
+                    },
+
+                }
+            },
+
+         /// <summary>
+         /// Venus.
+         /// </summary>
+            new Planet
+            {
+                Name="Venus",
+                Distance_from_sun = 108208930 ,
+                Diameter= 12104 ,
+                Age=4600000000,
+                Rotation_period=348480,
+                Rotation_speed=6.52,
+                Orbital_period=225 ,
+                Moons=0,
+                Mass=4867*Math.Pow(10,24),
+                Highest_temp=475,
+                Lowest_temp=-173,
+                Statements={
+                    "Venus is the second closest planet from the Sun.",
+                    "It's named after the Roman goddess of love and beauty, Venus.",
+                    "Venus orbits around the Sun in 225 days.",
+                    "Venus is the brightest natural object in the sky, after the Moon, it can cast shadows and can be visible to the naked eye in broad daylight.",
+                    "Like Mercury, Venus does not have any moons also.",
+                    "Though Mercury is closer to the Sun, Venus has the hottest surface of any planet in the Solar System, with the max temperature around 474 °C.",
+                    "It's size and mass are similar to the Earth, often described as &#34;Earth's sister&#34;.",
+                    "It has an theory, which says out, that if Venus had any ocean or even water on it's land, it was evaporated by the heat, and because the lack of the magnetic field, the remaining free hydrogen was swept into interplanetary space by the solar wind."
+                },
+                 Quests={
+                    new QuestionAndAnswer{
+                        Question="What position does Venus have in the order of the planets when counting from the sun?",
+                        Answers={ "First", "Fourth", "Second", "Tenth" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Which god or goddess was the planet named after?",
+                        Answers={ "The roman goddess, Venus", "The roman goddess, Diana", "The greek goddess, Aphrodite", "The greek goddess, Artemis" },
+                        CorrectAnswerIndex =0
+                    },
+                    new QuestionAndAnswer{
+                        Question="How long does it take Venus to orbitate one round of the Sun?",
+                        Answers={ "112 days", "225 days", "256 days", "720 days" },
+                        CorrectAnswerIndex=1
+                    },
+                    new QuestionAndAnswer{
+                        Question="How many moons does Venus have?",
+                        Answers={ "2", "7", "0", "6" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="What is the maximum temperature on Venus?",
+                        Answers={ "1000 °C", "600 °C", "474 °C", "200 °C" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Is it true that Venus is one of the brightest natural objects in the Solar System?",
+                        Answers={ "Yes", "No"},
+                        CorrectAnswerIndex=0
+                    },
+                    new QuestionAndAnswer{
+                        Question="Why can we call Venus, as &#34;Earth's sister&#34;?",
+                        Answers={ "Because of Size and Mass are similar to Earth", "There aren't such a thing like &#34;Earth's sister&#34;"},
+                        CorrectAnswerIndex=0
+                    }
+                 }
+            },
+
+         /// <summary>
          /// Earth.
          /// </summary>
             new Planet
@@ -84,137 +214,7 @@ List<Planet> planets_en = new List<Planet>()
 
                 }
             },
-
-         /// <summary>
-         /// Mercury.
-         /// </summary>
-            new Planet
-            {
-                Name="Mercury",
-                Distance_from_sun = 47000000,
-                Diameter= 4878 ,
-                Age=4600000000,
-                Rotation_period=84450,
-                Rotation_speed=10892 ,
-                Orbital_period=88,
-                Moons=0,
-                Mass=3.301*Math.Pow(10,23),
-                Highest_temp=430,
-                Lowest_temp=-180,
-                Statements={
-                    "Mercury is one of the smallest planets in the Solar System, and it is the closest to the Sun",
-                    "Mercury orbits around the Sun in 88 Days, the shortest of all the Sun's planets.",
-                    "It is named after the Roman god of commerce, and the messenger of the gods, Mercurius.",
-                    "It's surface appears heavily cratered and similar in appearance to the Moon's.",
-                    "Despite the small size, Mercury has a significant, and apparently global magnetic field.",
-                    "It has almost no atmosphere to retain heat, the temperature ranges from -173 °C to 427 °C.",
-                    "The planet experienced a spacecraft crash, back in the 30 of April, 2015; when NASA intentionally let a spacecraft, named &#34;MESSENGER&#34; crash into it."
-                },
-                 Quests={
-                    new QuestionAndAnswer{
-                        Question="How long does it take Mercury to orbitate one round of the Sun?",
-                        Answers={ "10 days", "88 days", "200 days", "365 days" },
-                        CorrectAnswerIndex=1
-                    },
-                    new QuestionAndAnswer{
-                        Question="Who was the planet Mercury named after?",
-                        Answers={ "It isn’t named after anybody", "The Greek god, Hermes", "The Roman god, Mercurius"},
-                        CorrectAnswerIndex =2
-                    },
-                    new QuestionAndAnswer{
-                        Question="What is the maximum temperature on Mercury?",
-                        Answers={ "166 °C", "512 °C", "427 °C", "400 °C" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="What is the minimum temperature on Mercury?",
-                        Answers={ "-173 °C", "0 °C", "-100 °C", "-386 °C" },
-                        CorrectAnswerIndex=0
-                    },
-                    new QuestionAndAnswer{
-                        Question="What was the name of the space probe that NASA crashed on Mercury?",
-                        Answers={ "MESSAGE", "MESSENGER", "MESSAGES", "MESS" },
-                        CorrectAnswerIndex=1
-                    },
-                    new QuestionAndAnswer{
-                        Question="What does the surface of the planet Mercury look like?",
-                        Answers={ "Smooth", "Small Hills", "Heavily Cratered", "Covered by water" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Is it true that Mercury is the closest planet to the Sun?",
-                        Answers={ "Yes", "No"},
-                        CorrectAnswerIndex=0
-                    },
-
-                }
-            },
          
-         /// <summary>
-         /// Venus.
-         /// </summary>
-            new Planet
-            {
-                Name="Venus",
-                Distance_from_sun = 108208930 ,
-                Diameter= 12104 ,
-                Age=4600000000,
-                Rotation_period=348480,
-                Rotation_speed=6.52,
-                Orbital_period=225 ,
-                Moons=0,
-                Mass=4867*Math.Pow(10,24),
-                Highest_temp=475,
-                Lowest_temp=-173,
-                Statements={
-                    "Venus is the second closest planet from the Sun.",
-                    "It's named after the Roman goddess of love and beauty, Venus.",
-                    "Venus orbits around the Sun in 225 days.",
-                    "Venus is the brightest natural object in the sky, after the Moon, it can cast shadows and can be visible to the naked eye in broad daylight.",
-                    "Like Mercury, Venus does not have any moons also.",
-                    "Though Mercury is closer to the Sun, Venus has the hottest surface of any planet in the Solar System, with the max temperature around 474 °C.",
-                    "It's size and mass are similar to the Earth, often described as &#34;Earth's sister&#34;.",
-                    "It has an theory, which says out, that if Venus had any ocean or even water on it's land, it was evaporated by the heat, and because the lack of the magnetic field, the remaining free hydrogen was swept into interplanetary space by the solar wind."
-                },
-                 Quests={
-                    new QuestionAndAnswer{
-                        Question="What position does Venus have in the order of the planets when counting from the sun?",
-                        Answers={ "First", "Fourth", "Second", "Tenth" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Which god or goddess was the planet named after?",
-                        Answers={ "The roman goddess, Venus", "The roman goddess, Diana", "The greek goddess, Aphrodite", "The greek goddess, Artemis" },
-                        CorrectAnswerIndex =0
-                    },
-                    new QuestionAndAnswer{
-                        Question="How long does it take Venus to orbitate one round of the Sun?",
-                        Answers={ "112 days", "225 days", "256 days", "720 days" },
-                        CorrectAnswerIndex=1
-                    },
-                    new QuestionAndAnswer{
-                        Question="How many moons does Venus have?",
-                        Answers={ "2", "7", "0", "6" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="What is the maximum temperature on Venus?",
-                        Answers={ "1000 °C", "600 °C", "474 °C", "200 °C" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Is it true that Venus is one of the brightest natural objects in the Solar System?",
-                        Answers={ "Yes", "No"},
-                        CorrectAnswerIndex=0
-                    },
-                    new QuestionAndAnswer{
-                        Question="Why can we call Venus, as &#34;Earth's sister&#34;?",
-                        Answers={ "Because of Size and Mass are similar to Earth", "There aren't such a thing like &#34;Earth's sister&#34;"},
-                        CorrectAnswerIndex=0
-                    }
-                 }
-            },
-
          /// <summary>
          /// Mars.
          /// </summary>
@@ -648,6 +648,136 @@ List<Planet> planets_en = new List<Planet>()
 List<Planet> planets_da = new List<Planet>()
         {
          /// <summary>
+         /// Mercury.
+         /// </summary>
+            new Planet
+            {
+                Name="Merkur",
+                Distance_from_sun = 47000000,
+                Diameter= 4878 ,
+                Age=4600000000,
+                Rotation_period=84450,
+                Rotation_speed=10892 ,
+                Orbital_period=88,
+                Moons=0,
+                Mass=3.301*Math.Pow(10,23),
+                Highest_temp=430,
+                Lowest_temp=-180,
+                Statements={
+                    "Merkur er en af de mindste planeter i solsystemet, og den er tættest på Solen.",
+                    "Merkur kredser om Solen i løbet af 88 dage, hvilket er den korteste kredsløbsperiode af alle Solens planeter.",
+                    "Merkur er opkaldt efter den romerske handelsgud, og gudernes budbringer, Mercurius.",
+                    "Merkur overflade fremstår stærkt krateret og ligner Månens udseende.",
+                    "På trods af den lille størrelse har Merkur et betydeligt, og tilsyneladende globalt magnetfelt.",
+                    "Merkur har næsten ingen atmosfære til at holde på varmen, temperaturen varierer fra -173 °C til 427 °C.",
+                    "Merkur oplevede et rumfartøjsstyrt tilbage den 30. april 2015; da NASA med vilje lod et rumfartøj ved navn &#34;MESSENGER&#34; styrte ind i det."
+                },
+                 Quests={
+                    new QuestionAndAnswer{
+                        Question="Hvor lang tid tager det Merkur at kredse en omgang om Solen?",
+                        Answers={ "10 dage", "88 dage", "200 dage", "365 dage" },
+                        CorrectAnswerIndex=1
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hvem er planeten Mercur opkaldt efter?",
+                        Answers={ "Den er ikke opkaldt efter nogen", "Den græske gud, Hermes", "Den romerske gud Merkurius"},
+                        CorrectAnswerIndex =2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hvad er den højst målte temperatur på Merkur?",
+                        Answers={ "166 °C", "512 °C", "427 °C", "400 °C" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hvad er den laveste målte temperatur på Merkur?",
+                        Answers={ "-173 °C", "0 °C", "-100 °C", "-386 °C" },
+                        CorrectAnswerIndex=0
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hvad var navnet på den rumsonde, som NASA lod styrte ned på Merkur?",
+                        Answers={ "MESSAGE", "MESSENGER", "MESSAGES", "MESS" },
+                        CorrectAnswerIndex=1
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hvordan ser overfladen ud på planeten Merkur?",
+                        Answers={ "Glat", "Små bakker", "kraterfyldt", "Dækket af vand" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Er det sandt at Merkur er den planet som er tættest på solen?",
+                        Answers={ "Ja", "Nej"},
+                        CorrectAnswerIndex=0
+                    },
+
+                }
+            },
+
+         /// <summary>
+         /// Venus.
+         /// </summary>
+            new Planet
+            {
+                Name="Venus",
+                Distance_from_sun = 108208930 ,
+                Diameter= 12104 ,
+                Age=4600000000,
+                Rotation_period=348480,
+                Rotation_speed=6.52,
+                Orbital_period=225 ,
+                Moons=0,
+                Mass=4867*Math.Pow(10,24),
+                Highest_temp=475,
+                Lowest_temp=-173,
+                Statements={
+                    "Venus er den næst nærmeste planet fra Solen.",
+                    "Den er opkaldt efter den romerske gudinden for kærlighed og skønhed, Venus.",
+                    "Venus kredser om Solen på 225 dage.",
+                    "Venus er det lyseste naturlige objekt på himlen, kun overgået af solen og månen. Den kan det kaste skygger og kan være synligt med det blotte øje ved højlys dag.",
+                    "Ligesom Merkur har Venus heller ingen måner.",
+                    "Selvom Mercur er tættere på Solen, Så er det Venus som har den varmeste overflade af enhver planet i solsystemet, med en top temperatur omkring 474 °C.",
+                    "Dens størrelse og masse ligner Jordens, Derfor bliver Venus ofte betegnet som &#34;Jordens søster&#34;.",
+                    "Der er en teori, som siger, at hvis Venus engang havde et hav eller andet vand, så blev det fordampet af varmen, og på grund af manglen på magnetfeltet, blev den tilbageværende brint fejet ud i rummet af solvinden."
+                },
+                 Quests={
+                    new QuestionAndAnswer{
+                        Question="Hvilken position har Venus i planeternes rækkefølge, når man tæller fra solen?",
+                        Answers={ "Første", "Fjerde", "Anden", "Tiende" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hvilken gud, eller gudinde er planeten opkaldt efter?",
+                        Answers={ "Den romerske gudinde, Venus", "Den romerske gudinde, Diana", "Den græske gudinde, Afrodite", "Den græske gudinde, Artemis" },
+                        CorrectAnswerIndex =0
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hvor lang tid tager det Merkur at kredse en omgang om Solen?",
+                        Answers={ "112 dage", "225 dage", "256 dage", "720 dage" },
+                        CorrectAnswerIndex=1
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hvor mange måner har Venus?",
+                        Answers={ "2", "7", "0", "6" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hvad er den højst målte temperatur på Venus?",
+                        Answers={ "1000 °C", "600 °C", "474 °C", "200 °C" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Er det rigtigt, at Venus er et af de lyseste naturlige objekter i solsystemet?",
+                        Answers={ "Ja", "Nej"},
+                        CorrectAnswerIndex=0
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hvorfor kan vi kalde Venus for en &#34;Jordens søster&#34;?",
+                        Answers={ "På grund af at størrelse og masse er tæt på Jordens", "Jorden har da ingen søskende"},
+                        CorrectAnswerIndex=0
+                    }
+                 }
+            },
+
+         /// <summary>
          /// Earth.
          /// </summary>
             new Planet
@@ -720,136 +850,6 @@ List<Planet> planets_da = new List<Planet>()
                     },
 
                 }
-            },
-
-         /// <summary>
-         /// Mercury.
-         /// </summary>
-            new Planet
-            {
-                Name="Merkur",
-                Distance_from_sun = 47000000,
-                Diameter= 4878 ,
-                Age=4600000000,
-                Rotation_period=84450,
-                Rotation_speed=10892 ,
-                Orbital_period=88,
-                Moons=0,
-                Mass=3.301*Math.Pow(10,23),
-                Highest_temp=430,
-                Lowest_temp=-180,
-                Statements={
-                    "Merkur er en af de mindste planeter i solsystemet, og den er tættest på Solen.",
-                    "Merkur kredser om Solen i løbet af 88 dage, hvilket er den korteste kredsløbsperiode af alle Solens planeter.",
-                    "Merkur er opkaldt efter den romerske handelsgud, og gudernes budbringer, Mercurius.",
-                    "Merkur overflade fremstår stærkt krateret og ligner Månens udseende.",
-                    "På trods af den lille størrelse har Merkur et betydeligt, og tilsyneladende globalt magnetfelt.",
-                    "Merkur har næsten ingen atmosfære til at holde på varmen, temperaturen varierer fra -173 °C til 427 °C.",
-                    "Merkur oplevede et rumfartøjsstyrt tilbage den 30. april 2015; da NASA med vilje lod et rumfartøj ved navn &#34;MESSENGER&#34; styrte ind i det."
-                },
-                 Quests={
-                    new QuestionAndAnswer{
-                        Question="Hvor lang tid tager det Merkur at kredse en omgang om Solen?",
-                        Answers={ "10 dage", "88 dage", "200 dage", "365 dage" },
-                        CorrectAnswerIndex=1
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hvem er planeten Mercur opkaldt efter?",
-                        Answers={ "Den er ikke opkaldt efter nogen", "Den græske gud, Hermes", "Den romerske gud Merkurius"},
-                        CorrectAnswerIndex =2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hvad er den højst målte temperatur på Merkur?",
-                        Answers={ "166 °C", "512 °C", "427 °C", "400 °C" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hvad er den laveste målte temperatur på Merkur?",
-                        Answers={ "-173 °C", "0 °C", "-100 °C", "-386 °C" },
-                        CorrectAnswerIndex=0
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hvad var navnet på den rumsonde, som NASA lod styrte ned på Merkur?",
-                        Answers={ "MESSAGE", "MESSENGER", "MESSAGES", "MESS" },
-                        CorrectAnswerIndex=1
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hvordan ser overfladen ud på planeten Merkur?",
-                        Answers={ "Glat", "Små bakker", "kraterfyldt", "Dækket af vand" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Er det sandt at Merkur er den planet som er tættest på solen?",
-                        Answers={ "Ja", "Nej"},
-                        CorrectAnswerIndex=0
-                    },
-
-                }
-            },
-         
-         /// <summary>
-         /// Venus.
-         /// </summary>
-            new Planet
-            {
-                Name="Venus",
-                Distance_from_sun = 108208930 ,
-                Diameter= 12104 ,
-                Age=4600000000,
-                Rotation_period=348480,
-                Rotation_speed=6.52,
-                Orbital_period=225 ,
-                Moons=0,
-                Mass=4867*Math.Pow(10,24),
-                Highest_temp=475,
-                Lowest_temp=-173,
-                Statements={
-                    "Venus er den næst nærmeste planet fra Solen.",
-                    "Den er opkaldt efter den romerske gudinden for kærlighed og skønhed, Venus.",
-                    "Venus kredser om Solen på 225 dage.",
-                    "Venus er det lyseste naturlige objekt på himlen, kun overgået af solen og månen. Den kan det kaste skygger og kan være synligt med det blotte øje ved højlys dag.",
-                    "Ligesom Merkur har Venus heller ingen måner.",
-                    "Selvom Mercur er tættere på Solen, Så er det Venus som har den varmeste overflade af enhver planet i solsystemet, med en top temperatur omkring 474 °C.",
-                    "Dens størrelse og masse ligner Jordens, Derfor bliver Venus ofte betegnet som &#34;Jordens søster&#34;.",
-                    "Der er en teori, som siger, at hvis Venus engang havde et hav eller andet vand, så blev det fordampet af varmen, og på grund af manglen på magnetfeltet, blev den tilbageværende brint fejet ud i rummet af solvinden."
-                },
-                 Quests={
-                    new QuestionAndAnswer{
-                        Question="Hvilken position har Venus i planeternes rækkefølge, når man tæller fra solen?",
-                        Answers={ "Første", "Fjerde", "Anden", "Tiende" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hvilken gud, eller gudinde er planeten opkaldt efter?",
-                        Answers={ "Den romerske gudinde, Venus", "Den romerske gudinde, Diana", "Den græske gudinde, Afrodite", "Den græske gudinde, Artemis" },
-                        CorrectAnswerIndex =0
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hvor lang tid tager det Merkur at kredse en omgang om Solen?",
-                        Answers={ "112 dage", "225 dage", "256 dage", "720 dage" },
-                        CorrectAnswerIndex=1
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hvor mange måner har Venus?",
-                        Answers={ "2", "7", "0", "6" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hvad er den højst målte temperatur på Venus?",
-                        Answers={ "1000 °C", "600 °C", "474 °C", "200 °C" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Er det rigtigt, at Venus er et af de lyseste naturlige objekter i solsystemet?",
-                        Answers={ "Ja", "Nej"},
-                        CorrectAnswerIndex=0
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hvorfor kan vi kalde Venus for en &#34;Jordens søster&#34;?",
-                        Answers={ "På grund af at størrelse og masse er tæt på Jordens", "Jorden har da ingen søskende"},
-                        CorrectAnswerIndex=0
-                    }
-                 }
             },
 
          /// <summary>
@@ -1285,6 +1285,136 @@ List<Planet> planets_da = new List<Planet>()
 List<Planet> planets_hu = new List<Planet>()
         {
          /// <summary>
+         /// Mercury.
+         /// </summary>
+            new Planet
+            {
+                Name="Merkúr",
+                Distance_from_sun = 47000000,
+                Diameter= 4878 ,
+                Age=4600000000,
+                Rotation_period=84450,
+                Rotation_speed=10892 ,
+                Orbital_period=88,
+                Moons=0,
+                Mass=3.301*Math.Pow(10,23),
+                Highest_temp=430,
+                Lowest_temp=-180,
+                Statements={
+                    "Merkúr az egyik legkisebb bolygó a naprendszerben és ez van legközelebb a Naphoz.",
+                    "Merkúr 88 nap alatt tesz meg egy kört a Nap körül, a többi bolygó közül a legrövidebb idő alatt.",
+                    "A római kereskedelem istenéről és az istenek hírnökéről, Merkúriuszról lett elnevezve.",
+                    "A felszíne kráteres és hasonló a megjelenése a Hold felszínéhez.",
+                    "A kis mérete ellenére Merkúrnak jelentős mágneses mezője van.",
+                    "Szinte nincs légköre ami megtartaná a hőt, így a hőmérséklet -173 °C és 427 °C között változik.",
+                    "A NASA 2015. április 30-án hagyta, hogy a MESSENGER nevű űrhajóra lezuhanjon a bolygóra."
+                },
+                 Quests={
+                    new QuestionAndAnswer{
+                        Question="Mennyi időbe telik amíg a Merkúr megtesz egy teljes kört a Nap körül?",
+                        Answers={ "10 nap", "88 nap", "200 nap", "365 nap" },
+                        CorrectAnswerIndex=1
+                    },
+                    new QuestionAndAnswer{
+                        Question="Kiről nevezték el a Merkúrt?",
+                        Answers={ "Senkiről sem lett elnevezve", "A görög Istenről, Hermészről", "Egy római Istenről, Merkuriusról"},
+                        CorrectAnswerIndex =2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Mi a legmagasabb hőmérséklet a Merkúron?",
+                        Answers={ "166 °C", "512 °C", "427 °C", "400 °C" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Mi a legalacsonyabb hőmérséklet a Merkúron?",
+                        Answers={ "-173 °C", "0 °C", "-100 °C", "-386 °C" },
+                        CorrectAnswerIndex=0
+                    },
+                    new QuestionAndAnswer{
+                        Question="Mi volt a neve annak az űrszondának amivel a NASA landolt a Merkúron?",
+                        Answers={ "MESSAGE", "MESSENGER", "MESSAGES", "MESS" },
+                        CorrectAnswerIndex=1
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hogyan néz ki a talaj a Merkúron?",
+                        Answers={ "Sima", "Hegyes", "Kráteres", "Vizes" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Igaz, hogy a Merkúr a legközelebbi bolygó a Naphoz?",
+                        Answers={ "Igaz", "Hamis"},
+                        CorrectAnswerIndex=0
+                    },
+
+                }
+            },
+
+         /// <summary>
+         /// Venus.
+         /// </summary>
+            new Planet
+            {
+                Name="Vénusz",
+                Distance_from_sun = 108208930 ,
+                Diameter= 12104 ,
+                Age=4600000000,
+                Rotation_period=348480,
+                Rotation_speed=6.52,
+                Orbital_period=225 ,
+                Moons=0,
+                Mass=4867*Math.Pow(10,24),
+                Highest_temp=475,
+                Lowest_temp=-173,
+                Statements={
+                    "A Vénusz a második legközelebbi bolygó a Naphoz.",
+                    "A római szerelem és szépség istennőjéről, Vénuszról nevezték el.",
+                    "Vénusz 225 nap alatt tesz meg egy kört a Nap körül.",
+                    "A Vénusz a legvilágosabb természetes bolygó az égen, a Hold után. Árnyékot vethet és látható lehet szabad szemmel is a fényes égbolton.",
+                    "Merkúrhoz hasonlóan a Vénusznak sincsenek holdjai.",
+                    "Annak ellenére, hogy Merkúr van a legközelebb a Naphoz, a Vénusznak van a legforróbb felszíne a többi bolygó közül a naprendszerben. A maximum hőmérséklet 474 °C.",
+                    "A mérete és a tömege hasonlít a Földhöz, ezért néha a Föld testvérének nevezik.",
+                    "Van egy teória, miszerint ha a Vénuszon lenne víz vagy óceán akkor az elpárolgott volna a hő miatt és az erős mágneses mező miatt. A megmaradt hidrogént a bolygóközi térbe söpörte volna  a napszél."
+                },
+                 Quests={
+                    new QuestionAndAnswer{
+                        Question="A Naptól számítva hányadik bolygó a Vénusz?",
+                        Answers={ "Első", "Negyedik", "Második", "Tizedik" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Melyik Istenről vagy Istennőről nevezték el a bolygót?",
+                        Answers={ "Római istennőről, Vénuszról", "A római Istennőről, Diana-ról", "A görög Istennőről, Afroditéről", "A görög Istennőről, Artemiszről" },
+                        CorrectAnswerIndex =0
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hány nap szükséges a Vénusznak, hogy megtegyen egy kört a Nap körül?",
+                        Answers={ "112 nap", "225 nap", "256 nap", "720 nap" },
+                        CorrectAnswerIndex=1
+                    },
+                    new QuestionAndAnswer{
+                        Question="Hány holdja van a Vénusznak?",
+                        Answers={ "2", "7", "0", "6" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Mi a legmagasabb hőmérséklet a Vénuszon?",
+                        Answers={ "1000 °C", "600 °C", "474 °C", "200 °C" },
+                        CorrectAnswerIndex=2
+                    },
+                    new QuestionAndAnswer{
+                        Question="Is it true that Venus is one of the brightest natural objects in the Solar System?",
+                        Answers={ "Igaz", "Hamis"},
+                        CorrectAnswerIndex=0
+                    },
+                    new QuestionAndAnswer{
+                        Question="Miért hívhatjuk a Vénusz a Föld testvérének?",
+                        Answers={ "Mert a mérete és a tömege hasonlít a Föld méretéhez és tömegéhez", "Nem hívjuk így"},
+                        CorrectAnswerIndex=0
+                    }
+                 }
+            },
+
+         /// <summary>
          /// Earth.
          /// </summary>
             new Planet
@@ -1357,136 +1487,6 @@ List<Planet> planets_hu = new List<Planet>()
                     },
 
                 }
-            },
-
-         /// <summary>
-         /// Mercury.
-         /// </summary>
-            new Planet
-            {
-                Name="Merkúr",
-                Distance_from_sun = 47000000,
-                Diameter= 4878 ,
-                Age=4600000000,
-                Rotation_period=84450,
-                Rotation_speed=10892 ,
-                Orbital_period=88,
-                Moons=0,
-                Mass=3.301*Math.Pow(10,23),
-                Highest_temp=430,
-                Lowest_temp=-180,
-                Statements={
-                    "Merkúr az egyik legkisebb bolygó a naprendszerben és ez van legközelebb a Naphoz.",
-                    "Merkúr 88 nap alatt tesz meg egy kört a Nap körül, a többi bolygó közül a legrövidebb idő alatt.",
-                    "A római kereskedelem istenéről és az istenek hírnökéről, Merkúriuszról lett elnevezve.",
-                    "A felszíne kráteres és hasonló a megjelenése a Hold felszínéhez.",
-                    "A kis mérete ellenére Merkúrnak jelentős mágneses mezője van.",
-                    "Szinte nincs légköre ami megtartaná a hőt, így a hőmérséklet -173 °C és 427 °C között változik.",
-                    "A NASA 2015. április 30-án hagyta, hogy a MESSENGER nevű űrhajóra lezuhanjon a bolygóra."
-                },
-                 Quests={
-                    new QuestionAndAnswer{
-                        Question="Mennyi időbe telik amíg a Merkúr megtesz egy teljes kört a Nap körül?",
-                        Answers={ "10 nap", "88 nap", "200 nap", "365 nap" },
-                        CorrectAnswerIndex=1
-                    },
-                    new QuestionAndAnswer{
-                        Question="Kiről nevezték el a Merkúrt?",
-                        Answers={ "Senkiről sem lett elnevezve", "A görög Istenről, Hermészről", "Egy római Istenről, Merkuriusról"},
-                        CorrectAnswerIndex =2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Mi a legmagasabb hőmérséklet a Merkúron?",
-                        Answers={ "166 °C", "512 °C", "427 °C", "400 °C" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Mi a legalacsonyabb hőmérséklet a Merkúron?",
-                        Answers={ "-173 °C", "0 °C", "-100 °C", "-386 °C" },
-                        CorrectAnswerIndex=0
-                    },
-                    new QuestionAndAnswer{
-                        Question="Mi volt a neve annak az űrszondának amivel a NASA landolt a Merkúron?",
-                        Answers={ "MESSAGE", "MESSENGER", "MESSAGES", "MESS" },
-                        CorrectAnswerIndex=1
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hogyan néz ki a talaj a Merkúron?",
-                        Answers={ "Sima", "Hegyes", "Kráteres", "Vizes" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Igaz, hogy a Merkúr a legközelebbi bolygó a Naphoz?",
-                        Answers={ "Igaz", "Hamis"},
-                        CorrectAnswerIndex=0
-                    },
-
-                }
-            },
-         
-         /// <summary>
-         /// Venus.
-         /// </summary>
-            new Planet
-            {
-                Name="Vénusz",
-                Distance_from_sun = 108208930 ,
-                Diameter= 12104 ,
-                Age=4600000000,
-                Rotation_period=348480,
-                Rotation_speed=6.52,
-                Orbital_period=225 ,
-                Moons=0,
-                Mass=4867*Math.Pow(10,24),
-                Highest_temp=475,
-                Lowest_temp=-173,
-                Statements={
-                    "A Vénusz a második legközelebbi bolygó a Naphoz.",
-                    "A római szerelem és szépség istennőjéről, Vénuszról nevezték el.",
-                    "Vénusz 225 nap alatt tesz meg egy kört a Nap körül.",
-                    "A Vénusz a legvilágosabb természetes bolygó az égen, a Hold után. Árnyékot vethet és látható lehet szabad szemmel is a fényes égbolton.",
-                    "Merkúrhoz hasonlóan a Vénusznak sincsenek holdjai.",
-                    "Annak ellenére, hogy Merkúr van a legközelebb a Naphoz, a Vénusznak van a legforróbb felszíne a többi bolygó közül a naprendszerben. A maximum hőmérséklet 474 °C.",
-                    "A mérete és a tömege hasonlít a Földhöz, ezért néha a Föld testvérének nevezik.",
-                    "Van egy teória, miszerint ha a Vénuszon lenne víz vagy óceán akkor az elpárolgott volna a hő miatt és az erős mágneses mező miatt. A megmaradt hidrogént a bolygóközi térbe söpörte volna  a napszél."
-                },
-                 Quests={
-                    new QuestionAndAnswer{
-                        Question="A Naptól számítva hányadik bolygó a Vénusz?",
-                        Answers={ "Első", "Negyedik", "Második", "Tizedik" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Melyik Istenről vagy Istennőről nevezték el a bolygót?",
-                        Answers={ "Római istennőről, Vénuszról", "A római Istennőről, Diana-ról", "A görög Istennőről, Afroditéről", "A görög Istennőről, Artemiszről" },
-                        CorrectAnswerIndex =0
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hány nap szükséges a Vénusznak, hogy megtegyen egy kört a Nap körül?",
-                        Answers={ "112 nap", "225 nap", "256 nap", "720 nap" },
-                        CorrectAnswerIndex=1
-                    },
-                    new QuestionAndAnswer{
-                        Question="Hány holdja van a Vénusznak?",
-                        Answers={ "2", "7", "0", "6" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Mi a legmagasabb hőmérséklet a Vénuszon?",
-                        Answers={ "1000 °C", "600 °C", "474 °C", "200 °C" },
-                        CorrectAnswerIndex=2
-                    },
-                    new QuestionAndAnswer{
-                        Question="Is it true that Venus is one of the brightest natural objects in the Solar System?",
-                        Answers={ "Igaz", "Hamis"},
-                        CorrectAnswerIndex=0
-                    },
-                    new QuestionAndAnswer{
-                        Question="Miért hívhatjuk a Vénusz a Föld testvérének?",
-                        Answers={ "Mert a mérete és a tömege hasonlít a Föld méretéhez és tömegéhez", "Nem hívjuk így"},
-                        CorrectAnswerIndex=0
-                    }
-                 }
             },
 
          /// <summary>
