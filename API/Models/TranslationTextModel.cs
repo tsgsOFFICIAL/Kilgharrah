@@ -5,18 +5,18 @@
         /// <summary>
         /// The id from the database
         /// </summary>
-        public int id { get; private set; }
+        public int Id { get; private set; }
         /// <summary>
         /// The text in danish
         /// </summary>
-        public string da { get; private set; }
+        public string? Da { get; private set; }
         /// <summary>
         /// The text in english
         /// </summary>
-        public string en { get; private set; }
+        public string? En { get; private set; }
         /// <summary>
         /// The text in hungarian
         /// </summary>
-        public string hu { get; private set; }
+        public string? Hu { get; private set; }
     }
 }

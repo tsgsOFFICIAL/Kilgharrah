@@ -25,12 +25,10 @@ namespace API.DAL
         /// Method for getting all planets and all the information.
         /// </summary>
         /// <returns></returns>
-        public List<PlanetModel_Obsolete> GetPlanets()
+        public List<PlanetModel> GetPlanets()
         {
-            List<PlanetModel_Obsolete> planets = new List<PlanetModel_Obsolete>();
+            List<PlanetModel> planets = new List<PlanetModel>();
             string sql = "SELECT * FROM planets";
-
-
 
             using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection)) // "Using" automatically disposes of objects after use.
             {
@@ -38,7 +36,7 @@ namespace API.DAL
                 {
                     while (reader.Read())
                     {
-                        PlanetModel_Obsolete planet = new PlanetModel_Obsolete();
+                        PlanetModel planet = new PlanetModel();
                         int i = 0;
 
                         // This loop gets all the properties from the DataBase and sets them to the object.
@@ -60,10 +58,10 @@ namespace API.DAL
         /// </summary>
         /// <param name="id"></param>
         /// <returns>This method returns a planet.</returns>
-        public PlanetModel_Obsolete GetPlanet(int id)
+        public PlanetModel GetPlanet(int id)
         {
             string sql = $"SELECT * FROM Planets WHERE id = '{id}'";
-            PlanetModel_Obsolete planet = new PlanetModel_Obsolete();
+            PlanetModel planet = new PlanetModel();
 
             using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection))
             {
@@ -95,7 +93,7 @@ namespace API.DAL
         /// <returns>This method returns a single property as a string</returns>
         public string GetPlanetInfo(int id, string prop)
         {
-            PlanetModel_Obsolete planet = GetPlanet(id);
+            PlanetModel planet = GetPlanet(id);
 
             return planet.GetType().GetProperty(prop).GetValue(planet, null).ToString();
         }

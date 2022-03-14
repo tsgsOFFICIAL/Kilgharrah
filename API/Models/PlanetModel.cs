@@ -3,9 +3,19 @@
     public class PlanetModel
     {
         /// <summary>
+        /// Id is the Id for the DataBase.
+        /// </summary>
+        public int Id { get; private set; }
+        /// <summary>
+        /// All the information as JSON
+        /// </summary>
+        public string? Info_as_json { get; private set; }
+
+        /*
+        /// <summary>
         /// Name of the planet.
         /// </summary>
-        public string? Name { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// Distance from the sun in KM.
         /// </summary>
@@ -49,16 +59,19 @@
         /// <summary>
         /// List of statements and facts of the planet.
         /// </summary>
-        public List<string>? Statements { get; set; }
+        public string Statements { get; set; }
         /// <summary>
         /// List of object with questions and answers to the planet.
         /// </summary>
-        public List<QuestionAndAnswerModel>? Quests { get; set; }
-
+        public List<QuestionAndAnswerModel> Quests { get; set; }
+        
+        /// <summary>
+        /// Creates a new instance of the planet model
+        /// </summary>
         public PlanetModel()
         {
-            this.Statements = new List<string>();
-            this.Quests = new List<QuestionAndAnswerModel>();
+            Quests = new List<QuestionAndAnswerModel>();
         }
+        */
     }
 }

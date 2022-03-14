@@ -10,15 +10,15 @@ namespace API.Controllers
     [ApiController] // ApiController tells a program, that the class is not an object, but a controller.
     public class PlanetController : ControllerBase
     {
-        DBManager man = new DBManager();
+        readonly DBManager manager = new DBManager();
 
         // GET: api/Planet
         [HttpGet]
         public string Get()
         {
-            return JsonSerializer.Serialize(man.GetPlanets(), new JsonSerializerOptions() {WriteIndented = true});
+            return JsonSerializer.Serialize(manager.GetPlanets(), new JsonSerializerOptions() { WriteIndented = true });
         }
-        
+
         // GET: api/Planet/{id}
         [HttpGet("{id}")]
         public string Get(int id)
@@ -27,13 +27,13 @@ namespace API.Controllers
 
             //string json = JsonSerializer.Serialize(planet);
 
-            return JsonSerializer.Serialize(man.GetPlanet(id), new JsonSerializerOptions() { WriteIndented = true });
+            return JsonSerializer.Serialize(manager.GetPlanet(id), new JsonSerializerOptions() { WriteIndented = true });
         }
 
         [HttpGet("{id}/{prop}")]
         public string Get(int id, string prop)
         {
-            return man.GetPlanetInfo(id, prop);
+            return manager.GetPlanetInfo(id, prop);
         }
 
         /*
