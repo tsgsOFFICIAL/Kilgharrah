@@ -13,6 +13,7 @@ namespace API.Controllers
         readonly DBManager manager = new DBManager();
 
         // GET: api/Planet
+        //[Route("GetPlanets")]
         [HttpGet]
         public string Get()
         {
