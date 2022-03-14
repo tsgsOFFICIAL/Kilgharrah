@@ -1915,32 +1915,34 @@ List<Planet> planets_hu = new List<Planet>()
 #endregion
 
 string sqlStatements = "";
+int id = 0;
 
 foreach (Planet planet in planets_en)
 {
-    sqlStatements += $"INSERT INTO Planets (info_as_json) VALUES ('{JsonSerializer.Serialize(planet)}');\n";
+    sqlStatements += $"INSERT INTO Planets (id, lang, info_as_json) VALUES ({id++}, 'en', '{JsonSerializer.Serialize(planet)}');\n";
 }
 
 File.WriteAllText(@$"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\Planets\en.sql", sqlStatements);
 
 
 sqlStatements = "";
-
+id = 0;
 
 foreach (Planet planet in planets_da)
 {
-    sqlStatements += $"INSERT INTO Planets (info_as_json) VALUES ('{JsonSerializer.Serialize(planet)}');\n";
+    sqlStatements += $"INSERT INTO Planets (id, lang, info_as_json) VALUES ({id++}, 'da', '{JsonSerializer.Serialize(planet)}');\n";
 }
 
 File.WriteAllText(@$"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\Planets\da.sql", sqlStatements);
 
 
 sqlStatements = "";
+id = 0;
 
 
 foreach (Planet planet in planets_hu)
 {
-    sqlStatements += $"INSERT INTO Planets (info_as_json) VALUES ('{JsonSerializer.Serialize(planet)}');\n";
+    sqlStatements += $"INSERT INTO Planets (id, lang, info_as_json) VALUES ({id++}, 'hu', '{JsonSerializer.Serialize(planet)}');\n";
 }
 
 File.WriteAllText(@$"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\Planets\hu.sql", sqlStatements);
