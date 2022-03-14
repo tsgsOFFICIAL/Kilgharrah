@@ -13,7 +13,7 @@ namespace API.Controllers
         readonly DBManager manager = new DBManager();
 
         // GET: api/Planet
-        //[Route("GetPlanets")]
+        [Route("GetPlanets/All")]
         [HttpGet]
         public string Get()
         {
@@ -21,7 +21,8 @@ namespace API.Controllers
         }
 
         // GET: api/Planet/{id}
-        [HttpGet("{id}")]
+        [Route("GetPlanets/{id}")]
+        [HttpGet]
         public string Get(int id)
         {
             //Planet planet = man.GetPlanet(id);
@@ -32,7 +33,8 @@ namespace API.Controllers
         }
 
         // GET: api/Planet/{id}
-        [HttpGet("{id}/{lang}")]
+        [Route("GetPlanets/{id}/{lang}")]
+        [HttpGet]
         public string Get(int id, string lang)
         {
             //Planet planet = man.GetPlanet(id);

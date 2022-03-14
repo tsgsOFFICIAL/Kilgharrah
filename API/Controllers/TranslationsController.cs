@@ -11,6 +11,7 @@ namespace API.Controllers
         readonly DBManager manager = new DBManager();
 
         // GET: api/Translations
+        [Route("GetTranslations/All")]
         [HttpGet]
         public string Get()
         {
