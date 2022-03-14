@@ -58,9 +58,37 @@ namespace API.DAL
         /// </summary>
         /// <param name="id"></param>
         /// <returns>This method returns a planet.</returns>
-        public PlanetModel GetPlanet(int id)
+        public List<PlanetModel> GetPlanets(int id)
         {
-            string sql = $"SELECT * FROM Planets WHERE id = '{id}'";
+            List<PlanetModel> planets = new List<PlanetModel>();
+            string sql = $"SELECT * FROM planets WHERE id = '{id}'";
+
+            using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection)) // "Using" automatically disposes of objects after use.
+            {
+                using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        PlanetModel planet = new PlanetModel();
+                        int i = 0;
+
+                        // This loop gets all the properties from the DataBase and sets them to the object.
+                        foreach (PropertyInfo property in planet.GetType().GetProperties().Where(PropInfo => !PropInfo.GetGetMethod().GetParameters().Any()))
+                        {
+                            property.SetValue(planet, reader.GetValue(i++));
+                            //Console.WriteLine($"{p.Name}: \"{p.GetValue(planet, null)}\"");
+                        }
+
+                        planets.Add(planet);
+                    }
+
+                    return planets;
+                }
+            }
+        }
+        public PlanetModel GetPlanet(int id, string lang)
+        {
+            string sql = $"SELECT * FROM Planets WHERE id = '{id}' AND lang = '{lang.Substring(0, 2)}'";
             PlanetModel planet = new PlanetModel();
 
             using (NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection))
@@ -91,9 +119,9 @@ namespace API.DAL
         /// <param name="id"></param>
         /// <param name="prop"></param>
         /// <returns>This method returns a single property as a string</returns>
-        public string GetPlanetInfo(int id, string prop)
+        public string GetPlanetInfo(int id, string lang, string prop)
         {
-            PlanetModel planet = GetPlanet(id);
+            PlanetModel planet = GetPlanet(id, lang);
 
             return planet.GetType().GetProperty(prop).GetValue(planet, null).ToString();
         }

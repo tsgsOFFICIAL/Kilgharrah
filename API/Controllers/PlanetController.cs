@@ -27,14 +27,25 @@ namespace API.Controllers
 
             //string json = JsonSerializer.Serialize(planet);
 
-            return JsonSerializer.Serialize(manager.GetPlanet(id), new JsonSerializerOptions() { WriteIndented = true });
+            return JsonSerializer.Serialize(manager.GetPlanets(id), new JsonSerializerOptions() { WriteIndented = true });
         }
 
-        [HttpGet("{id}/{prop}")]
-        public string Get(int id, string prop)
+        // GET: api/Planet/{id}
+        [HttpGet("{id}/{lang}")]
+        public string Get(int id, string lang)
         {
-            return manager.GetPlanetInfo(id, prop);
+            //Planet planet = man.GetPlanet(id);
+
+            //string json = JsonSerializer.Serialize(planet);
+
+            return JsonSerializer.Serialize(manager.GetPlanet(id, lang), new JsonSerializerOptions() { WriteIndented = true });
         }
+
+        //[HttpGet("{id}/{prop}")]
+        //public string Get(int id, string prop)
+        //{
+        //    return manager.GetPlanetInfo(id, prop);
+        //}
 
         /*
         // GET: api/<PlanetController>
