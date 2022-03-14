@@ -8,13 +8,13 @@ namespace API.Controllers
     [ApiController]
     public class TranslationsController : ControllerBase
     {
-        DBManager man = new DBManager();
+        DBManager manager = new DBManager();
 
         // GET: api/Translations
         [HttpGet]
         public string Get()
         {
-            return JsonSerializer.Serialize(man.GetTranslations, new JsonSerializerOptions() { WriteIndented = true });
+            return JsonSerializer.Serialize(manager.GetTranslations, new JsonSerializerOptions() { WriteIndented = true });
         }
     }
 }
