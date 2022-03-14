@@ -782,7 +782,7 @@ List<Planet> planets_da = new List<Planet>()
                         Question="Er det sandt at Merkur er den planet som er tættest på solen?",
                         Answers={ "Ja", "Nej"},
                         CorrectAnswerIndex=0
-                    },  
+                    },
 
                 }
             },
@@ -1914,8 +1914,36 @@ List<Planet> planets_hu = new List<Planet>()
 
 #endregion
 
+string sqlStatements = "";
+
+foreach (Planet planet in planets_en)
+{
+    sqlStatements += $"INSERT INTO Planets (info_as_json) VALUES ('{JsonSerializer.Serialize(planet)}');\n";
+}
+
+File.WriteAllText(@$"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\Planets\en.sql", sqlStatements);
 
 
+sqlStatements = "";
+
+
+foreach (Planet planet in planets_da)
+{
+    sqlStatements += $"INSERT INTO Planets (info_as_json) VALUES ('{JsonSerializer.Serialize(planet)}');\n";
+}
+
+File.WriteAllText(@$"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\Planets\da.sql", sqlStatements);
+
+
+sqlStatements = "";
+
+
+foreach (Planet planet in planets_hu)
+{
+    sqlStatements += $"INSERT INTO Planets (info_as_json) VALUES ('{JsonSerializer.Serialize(planet)}');\n";
+}
+
+File.WriteAllText(@$"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\Planets\hu.sql", sqlStatements);
 
 Console.WriteLine();
 Console.WriteLine();
