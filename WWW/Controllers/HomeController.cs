@@ -14,10 +14,13 @@ namespace WWW.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             APIManager apiManager = new APIManager();
-            return View();
+            await apiManager.GetPlanets();
+            await apiManager.GetTranslation();
+
+            return View(Tuple.Create(await apiManager.GetPlanets(), await apiManager.GetTranslation()));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

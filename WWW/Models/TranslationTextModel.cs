@@ -1,4 +1,4 @@
-﻿namespace WWW.DAL
+﻿namespace WWW.Models
 {
     public class TranslationTextModel
     {
