@@ -35,7 +35,7 @@ namespace Website
             Listener = new TcpListener(IPAddress.Parse(Ip), Port);
             try
             {
-                SerialPort = new SerialPort("COM4", 9600);
+                SerialPort = new SerialPort("COM3", 9600);
             }
             catch (Exception)
             { }
