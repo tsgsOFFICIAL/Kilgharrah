@@ -13,10 +13,10 @@ Stepper stepper = Stepper(stepsPerRevolution, 2, 4, 3, 5);
 
 short UfoLeds[] =
 {
-  A0,
-  A1,
-  A2,
-  A3
+  8,
+  11,
+  10,
+  9
 };
 
 short PlanetLeds[] =
@@ -101,7 +101,7 @@ void setup() {
   }
 }
 
-void loop() {  
+void loop() {
   // Check if data is available & read it
   if (Serial.available() > 0)
   {
@@ -190,6 +190,31 @@ void loop() {
       moveUfo(stepsToTake);
       turnOnPlanet(PlanetLeds[8]);
     }
+  }
+  else
+  {
+    // Fade in
+    for (int i = 0; i <= 255; i+=5)
+    {
+      for (int j = 0; j < sizeof(UfoLeds) / sizeof(short); j++)
+      {
+        analogWrite(UfoLeds[j], i);
+          
+        delay(5);
+      }
+    }
+
+    // Fade out
+    for (int i = 255; i >= 0; i-=5)
+    {
+      for (int j = 0; j < sizeof(UfoLeds) / sizeof(short); j++)
+      {
+        analogWrite(UfoLeds[j], i);
+          
+        delay(5);
+      }
+    }
+    
   }
 }
 
