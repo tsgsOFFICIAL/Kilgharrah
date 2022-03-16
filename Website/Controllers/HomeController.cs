@@ -16,11 +16,18 @@ namespace Website.Controllers
 
         public async Task<IActionResult> Index()
         {
-            APIManager apiManager = new APIManager();
-            await apiManager.GetPlanets();
-            await apiManager.GetTranslation();
+            try
+            {
+                APIManager apiManager = new APIManager();
+                await apiManager.GetPlanets();
+                await apiManager.GetTranslation();
 
-            return View(Tuple.Create(await apiManager.GetPlanets(), await apiManager.GetTranslation()));
+                return View(Tuple.Create(await apiManager.GetPlanets(), await apiManager.GetTranslation()));
+            }
+            catch (Exception)
+            {
+                return View();
+            }
         }
 
         public IActionResult Privacy()
