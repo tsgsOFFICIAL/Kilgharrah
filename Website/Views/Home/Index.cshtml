@@ -5,4 +5,34 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>@Model.Item1[0].Info_as_json</h1>
+<article>
+    <section>
+        <h2>Our solar system</h2>
+        <img src="/assets/img/solar_system.png" alt="Our solar system" title="Our solar system"/>
+        <p>Our solar system is very large, and unique, but ofcourse there are others out there</p>
+    </section>
+
+    <section>
+        <h3>Did you know?</h3>
+        <p>there are only things in our solar system that you can’t even guess</p>
+    </section>
+</article>
+
+<article>
+    <section>
+        <img src="/assets/img/earthImpact.jpg" alt="Earth Impact" title="Esarth Impact"/>
+    </section>
+
+    <section>
+        <h3>History of the Earth</h3>
+        <p>Learn the history of a remarkable planet. This is nothing like what we found in the universe.</p>
+    </section>
+</article>
+
+<article>
+    <img src="/assets/img/lunar.jpg" alt="Lunar" title="Lunar"/>
+</article>
+
+<article id="game">
+    <model-viewer src="/assets/3d/earth.glb" id="earth3d" auto-rotate rotation-per-second="5deg"></model-viewer>
+</article>
