@@ -37,17 +37,6 @@
 </article>
 
 <article id="game">
-    <img src="/assets/img/planet/sun.png" alt="Sun" title="You can't go here" />
-    <img src="/assets/img/planet/mercury.png" alt="Mercury" title="Go to mercury" data-index="0" data-click="moveToMercury" />
-    <img src="/assets/img/planet/venus.png" alt="Venus" title="Go to venus" data-index="1" data-click="moveToVenus" />
-    <img src="/assets/img/planet/earth.png" alt="Earth" title="Go to earth" data-index="2" data-click="moveToEarth" />
-    <img src="/assets/img/planet/mars.png" alt="Mars" title="Go to mars" data-index="3" data-click="moveToMars" />
-    <img src="/assets/img/planet/jupiter.png" alt="Jupiter" title="Go to jupiter" data-index="4" data-click="moveToJupiter" />
-    <img src="/assets/img/planet/saturn.png" alt="Saturn" title="Go to saturn" data-index="5" data-click="moveToSaturn" />
-    <img src="/assets/img/planet/uranus.png" alt="Uranus" title="Go to uranus" data-index="6" data-click="moveToUranus" />
-    <img src="/assets/img/planet/neptune.png" alt="Neptune" title="Go to neptune" data-index="7" data-click="moveToNeptune" />
-    <img src="/assets/img/planet/pluto.png" alt="Pluto" title="Go to pluto" data-index="8" data-click="moveToPluto" />
-
     <div id="information-modal" class="modal">
         <section class="header">
             <h3>
@@ -66,4 +55,38 @@
                 </span>
         </section>
     </div>
+
+    <article>
+        <section id="game-question" class="hidden">
+            <h3>Which planet do we live on?</h3>
+        </section>
+
+        <section>
+            <img src="/assets/img/planet/sun.png" alt="Sun" title="You can't go here" />
+            <img src="/assets/img/planet/mercury.png" alt="Mercury" title="Go to mercury" data-index="0" data-click="moveToMercury" />
+            <img src="/assets/img/planet/venus.png" alt="Venus" title="Go to venus" data-index="1" data-click="moveToVenus" />
+            <img src="/assets/img/planet/earth.png" alt="Earth" title="Go to earth" data-index="2" data-click="moveToEarth" />
+            <img src="/assets/img/planet/mars.png" alt="Mars" title="Go to mars" data-index="3" data-click="moveToMars" />
+            <img src="/assets/img/planet/jupiter.png" alt="Jupiter" title="Go to jupiter" data-index="4" data-click="moveToJupiter" />
+            <img src="/assets/img/planet/saturn.png" alt="Saturn" title="Go to saturn" data-index="5" data-click="moveToSaturn" />
+            <img src="/assets/img/planet/uranus.png" alt="Uranus" title="Go to uranus" data-index="6" data-click="moveToUranus" />
+            <img src="/assets/img/planet/neptune.png" alt="Neptune" title="Go to neptune" data-index="7" data-click="moveToNeptune" />
+            <img src="/assets/img/planet/pluto.png" alt="Pluto" title="Go to pluto" data-index="8" data-click="moveToPluto" />
+        </section>
+
+        <button type="button" class="start-btn">Start game</button>
+
+        <section class="answer-grid hidden">
+                <button class="overflow-dots" type="button">Mercury</button>
+                <button class="overflow-dots" type="button">Venus</button>
+                <button class="overflow-dots" type="button">Earth</button>
+                <button class="overflow-dots" type="button">Mars</button>
+                <button class="overflow-dots" type="button">Jupiter</button>
+                <button class="overflow-dots" type="button">Saturn</button>
+                <button class="overflow-dots" type="button">Uranus</button>
+                <button class="overflow-dots" type="button">Neptune</button>
+                <button class="overflow-dots" type="button">Pluto</button>
+        </section>
+    </article>
+
 </article>

@@ -55,6 +55,10 @@ body {
 
 /* Classes */
 
+.hidden {
+    display: none !important;
+}
+
 .rotating {
     animation: rotating 3s linear infinite;
 }
@@ -229,17 +233,76 @@ article {
             /*border-radius: 32% 30% 39% 41% / 0% 24% 37% 33%;*/
         }
 
+    article article {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+
+        article article section {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+        }
+
+.answer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background-color: rgba(50, 50, 50, .5);
+    border-radius: 1rem;
+    padding: .69rem;
+}
+
+    .answer-grid button[type=button] {
+        cursor: pointer;
+        border: none;
+        padding: 2rem;
+        font-size: 1.6rem;
+        text-align: center;
+        border: .2rem solid rgba(0, 0, 0, .69);
+        background-color: rgba(100, 100, 100, .4);
+        transition: all .169s linear;
+    }
+
+        .answer-grid button[type=button]:hover {
+            background: rgba(0, 100, 200, .4);
+        }
+
 #game img[data-click] {
     cursor: pointer;
     transition: all .15s ease-in-out;
+}
+
+#game img[data-click].inactive {
+    filter: grayscale(100%) brightness(.4);
 }
 
     #game img[data-click]:hover {
         transform: scale(1.25);
     }
 
-/* Planet information modal */
+.start-btn {
+    cursor: pointer;
+    border: none;
+    padding: 2rem;
+    font-size: 2.4rem;
+    text-align: center;
+    border: .2rem solid rgba(0, 0, 0, .69);
+    background-color: rgba(100, 100, 100, .4);
+    transition: all .169s linear;
+}
 
+    .start-btn[type=button]:hover {
+        background: rgba(0, 100, 200, .4);
+    }
+
+/* Planet information modal */
 .modal {
     display: none;
     position: fixed;
