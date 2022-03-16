@@ -100,15 +100,17 @@ void setup()
     pinMode(UfoLeds[i], OUTPUT);
   }
 
-  digitalWrite(IN1Pin,LOW);
-  digitalWrite(IN2Pin,LOW);
-  digitalWrite(IN3Pin,LOW);
-  digitalWrite(IN4Pin,LOW);
+
 
 }
 
 void loop()
 {
+
+  digitalWrite(IN1Pin,LOW);
+  digitalWrite(IN2Pin,LOW);
+  digitalWrite(IN3Pin,LOW);
+  digitalWrite(IN4Pin,LOW);
   // Check if data is available & read it
   if (Serial.available() > 0)
   {
