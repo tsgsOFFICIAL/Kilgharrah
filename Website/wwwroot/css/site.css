@@ -55,6 +55,14 @@ body {
 
 /* Classes */
 
+.rotating {
+    animation: rotating 3s linear infinite;
+}
+
+.rotating.slow {
+    animation: rotating 10s linear infinite;
+}
+
 .inline {
     display: flex;
     flex-flow: row wrap;
@@ -220,3 +228,144 @@ article {
             max-width: 100%;
             /*border-radius: 32% 30% 39% 41% / 0% 24% 37% 33%;*/
         }
+
+#game img[data-click] {
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+}
+
+    #game img[data-click]:hover {
+        transform: scale(1.25);
+    }
+
+/* Planet information modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-color: var(--background-color);
+}
+
+    .modal.open {
+        display: flex;
+        animation: slideUpExpand .69s ease-out;
+    }
+
+    .modal.closing {
+        animation: slideDownCollapse .69s ease-in;
+    }
+
+    .modal .header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+        margin-left: 5%;
+        max-width: 90%;
+    }
+
+        .modal .header h3 {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.4rem;
+            font-weight: 500;
+            gap: 2rem;
+        }
+
+        .modal .header .animatedIcon {
+            width: 2.5em;
+        }
+
+        .modal .header button {
+            position: absolute;
+            right: 5%;
+            font-size: 5.69rem;
+            background-color: transparent;
+            border: none;
+            transition: .2s ease;
+            cursor: pointer;
+        }
+
+            .modal .header button:hover {
+                color: red;
+            }
+
+    .modal .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2rem;
+        margin-left: 5%;
+        max-width: 90%;
+        max-height: 100%;
+        overflow-y: auto;
+        padding-bottom: 3rem;
+    }
+
+        .modal .content div {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            gap: 2.5rem;
+        }
+
+.arrow-btn {
+    background: transparent;
+    border: none;
+}
+
+/* Animations */
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideUpExpand {
+    0% {
+        transform: translateY(100vh) scale(.8);
+        opacity: .69;
+    }
+
+    80% {
+        transform: translateY(0) scale(.8);
+        opacity: .69;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDownCollapse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateY(0) scale(.8);
+        opacity: .69;
+    }
+
+    100% {
+        transform: translateY(100vh) scale(.8);
+        opacity: .69;
+    }
+}
