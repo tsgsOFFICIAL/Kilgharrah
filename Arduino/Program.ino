@@ -99,9 +99,6 @@ void setup()
   {
     pinMode(UfoLeds[i], OUTPUT);
   }
-
-
-
 }
 
 void loop()
