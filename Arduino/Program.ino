@@ -1,5 +1,15 @@
 #include <Stepper.h>
 
+
+
+//settings for the stepperMotor
+const short stepsPerRound = 32;
+const short gearReduction = 64;
+//const short stepsPerRevolution = stepsPerRound * gearReduction;
+const short motorSpeed = 15;
+
+
+
 // Pin connections
 // Stepper motor & driver
 const short IN1Pin = 2;
@@ -17,18 +27,20 @@ short UfoLeds[] =
         11,
         10,
         9};
-
+//------------------------------------------------------------------------------------------------comeneted for test
 short PlanetLeds[] =
     {
         A4,  // Mercury
-        A5,  // Venus
-        A6,  // Earth
-        A7,  // Mars
-        A8,  // Jupiter
-        A9,  // Saturn
-        A10, // Uranus
-        A11, // Neptune
-        A12  // Pluto
+        A5  // Venus
+        // A4,  // Mercury
+        // A5,  // Venus
+        // A6,  // Earth
+        // A7,  // Mars
+        // A8,  // Jupiter
+        // A9,  // Saturn
+        // A10, // Uranus
+        // A11, // Neptune
+        // A12  // Pluto
 };
 
 int PlanetPositions[] =
@@ -85,17 +97,17 @@ const double msPerStep = 1.953125;
 void setup()
 {
   // Max 15 RPM @ 5V
-  stepper.setSpeed(15);
+ // stepper.setSpeed(motorSpeed);
   Serial.begin(9600);
 
   // Set all planets as output
-  for (int i = 0; i < sizeof(PlanetLeds); i++)
+  for (int i = 0; i < sizeof(PlanetLeds)/sizeof(short); i++)
   {
     pinMode(PlanetLeds[i], OUTPUT);
   }
 
   // Set all UFO Leds as output
-  for (int i = 0; i < sizeof(UfoLeds); i++)
+  for (int i = 0; i < sizeof(UfoLeds)/sizeof(short); i++)
   {
     pinMode(UfoLeds[i], OUTPUT);
   }
@@ -104,18 +116,14 @@ void setup()
 void loop()
 {
 
-  // digitalWrite(IN1Pin,LOW);
-  // digitalWrite(IN2Pin,LOW);
-  // digitalWrite(IN3Pin,LOW);
-  // digitalWrite(IN4Pin,LOW);
   // Check if data is available & read it
   if (Serial.available() > 0)
   {
     String incomingString = Serial.readString(); // Read the incoming string
 
-    // prints the received data
-    // Serial.print("I received: ");
-    // Serial.println(incomingString);
+    //prints the received data
+    Serial.print("I received: ");
+    Serial.println(incomingString);
 
     if (incomingString == "moveToStart")
     {
@@ -128,9 +136,9 @@ void loop()
     {
       int stepsToTake = PlanetPositions[0] - CurrentPosition;
 
-      turnOffPlanets();
+      //turnOffPlanets();
       moveAndBlink(stepsToTake);
-      turnOnPlanet(PlanetLeds[0]);
+     // turnOnPlanet(PlanetLeds[0]);
     }
     else if (incomingString == "moveToVenus")
     {
@@ -154,7 +162,7 @@ void loop()
 
       turnOffPlanets();
       moveAndBlink(stepsToTake);
-      turnOnPlanet(PlanetLeds[3]);
+       turnOnPlanet(PlanetLeds[3]);
     }
     else if (incomingString == "moveToJupiter")
     {
@@ -303,6 +311,11 @@ void moveUfo(int stepsToTake)
 
 void moveAndBlink(int stepsToTake)
 {
+  stepper.setSpeed(motorSpeed);
+    Serial.println(motorSpeed);
+  Serial.println(stepsToTake);
+  Serial.println(CurrentPosition);
+
   int delayTime = 100;
   int stepsPerRound = round(delayTime / msPerStep);
 
@@ -400,10 +413,16 @@ void moveAndBlink(int stepsToTake)
         }
       }
     }
-    stepper.step(-stepsToTake);
-    CurrentPosition -= stepsToTake;
+    //This has been edited to due to bugs
+    //stepper.step(stepsToTake);
+    //CurrentPosition += stepsToTake;
+    stepper.step(stepsToTake);
+    CurrentPosition = stepsToTake;
   }
-
+  digitalWrite(IN1Pin,LOW);
+  digitalWrite(IN2Pin,LOW);
+  digitalWrite(IN3Pin,LOW);
+  digitalWrite(IN4Pin,LOW);
   blinkUfo(5);
 }
 
