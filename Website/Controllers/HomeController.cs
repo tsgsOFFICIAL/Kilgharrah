@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Website.Models;
 using Website.DAL;
+using System.Text.Json;
 
 namespace Website.Controllers
 {
@@ -16,6 +17,9 @@ namespace Website.Controllers
 
         public async Task<IActionResult> Index()
         {
+            // Local testing
+            //return View(Tuple.Create(JsonSerializer.Deserialize<List<PlanetModel>>(System.IO.File.ReadAllText(@"C:\Users\marcu\Desktop\apiData.json")), ""));
+
             try
             {
                 APIManager apiManager = new APIManager();

@@ -1,12 +1,12 @@
 ﻿@using System.Text.Json
 @using Website.Models;
-@model Tuple<List<PlanetModel>, List<TranslationTextModel>>
+@model Tuple<List<PlanetModel>, string>
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<script src="/js/app.js" translation_text="@JsonSerializer.Serialize(Model.Item2)" planets_text="@JsonSerializer.Serialize(Model.Item1)" defer></script>
+<script src="/js/app.js" @*translation_text="@JsonSerializer.Serialize(Model.Item2)"*@ planets_text="@JsonSerializer.Serialize(Model.Item1)" defer></script>
 
 <article>
     <section>
@@ -37,16 +37,16 @@
 </article>
 
 <article id="game">
-    <img src="/assets/img/planet/sun.png" alt="Sun" title="You can't go here" data-click="moveToStart" />
-    <img src="/assets/img/planet/mercury.png" alt="Mercury" title="Go to mercury" data-click="moveToMercury" />
-    <img src="/assets/img/planet/venus.png" alt="Venus" title="Go to venus" data-click="moveToVenus" />
-    <img src="/assets/img/planet/earth.png" alt="Earth" title="Go to earth" data-click="moveToEarth" />
-    <img src="/assets/img/planet/mars.png" alt="Mars" title="Go to mars" data-click="moveToMars" />
-    <img src="/assets/img/planet/jupiter.png" alt="Jupiter" title="Go to jupiter" data-click="moveToJupiter" />
-    <img src="/assets/img/planet/saturn.png" alt="Saturn" title="Go to saturn" data-click="moveToSaturn" />
-    <img src="/assets/img/planet/uranus.png" alt="Uranus" title="Go to uranus" data-click="moveToUranus" />
-    <img src="/assets/img/planet/neptune.png" alt="Neptune" title="Go to neptune" data-click="moveToNeptune" />
-    <img src="/assets/img/planet/pluto.png" alt="Pluto" title="Go to pluto" data-click="moveToPluto" />
+    <img src="/assets/img/planet/sun.png" alt="Sun" title="You can't go here" />
+    <img src="/assets/img/planet/mercury.png" alt="Mercury" title="Go to mercury" data-index="0" data-click="moveToMercury" />
+    <img src="/assets/img/planet/venus.png" alt="Venus" title="Go to venus" data-index="1" data-click="moveToVenus" />
+    <img src="/assets/img/planet/earth.png" alt="Earth" title="Go to earth" data-index="2" data-click="moveToEarth" />
+    <img src="/assets/img/planet/mars.png" alt="Mars" title="Go to mars" data-index="3" data-click="moveToMars" />
+    <img src="/assets/img/planet/jupiter.png" alt="Jupiter" title="Go to jupiter" data-index="4" data-click="moveToJupiter" />
+    <img src="/assets/img/planet/saturn.png" alt="Saturn" title="Go to saturn" data-index="5" data-click="moveToSaturn" />
+    <img src="/assets/img/planet/uranus.png" alt="Uranus" title="Go to uranus" data-index="6" data-click="moveToUranus" />
+    <img src="/assets/img/planet/neptune.png" alt="Neptune" title="Go to neptune" data-index="7" data-click="moveToNeptune" />
+    <img src="/assets/img/planet/pluto.png" alt="Pluto" title="Go to pluto" data-index="8" data-click="moveToPluto" />
 
     <div id="information-modal" class="modal">
         <section class="header">
@@ -57,16 +57,13 @@
             <button id="information-modal-close-btn" title="Close" type="button">×</button>
         </section>
 
-        <section class="content">
-            <div>
-                <!-- Content here -->
+        <section class="content">                <!-- Content here -->
                 <p class="fact">Text goes here</p>
 
-                <span class="inline">
-                    <button class="arrow-btn" type="button">&lt;</button>
-                    <button class="arrow-btn" type="button">&gt;</button>
+                <span class="inline btn-group">
+                    <button class="prev-btn" type="button" title="Show previous fact">&lt;</button>
+                    <button class="next-btn" type="button" title="Show next fact">&gt;</button>
                 </span>
-            </div>
         </section>
     </div>
 </article>
