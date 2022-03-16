@@ -163,7 +163,14 @@ header {
         max-width: 4rem;
         border-radius: 50%;
         cursor: pointer;
+        filter: grayscale(.69);
+        transition: all .25s ease-in-out;
     }
+
+        header .flag.selected {
+            box-shadow: 0 0 1rem rgba(255, 255, 255, .8);
+            filter: grayscale(0);
+        }
 
 /* Footer */
 footer {
@@ -189,8 +196,8 @@ footer {
 /* Main */
 
 main {
-    max-width: 90vw;
-    margin-left: 5vw;
+    max-width: 100vw;
+    /*margin-left: 5vw;*/
 }
 
 article {
@@ -198,13 +205,18 @@ article {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    min-height: 100vh;
 }
 
+    article > img {
+        max-width: 100%;
+    }
+
     article section {
-        max-width: 50%;
+        width: 45%;
     }
 
         article section > img {
             max-width: 100%;
-            border-radius: 32% 30% 39% 41% / 0% 24% 37% 33%;
+            /*border-radius: 32% 30% 39% 41% / 0% 24% 37% 33%;*/
         }
