@@ -13,9 +13,16 @@ namespace API.Controllers
         // GET: api/Translations
         [Route("GetTranslations/All")]
         [HttpGet]
-        public string Get()
+        public string? Get()
         {
+            try
+            {
             return JsonSerializer.Serialize(manager.GetTranslations(), new JsonSerializerOptions() { WriteIndented = true });
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }
