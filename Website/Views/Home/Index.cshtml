@@ -1,47 +1,72 @@
-﻿@using Website.Models;
+﻿@using System.Text.Json
+@using Website.Models;
 @model Tuple<List<PlanetModel>, List<TranslationTextModel>>
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
+<script src="/js/app.js" translation_text="@JsonSerializer.Serialize(Model.Item2)" planets_text="@JsonSerializer.Serialize(Model.Item1)" defer></script>
+
 <article>
     <section>
-        <h2>Our solar system</h2>
-        <img src="/assets/img/solar_system.png" alt="Our solar system" title="Our solar system"/>
+        <h2 data-translation="1">Our solar system</h2>
+        <img src="/assets/img/solar_system.png" alt="Our solar system" title="Our solar system" />
         <p>Our solar system is very large, and unique, but ofcourse there are others out there</p>
     </section>
 
     <section>
-        <h3>Did you know?</h3>
+        <h3 data-translation="2">Did you know?</h3>
         <p>there are only things in our solar system that you can’t even guess</p>
     </section>
 </article>
 
 <article>
     <section>
-        <img src="/assets/img/earthImpact.jpg" alt="Earth Impact" title="Esarth Impact"/>
+        <img src="/assets/img/earthImpact.jpg" alt="Earth Impact" title="Esarth Impact" />
     </section>
 
     <section>
-        <h3>History of the Earth</h3>
+        <h3 data-translation="3">History of the Earth</h3>
         <p>Learn the history of a remarkable planet. This is nothing like what we found in the universe.</p>
     </section>
 </article>
 
 <article>
-    <img src="/assets/img/lunar.jpg" alt="Lunar" title="Lunar"/>
+    <img src="/assets/img/lunar.jpg" alt="Lunar" title="Lunar" />
 </article>
 
 <article id="game">
-    <img src="/assets/img/planet/sun.png" alt="sun" title="You can't go here"/>
-    <img src="/assets/img/planet/mercury.png" alt="mercury" title="Go to mercury"/>
-    <img src="/assets/img/planet/venus.png" alt="venus" title="Go to venus"/>
-    <img src="/assets/img/planet/earth.png" alt="earth" title="Go to earth"/>
-    <img src="/assets/img/planet/mars.png" alt="mars" title="Go to mars"/>
-    <img src="/assets/img/planet/jupiter.png" alt="jupiter" title="Go to jupiter"/>
-    <img src="/assets/img/planet/saturn.png" alt="saturn" title="Go to saturn"/>
-    <img src="/assets/img/planet/uranus.png" alt="uranus" title="Go to uranus"/>
-    <img src="/assets/img/planet/neptune.png" alt="neptune" title="Go to neptune"/>
-    <img src="/assets/img/planet/pluto.png" alt="pluto" title="Go to pluto"/>
+    <img src="/assets/img/planet/sun.png" alt="Sun" title="You can't go here" data-click="moveToStart" />
+    <img src="/assets/img/planet/mercury.png" alt="Mercury" title="Go to mercury" data-click="moveToMercury" />
+    <img src="/assets/img/planet/venus.png" alt="Venus" title="Go to venus" data-click="moveToVenus" />
+    <img src="/assets/img/planet/earth.png" alt="Earth" title="Go to earth" data-click="moveToEarth" />
+    <img src="/assets/img/planet/mars.png" alt="Mars" title="Go to mars" data-click="moveToMars" />
+    <img src="/assets/img/planet/jupiter.png" alt="Jupiter" title="Go to jupiter" data-click="moveToJupiter" />
+    <img src="/assets/img/planet/saturn.png" alt="Saturn" title="Go to saturn" data-click="moveToSaturn" />
+    <img src="/assets/img/planet/uranus.png" alt="Uranus" title="Go to uranus" data-click="moveToUranus" />
+    <img src="/assets/img/planet/neptune.png" alt="Neptune" title="Go to neptune" data-click="moveToNeptune" />
+    <img src="/assets/img/planet/pluto.png" alt="Pluto" title="Go to pluto" data-click="moveToPluto" />
+
+    <div id="information-modal" class="modal">
+        <section class="header">
+            <h3>
+                <span></span>
+                <img class="rotating slow icon" src="">
+            </h3>
+            <button id="information-modal-close-btn" title="Close" type="button">×</button>
+        </section>
+
+        <section class="content">
+            <div>
+                <!-- Content here -->
+                <p class="fact">Text goes here</p>
+
+                <span class="inline">
+                    <button class="arrow-btn" type="button">&lt;</button>
+                    <button class="arrow-btn" type="button">&gt;</button>
+                </span>
+            </div>
+        </section>
+    </div>
 </article>
