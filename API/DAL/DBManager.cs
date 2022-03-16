@@ -14,12 +14,19 @@ namespace API.DAL
         public DBManager()
         {
             Connection = new NpgsqlConnection(_connectionString);
-            Connection.Open();
 
             //string sql = "SELECT version()";
             //NpgsqlCommand cmd = new NpgsqlCommand(sql, Connection);
             //string outPut = cmd.ExecuteScalar().ToString();
 
+        }
+        public void Open()
+        {
+            Connection.Open();
+        }
+        public void Close()
+        {
+            Connection.Close();
         }
         /// <summary>
         /// Method for getting all planets and all the information.
@@ -27,6 +34,7 @@ namespace API.DAL
         /// <returns></returns>
         public List<PlanetModel> GetPlanets()
         {
+            Open();
             List<PlanetModel> planets = new List<PlanetModel>();
             string sql = "SELECT * FROM planets";
 
@@ -49,6 +57,7 @@ namespace API.DAL
                         planets.Add(planet);
                     }
 
+                    Close();
                     return planets;
                 }
             }
@@ -60,6 +69,7 @@ namespace API.DAL
         /// <returns>This method returns a planet.</returns>
         public List<PlanetModel> GetPlanets(int id)
         {
+            Open();
             List<PlanetModel> planets = new List<PlanetModel>();
             string sql = $"SELECT * FROM planets WHERE id = '{id}'";
 
@@ -81,13 +91,14 @@ namespace API.DAL
 
                         planets.Add(planet);
                     }
-
+                    Close();
                     return planets;
                 }
             }
         }
         public PlanetModel GetPlanet(int id, string lang)
         {
+            Open();
             string sql = $"SELECT * FROM Planets WHERE id = '{id}' AND lang = '{lang.Substring(0, 2)}'";
             PlanetModel planet = new PlanetModel();
 
@@ -111,6 +122,7 @@ namespace API.DAL
                     }
                 }
             }
+            Close();
             return planet;
         }
         /// <summary>
@@ -131,6 +143,7 @@ namespace API.DAL
         /// <returns>This method returns a List of TranslationText</returns>
         public List<TranslationTextModel> GetTranslations()
         {
+            Open();
             List<TranslationTextModel> translations = new List<TranslationTextModel>();
             string sql = "SELECT * FROM TranslationText";
 
@@ -152,7 +165,7 @@ namespace API.DAL
 
                         translations.Add(translationText);
                     }
-
+                    Close();
                     return translations;
                 }
             }
