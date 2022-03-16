@@ -19,7 +19,7 @@ namespace API.Controllers
         {
             try
             {
-            return JsonSerializer.Serialize(manager.GetPlanets(), new JsonSerializerOptions() { WriteIndented = true });
+                return JsonSerializer.Serialize(manager.GetPlanets(), new JsonSerializerOptions() { WriteIndented = true });
             }
             catch (Exception)
             {
@@ -37,7 +37,7 @@ namespace API.Controllers
             //string json = JsonSerializer.Serialize(planet);
             try
             {
-            return JsonSerializer.Serialize(manager.GetPlanets(id), new JsonSerializerOptions() { WriteIndented = true });
+                return JsonSerializer.Serialize(manager.GetPlanets(id), new JsonSerializerOptions() { WriteIndented = true });
             }
             catch (Exception)
             {
@@ -55,7 +55,7 @@ namespace API.Controllers
             //string json = JsonSerializer.Serialize(planet);
             try
             {
-            return JsonSerializer.Serialize(manager.GetPlanet(id, lang), new JsonSerializerOptions() { WriteIndented = true });
+                return JsonSerializer.Serialize(manager.GetPlanet(id, lang), new JsonSerializerOptions() { WriteIndented = true });
             }
             catch (Exception)
             {
