@@ -19,8 +19,8 @@ namespace Website.Controllers
             try
             {
                 APIManager apiManager = new APIManager();
-                await apiManager.GetPlanets();
-                await apiManager.GetTranslation();
+                //await apiManager.GetPlanets();
+                //await apiManager.GetTranslation();
 
                 return View(Tuple.Create(await apiManager.GetPlanets(), await apiManager.GetTranslation()));
             }
