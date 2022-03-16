@@ -31,17 +31,17 @@ short PlanetLeds[] =
         A12  // Pluto
 };
 
-short PlanetPositions[] =
+int PlanetPositions[] =
     {
         0,   // Mercury
-        1467,  // Venus
-        2608,  // Earth
-        3585,  // Mars
-        6356,  // Jupiter
-        10756, // Saturn
-        21404, // Uranus
-        27434, // Neptune
-        32323  // Pluto
+        1412,  // Venus
+        2499,  // Earth
+        3531,  // Mars
+        6302,  // Jupiter
+        10648, // Saturn
+        21295, // Uranus
+        27325, // Neptune
+        32378  // Pluto
 };
 
 /*
@@ -63,7 +63,7 @@ const short UranusLedPin = A10;
 const short NeptuneLedPin = A11;
 const short PlutoLedPin = A12;
 
-// Steps from the sun
+// Steps from the sun (This has been adjusted several times)
 const short SunPosition = 0;
 const short MercuryPosition = 217;
 const short VenusPosition = 1630;
