@@ -85,7 +85,7 @@ const double msPerStep = 1.953125;
 void setup()
 {
   // Max 15 RPM @ 5V
-  stepper.setSpeed(20);
+  stepper.setSpeed(15);
   Serial.begin(9600);
 
   // Set all planets as output
@@ -104,10 +104,10 @@ void setup()
 void loop()
 {
 
-  digitalWrite(IN1Pin,LOW);
-  digitalWrite(IN2Pin,LOW);
-  digitalWrite(IN3Pin,LOW);
-  digitalWrite(IN4Pin,LOW);
+  // digitalWrite(IN1Pin,LOW);
+  // digitalWrite(IN2Pin,LOW);
+  // digitalWrite(IN3Pin,LOW);
+  // digitalWrite(IN4Pin,LOW);
   // Check if data is available & read it
   if (Serial.available() > 0)
   {
