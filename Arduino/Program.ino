@@ -34,14 +34,14 @@ short PlanetLeds[] =
 short PlanetPositions[] =
     {
         0,   // Mercury
-        793,  // Venus
-        1630,  // Earth
-        2879,  // Mars
-        5867,  // Jupiter
-        10430, // Saturn
-        21122, // Uranus
+        1467,  // Venus
+        2608,  // Earth
+        3585,  // Mars
+        6356,  // Jupiter
+        10756, // Saturn
+        21404, // Uranus
         27434, // Neptune
-        32160  // Pluto
+        32323  // Pluto
 };
 
 /*
