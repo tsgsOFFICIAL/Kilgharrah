@@ -15,33 +15,52 @@ namespace API.Controllers
         // GET: api/Planet
         [Route("GetPlanets/All")]
         [HttpGet]
-        public string Get()
+        public string? Get()
         {
+            try
+            {
             return JsonSerializer.Serialize(manager.GetPlanets(), new JsonSerializerOptions() { WriteIndented = true });
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         // GET: api/Planet/{id}
         [Route("GetPlanets/{id}")]
         [HttpGet]
-        public string Get(int id)
+        public string? Get(int id)
         {
             //Planet planet = man.GetPlanet(id);
 
             //string json = JsonSerializer.Serialize(planet);
-
+            try
+            {
             return JsonSerializer.Serialize(manager.GetPlanets(id), new JsonSerializerOptions() { WriteIndented = true });
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         // GET: api/Planet/{id}
         [Route("GetPlanets/{id}/{lang}")]
         [HttpGet]
-        public string Get(int id, string lang)
+        public string? Get(int id, string lang)
         {
             //Planet planet = man.GetPlanet(id);
 
             //string json = JsonSerializer.Serialize(planet);
-
+            try
+            {
             return JsonSerializer.Serialize(manager.GetPlanet(id, lang), new JsonSerializerOptions() { WriteIndented = true });
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         //[HttpGet("{id}/{prop}")]
