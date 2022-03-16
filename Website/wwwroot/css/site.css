@@ -59,9 +59,9 @@ body {
     animation: rotating 3s linear infinite;
 }
 
-.rotating.slow {
-    animation: rotating 10s linear infinite;
-}
+    .rotating.slow {
+        animation: rotating 10s linear infinite;
+    }
 
 .inline {
     display: flex;
@@ -306,26 +306,31 @@ article {
         align-items: center;
         font-size: 2rem;
         margin-left: 5%;
-        max-width: 90%;
+        width: 90%;
         max-height: 100%;
         overflow-y: auto;
         padding-bottom: 3rem;
+        gap: 5rem;
     }
 
-        .modal .content div {
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: flex-start;
-            gap: 2.5rem;
-        }
-
-.arrow-btn {
+.prev-btn, .next-btn {
     background: transparent;
     border: none;
+    cursor: pointer;
+    transition: all .16s linear;
+    font-size: 10rem;
 }
 
-/* Animations */
+    .prev-btn:hover, .next-btn:hover {
+        color: red;
+    }
 
+    .prev-btn:active, .next-btn:active {
+        transform: scale(.9);
+    }
+
+
+/* Animations */
 @keyframes rotating {
     0% {
         transform: rotate(0deg);
