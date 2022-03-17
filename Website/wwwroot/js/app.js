@@ -135,7 +135,9 @@ start_btn.addEventListener("click", () => {
             } else {
                 try {
                     ws.send(planet.getAttribute("data-click"));
-                } catch (e) { }
+                } catch (e) {
+                    console.log(e);
+                }
             }
         });
     });
@@ -163,7 +165,9 @@ start_btn.addEventListener("click", () => {
 function takeQuiz(planet) {
     try {
         ws.send(planet.getAttribute("data-click")); // Move the ufo to
-    } catch (e) { }
+    } catch (e) {
+        console.log(e);
+    }
 
     let planetIndex;
     let questionIndex = 0;
