@@ -8,6 +8,7 @@ const start_btn = document.querySelector(".start-btn"); // The button to start t
 const game_question = document.querySelector("#game-question"); // The question element
 const game_answer_grid = document.querySelector(".answer-grid"); // The answer grid element
 let game_state = false; // false == not running, true == running
+let onGoing = false; // true == busy
 let game_question_index = 0; // The index for the questions
 let lang; // The language code
 let ws; // A WebSocket instance
@@ -116,7 +117,7 @@ start_btn.addEventListener("click", () => {
 
     game_state = true;
 
-    game_question.querySelector("h3").innerText = "Where do you want to start?";
+    game_question.querySelector("h3").innerText = "Click on a planet to conquer it";
     game_question.querySelector("h3").removeAttribute("data-translation");
 
     // Add new event listeners to all planets
@@ -124,33 +125,45 @@ start_btn.addEventListener("click", () => {
         planet.classList.add("inactive");
         planet.title = "You haven't unlocked this planet yet";
 
-        //planet.addEventListener("click", () => {
-        //    ws.send(planet.getAttribute("data-click")); // Send a WebSocket message to move an Arduino
-        //});
+        planet.addEventListener("click", () => {
+            if (!onGoing && planet.classList.contains("inactive")) {
+                planet.classList.remove("inactive");
+                planet.classList.add("active");
+                planet.title = `${planet.alt}`;
+
+                takeQuiz(planet);
+            } else {
+                try {
+                    ws.send(planet.getAttribute("data-click"));
+                } catch (e) { }
+            }
+        });
     });
 
-    // Initiate all buttons / answers
-    for (child of game_answer_grid.children) {
-        const c = child;
+    //// Initiate all buttons / answers
+    //for (child of game_answer_grid.children) {
+    //    const c = child;
 
-        child.addEventListener("click", () => {
-            game_answer_grid.innerHTML = "";
+    //    child.addEventListener("click", () => {
+    //        game_answer_grid.innerHTML = "";
 
-            planets.forEach(planet => {
-                if (planet.getAttribute("data-index") == c.getAttribute("data-index")) {
-                    planet.classList.remove("inactive");
-                    planet.classList.add("active");
-                    planet.title = `${planet.alt}`;
+    //        planets.forEach(planet => {
+    //            if (planet.getAttribute("data-index") == c.getAttribute("data-index")) {
+    //                planet.classList.remove("inactive");
+    //                planet.classList.add("active");
+    //                planet.title = `${planet.alt}`;
 
-                    takeQuiz(planet);
-                }
-            });
-        });
-    }
+    //                takeQuiz(planet);
+    //            }
+    //        });
+    //    });
+    //}
 });
 
 function takeQuiz(planet) {
-    ws.send(planet.getAttribute("data-click")); // Move the ufo to
+    try {
+        ws.send(planet.getAttribute("data-click")); // Move the ufo to
+    } catch (e) { }
 
     let planetIndex;
     let questionIndex = 0;
@@ -171,7 +184,7 @@ function takeQuiz(planet) {
     maxIndex = planetObjects[planetIndex].Info_as_json.Quests.length - 1;
 
 
-    let onGoing = false;
+
     const timer = setInterval(() => {
         if (!onGoing) {
             onGoing = true;
@@ -184,21 +197,41 @@ function takeQuiz(planet) {
                 if (score >= 3) {
                     clearInterval(timer);
                     clearAnswers();
+                    planet.className = "";
 
-                    setTimeout(() => {
-                        alert(`Congratulations, you conquered ${planet.title}!`);
-                    }, 50);
+                    let didIWin = true;
+                    planets.forEach(planet => {
+                        if (planet.classList.contains("inactive")) {
+                            didIWin = false;
+                        }
+                    });
+
+                    if (didIWin) {
+                        setTimeout(() => {
+                            alert(`Congratulations, you conquered the entire solar system!`);
+                        }, 50);
+                    } else {
+                        setTimeout(() => {
+                            alert(`Congratulations, you conquered ${planet.title}!`);
+                        }, 50);
+                    }
                 }
-
                 //console.log(r);
             }).catch((e) => {
                 onGoing = false;
+                questionIndex = questionIndex < maxIndex ? ++questionIndex : maxIndex;
+
+                if (questionIndex >= maxIndex) {
+                    clearInterval(timer);
+                    clearAnswers();
+                    planet.className = "destroyed";
+                }
+
 
                 //console.log(e);
             });
         }
     }, 50);
-
 
 
 

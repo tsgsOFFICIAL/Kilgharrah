@@ -254,7 +254,7 @@ article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    background-color: rgba(50, 50, 50, .5);
+    /*background-color: rgba(50, 50, 50, .5);*/
     border-radius: 1rem;
 }
 
@@ -267,6 +267,7 @@ article {
         border: .2rem solid rgba(0, 0, 0, .69);
         background-color: rgba(100, 100, 100, .4);
         transition: all .169s linear;
+        border-radius: 1rem;
     }
 
         .answer-grid button[type=button]:hover {
@@ -285,6 +286,10 @@ article {
 
     #game img[data-click].inactive {
         filter: grayscale(100%) brightness(.4);
+    }
+
+    #game img[data-click].destroyed {
+        filter: blur(.5rem) grayscale(.8);
     }
 
     #game img[data-click]:hover {
