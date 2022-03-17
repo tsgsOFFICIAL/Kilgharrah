@@ -1,23 +1,23 @@
 ﻿@using System.Text.Json
 @using Website.Models;
-@model Tuple<List<PlanetModel>, string>
+@model Tuple<List<PlanetModel>, List<TranslationTextModel>>
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<script src="/js/app.js" @*translation_text="@JsonSerializer.Serialize(Model.Item2)"*@ planets_text="@JsonSerializer.Serialize(Model.Item1)" defer></script>
+<script src="/js/app.js" planets_text="@JsonSerializer.Serialize(Model.Item1)" translation_text="@JsonSerializer.Serialize(Model.Item2)" defer></script>
 
 <article>
     <section>
         <h2 data-translation="1">Our solar system</h2>
         <img src="/assets/img/solar_system.png" alt="Our solar system" title="Our solar system" />
-        <p>Our solar system is very large, and unique, but ofcourse there are others out there</p>
+        <p data-translation="12">Our solar system is very large, and unique, but ofcourse there are others out there</p>
     </section>
 
     <section>
         <h3 data-translation="2">Did you know?</h3>
-        <p>there are only things in our solar system that you can’t even guess</p>
+        <p data-translation="11">there are only things in our solar system that you can’t even guess</p>
     </section>
 </article>
 
@@ -28,7 +28,7 @@
 
     <section>
         <h3 data-translation="3">History of the Earth</h3>
-        <p>Learn the history of a remarkable planet. This is nothing like what we found in the universe.</p>
+        <p data-translation="13">Learn the history of a remarkable planet. This is nothing like what we found in the universe.</p>
     </section>
 </article>
 
@@ -46,7 +46,7 @@
             <button id="information-modal-close-btn" title="Close" type="button">×</button>
         </section>
 
-        <section class="content">                <!-- Content here -->
+        <section class="content">
                 <p class="fact">Text goes here</p>
 
                 <span class="inline btn-group">
@@ -57,8 +57,9 @@
     </div>
 
     <article>
-        <section id="game-question" class="hidden">
-            <h3>Which planet do we live on?</h3>
+        <section id="game-question">
+            <h3 data-translation="6">Click on any planet, to see some information</h3>
+            <h3 class="score"></h3>
         </section>
 
         <section>
@@ -74,18 +75,18 @@
             <img src="/assets/img/planet/pluto.png" alt="Pluto" title="Go to pluto" data-index="8" data-click="moveToPluto" />
         </section>
 
-        <button type="button" class="start-btn">Start game</button>
+        <button type="button" class="start-btn" data-translation="7">Start game</button>
 
         <section class="answer-grid hidden">
-                <button class="overflow-dots" type="button">Mercury</button>
-                <button class="overflow-dots" type="button">Venus</button>
-                <button class="overflow-dots" type="button">Earth</button>
-                <button class="overflow-dots" type="button">Mars</button>
-                <button class="overflow-dots" type="button">Jupiter</button>
-                <button class="overflow-dots" type="button">Saturn</button>
-                <button class="overflow-dots" type="button">Uranus</button>
-                <button class="overflow-dots" type="button">Neptune</button>
-                <button class="overflow-dots" type="button">Pluto</button>
+                <button class="overflow-dots" type="button" data-index="0">Mercury</button>
+                <button class="overflow-dots" type="button" data-index="1">Venus</button>
+                <button class="overflow-dots" type="button" data-index="2">Earth</button>
+                <button class="overflow-dots" type="button" data-index="3">Mars</button>
+                <button class="overflow-dots" type="button" data-index="4">Jupiter</button>
+                <button class="overflow-dots" type="button" data-index="5">Saturn</button>
+                <button class="overflow-dots" type="button" data-index="6">Uranus</button>
+                <button class="overflow-dots" type="button" data-index="7">Neptune</button>
+                <button class="overflow-dots" type="button" data-index="8">Pluto</button>
         </section>
     </article>
 
