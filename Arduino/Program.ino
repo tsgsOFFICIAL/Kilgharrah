@@ -7,6 +7,7 @@ const short IN2Pin = 3;
 const short IN3Pin = 4;
 const short IN4Pin = 5;
 const short stepsPerRevolution = 2048;
+const short motorSpeed = 15;
 
 // Create stepper object called 'stepper', note the pin order:
 Stepper stepper = Stepper(stepsPerRevolution, 2, 4, 3, 5);
@@ -17,7 +18,7 @@ short UfoLeds[] =
         11,
         10,
         9};
-
+//------------------------------------------------------------------------------------------------comeneted for test
 short PlanetLeds[] =
     {
         A4,  // Mercury
@@ -44,37 +45,7 @@ int PlanetPositions[] =
         32378  // Pluto
 };
 
-/*
 
-// UFO
-const short UFOPin1 = A0;
-const short UFOPin2 = A1;
-const short UFOPin3 = A2;
-const short UFOPin4 = A3;
-
-// Planets
-const short MercuryLedPin = A4;
-const short VenusLedPin = A5;
-const short EarthLedPin = A6;
-const short MarsLedPin = A7;
-const short JupiterLedPin = A8;
-const short SaturnLedPin = A9;
-const short UranusLedPin = A10;
-const short NeptuneLedPin = A11;
-const short PlutoLedPin = A12;
-
-// Steps from the sun (This has been adjusted several times)
-const short SunPosition = 0;
-const short MercuryPosition = 217;
-const short VenusPosition = 1630;
-const short EarthPosition = 2716;
-const short MarsPosition = 3694;
-const short JupiterPosition = 6519;
-const short SaturnPosition = 10865;
-const short UranusPosition = 21564;
-const short NeptunePosition = 27607;
-const short PlutoPosition = 32595;
-*/
 
 // Amount of steps taken
 int CurrentPosition = 0;
@@ -85,37 +56,29 @@ const double msPerStep = 1.953125;
 void setup()
 {
   // Max 15 RPM @ 5V
-  stepper.setSpeed(15);
+ // stepper.setSpeed(motorSpeed);
   Serial.begin(9600);
 
   // Set all planets as output
-  for (int i = 0; i < sizeof(PlanetLeds); i++)
+  for (int i = 0; i < sizeof(PlanetLeds)/sizeof(short); i++)
   {
     pinMode(PlanetLeds[i], OUTPUT);
   }
 
   // Set all UFO Leds as output
-  for (int i = 0; i < sizeof(UfoLeds); i++)
+  for (int i = 0; i < sizeof(UfoLeds)/sizeof(short); i++)
   {
     pinMode(UfoLeds[i], OUTPUT);
   }
 }
 
+//Main loop, controlling the UFO movements and blinking and planets light on and off
 void loop()
 {
-
-  // digitalWrite(IN1Pin,LOW);
-  // digitalWrite(IN2Pin,LOW);
-  // digitalWrite(IN3Pin,LOW);
-  // digitalWrite(IN4Pin,LOW);
   // Check if data is available & read it
   if (Serial.available() > 0)
   {
     String incomingString = Serial.readString(); // Read the incoming string
-
-    // prints the received data
-    // Serial.print("I received: ");
-    // Serial.println(incomingString);
 
     if (incomingString == "moveToStart")
     {
@@ -227,11 +190,11 @@ void loop()
   }
 }
 
+// Blink the UFO Leds in a circular motion twice
 void blinkUfo(int iterations)
 {
   int delayTime = 50;
 
-  // Blink the UFO Leds in a circular motion twice
   for (int i = 0; i < iterations; i++)
   {
     for (int j = 0; j < sizeof(UfoLeds) / sizeof(short); j++)
@@ -283,7 +246,6 @@ void moveUfo(int stepsToTake)
   }
   else
   {
-
     while (stepsToTake < stepsPerRound)
     {
       stepper.step(stepsPerRound);
@@ -301,12 +263,14 @@ void moveUfo(int stepsToTake)
   blinkUfo(5);
 }
 
+//Blinks the ufo 5 times, and moving to the planet connected with the incomming string
 void moveAndBlink(int stepsToTake)
 {
   int delayTime = 100;
   int stepsPerRound = round(delayTime / msPerStep);
 
   blinkUfo(5);
+  turnOnMotor();
   if (stepsToTake >= 0)
   {
     while (stepsToTake > stepsPerRound)
@@ -400,22 +364,39 @@ void moveAndBlink(int stepsToTake)
         }
       }
     }
-    stepper.step(-stepsToTake);
-    CurrentPosition -= stepsToTake;
+    stepper.step(stepsToTake);
+    CurrentPosition = stepsToTake;
   }
-
+  turnOffMotor();
   blinkUfo(5);
 }
 
+//Function to turn on the light inside the planet, when the UFO arrives
 void turnOnPlanet(short planetPin)
 {
   analogWrite(planetPin, 255);
 }
 
+//Function to turn off the light in the planet, when the UFO leaves the planet.
 void turnOffPlanets()
 {
   for (int i = 0; i < sizeof(PlanetLeds) / sizeof(short); i++)
   {
     analogWrite(PlanetLeds[i], 0);
   }
+}
+
+//Turn on the motor befor moving
+void turnOnMotor()
+{
+  stepper.setSpeed(motorSpeed);
+}
+
+//Turn off the motor cutting the power to avoid overheating
+void turnOffMotor()
+{
+  digitalWrite(IN1Pin,LOW);
+  digitalWrite(IN2Pin,LOW);
+  digitalWrite(IN3Pin,LOW);
+  digitalWrite(IN4Pin,LOW);
 }
