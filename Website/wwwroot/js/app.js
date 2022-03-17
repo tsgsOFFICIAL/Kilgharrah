@@ -202,6 +202,7 @@ function takeQuiz(planet) {
                     clearInterval(timer);
                     clearAnswers();
                     planet.className = "";
+                    ws.send(planet.getAttribute("data-lock"));
 
                     let didIWin = true;
                     planets.forEach(planet => {
