@@ -150,6 +150,8 @@ start_btn.addEventListener("click", () => {
 });
 
 function takeQuiz(planet) {
+    ws.send(planet.getAttribute("data-click")); // Move the ufo to
+
     let planetIndex;
     let questionIndex = 0;
     let maxIndex;
@@ -182,6 +184,7 @@ function takeQuiz(planet) {
                 if (score >= 3) {
                     clearInterval(timer);
                     clearAnswers();
+
                     setTimeout(() => {
                         alert(`Congratulations, you conquered ${planet.title}!`);
                     }, 50);
