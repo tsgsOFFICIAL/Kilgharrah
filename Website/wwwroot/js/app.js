@@ -268,9 +268,15 @@ function showQuestion(planetIndex, questionIndex) {
                 const a = answer;
 
                 if (a.getAttribute("data-index") == planetObjects[planetIndex].Info_as_json.Quests[questionIndex].CorrectAnswerIndex) {
-                    resolve(true);
+                    answer.classList.add("right");
+                    setTimeout(() => {
+                        resolve(true);
+                    }, 500);
                 } else {
-                    reject(false);
+                    answer.classList.add("wrong");
+                    setTimeout(() => {
+                        reject(false);
+                    }, 500);
                 }
             });
 
