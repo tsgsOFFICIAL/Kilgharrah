@@ -14,10 +14,10 @@ const Stepper stepper = Stepper(stepsPerRevolution, 2, 4, 3, 5);
 
 const short UfoLeds[] =
     {
-        8,
-        11,
-        10,
-        9
+        8, // Upper right
+        11, // Lower right
+        10, // Lower left
+        9 // Upper left
     };
 
 const short PlanetLeds[] =
@@ -35,15 +35,15 @@ const short PlanetLeds[] =
 
 bool PlanetLock[] =
 {
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false
+  false, // Mercury
+  false, // Venus
+  false, // Earth
+  false, // Mars
+  false, // Jupiter
+  false, // Saturn
+  false, // Uranus
+  false, // Neptune
+  false  // Pluto
 };
 
 const int PlanetPositions[] =
@@ -196,27 +196,198 @@ void loop()
 //Blinks the ufo 5 times, and moving to the planet connected with the incomming string
 void moveAndBlink(int stepsToTake)
 {
+  int destination = stepsToTake;
   int delayTime = 100;
   int stepsPerRound = round(delayTime / msPerStep);
+
+  Serial.println(CurrentPosition);
+  Serial.println(destination);
   
-  Serial.print("stepsToTake: "); // DEBUG
-  Serial.println(stepsToTake); // DEBUG
-
-  Serial.print("stepsPerRound: "); // DEBUG
-  Serial.println(stepsPerRound); // DEBUG
-
   blinkUfo(5); // Blink UFO Led's
   turnOnMotor(); // Turn on the motor / Start the engine
   
-  // MOVE HERE
-  stepper.step(stepsToTake);
-  CurrentPosition += stepsToTake;
+  bool keepGoing = true;
+  if (stepsToTake > 0) // Positive value == KOM BAR' DO!
+  {
+    while (stepsToTake >= stepsPerRound && keepGoing)
+    {
+      for (int i = 0; i < sizeof(UfoLeds) / sizeof(short); i++)
+      {
+        if (i == 0)
+        {
+          analogWrite(UfoLeds[(sizeof(UfoLeds) / sizeof(short)) - 1], 0);
+          if (CurrentPosition + stepsPerRound >= destination)
+          {
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound);
+          stepsToTake -= stepsPerRound;
+          CurrentPosition += stepsPerRound;
+          analogWrite(UfoLeds[i], 255);
+          if (CurrentPosition + stepsPerRound >= destination)
+          {
+            analogWrite(UfoLeds[i], 0);
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound);
+          stepsToTake -= stepsPerRound;
+          CurrentPosition += stepsPerRound;
+        }
+        else if (i == sizeof(UfoLeds) / sizeof(short) - 1)
+        {
+          analogWrite(UfoLeds[i - 1], 0);
+          if (CurrentPosition + stepsPerRound >= destination)
+          {
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound);
+          stepsToTake -= stepsPerRound;
+          CurrentPosition += stepsPerRound;
+          analogWrite(UfoLeds[i], 255);
+          if (CurrentPosition + stepsPerRound >= destination)
+          {
+            analogWrite(UfoLeds[i], 0);
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound);
+          stepsToTake -= stepsPerRound;
+          CurrentPosition += stepsPerRound;
+          analogWrite(UfoLeds[i], 0);
+          if (CurrentPosition + stepsPerRound >= destination)
+          {
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound);
+          stepsToTake -= stepsPerRound;
+          CurrentPosition += stepsPerRound;
+        }
+        else
+        {
+          analogWrite(UfoLeds[i - 1], 0);
+          if (CurrentPosition + stepsPerRound >= destination)
+          {
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound);
+          stepsToTake -= stepsPerRound;
+          CurrentPosition += stepsPerRound;
+          analogWrite(UfoLeds[i], 255);
+          if (CurrentPosition + stepsPerRound >= destination)
+          {
+            analogWrite(UfoLeds[i], 0);
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound);
+          stepsToTake -= stepsPerRound;
+          CurrentPosition += stepsPerRound;
+        }
+      }
+    }
+    
+    stepper.step(stepsToTake);
+    CurrentPosition += stepsToTake; // Take the rest, if any
+  }
+  else if (stepsToTake < 0) // Negative value == PUT IT IN REVERSE TERRY
+  {
+    while (stepsToTake < 0 && keepGoing)
+    {
+      for (int i = 0; i < sizeof(UfoLeds) / sizeof(short); i++)
+      {
+        if (i == 0)
+        {
+          analogWrite(UfoLeds[(sizeof(UfoLeds) / sizeof(short)) - 1], 0);
+          if (CurrentPosition - stepsPerRound <= destination)
+          {
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound * -1);
+          stepsToTake += stepsPerRound;
+          CurrentPosition -= stepsPerRound;
+          analogWrite(UfoLeds[i], 255);
+          if (CurrentPosition - stepsPerRound <= destination)
+          {
+            analogWrite(UfoLeds[i], 0);
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound * -1);
+          stepsToTake += stepsPerRound;
+          CurrentPosition -= stepsPerRound;
+        }
+        else if (i == sizeof(UfoLeds) / sizeof(short) - 1)
+        {
+          analogWrite(UfoLeds[i - 1], 0);
+          if (CurrentPosition - stepsPerRound <= destination)
+          {
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound * -1);
+          stepsToTake += stepsPerRound;
+          CurrentPosition -= stepsPerRound;
+          analogWrite(UfoLeds[i], 255);
+          if (CurrentPosition - stepsPerRound <= destination)
+          {
+            analogWrite(UfoLeds[i], 0);
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound * -1);
+          stepsToTake += stepsPerRound;
+          CurrentPosition -= stepsPerRound;
+          analogWrite(UfoLeds[i], 0);
+          if (CurrentPosition - stepsPerRound <= destination)
+          {
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound * -1);
+          stepsToTake += stepsPerRound;
+          CurrentPosition -= stepsPerRound;
+        }
+        else
+        {
+          analogWrite(UfoLeds[i - 1], 0);
+          if (CurrentPosition - stepsPerRound <= destination)
+          {
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound * -1);
+          stepsToTake += stepsPerRound;
+          CurrentPosition -= stepsPerRound;
+          analogWrite(UfoLeds[i], 255);
+          if (CurrentPosition - stepsPerRound <= destination)
+          {
+            analogWrite(UfoLeds[i], 0);
+            keepGoing = false;
+            break;
+          }
+          stepper.step(stepsPerRound * -1);
+          stepsToTake += stepsPerRound;
+          CurrentPosition -= stepsPerRound;
+        }
+      }
+    }
+    if (stepsToTake < 0)
+    {
+      stepper.step(stepsToTake);
+    }
+    CurrentPosition += stepsToTake; // Take the rest, if any
+  }
+
+  Serial.println(CurrentPosition);
   
   turnOffMotor(); // Turn off the motor / Stop the engine
   blinkUfo(5); // Blink UFO Led's
-
-  Serial.print("CurrentPosition: "); // DEBUG
-  Serial.println(CurrentPosition); // DEBUG
 }
 
 // Blink the UFO Leds in a circular motion twice
@@ -258,16 +429,12 @@ void blinkUfo(int iterations)
 //Function to turn on the light inside the planet, when the UFO arrives
 void turnOnPlanet(short planetPin)
 {
-  Serial.println("Turned on a planet"); // DEBUG
-  
   analogWrite(planetPin, 255);
 }
 
 //Function to turn off the light in the planet, when the UFO leaves the planet.
 void turnOffPlanets()
 {
-  Serial.println("Turning off planets"); // DEBUG
-  
   for (int i = 0; i < sizeof(PlanetLeds) / sizeof(short); i++)
   {
     if (PlanetLock[i] == false)
@@ -275,15 +442,11 @@ void turnOffPlanets()
       analogWrite(PlanetLeds[i], 0);
     }
   }
-  
-  Serial.println("Turned off planets"); // DEBUG
 }
 
 // Turn on the motor befor moving
 void turnOnMotor()
 {
-  Serial.println("Turned on motor"); // DEBUG
-  
   stepper.setSpeed(motorSpeed);
 }
 
@@ -294,6 +457,4 @@ void turnOffMotor()
   digitalWrite(IN2Pin, LOW);
   digitalWrite(IN3Pin, LOW);
   digitalWrite(IN4Pin, LOW);
-  
-  Serial.println("Turned off motor"); // DEBUG
 }
