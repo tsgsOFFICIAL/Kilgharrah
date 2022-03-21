@@ -3,7 +3,7 @@
 @model Tuple<List<PlanetModel>, List<TranslationTextModel>>
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page" ;
 }
 
 <script src="/js/app.js" planets_text="@JsonSerializer.Serialize(Model.Item1)" translation_text="@JsonSerializer.Serialize(Model.Item2)" defer></script>
