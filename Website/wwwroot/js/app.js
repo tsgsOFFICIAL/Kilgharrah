@@ -214,6 +214,7 @@ function takeQuiz(planet) {
                     if (didIWin) {
                         setTimeout(() => {
                             alert(`Congratulations, you conquered the entire solar system!`);
+                            ws.send("x");
                         }, 50);
                     } else {
                         setTimeout(() => {
