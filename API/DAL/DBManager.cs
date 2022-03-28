@@ -10,7 +10,7 @@ namespace API.DAL
     public class DBManager
     {
         private NpgsqlConnection Connection;
-        private readonly string _connectionString = "Host=192.168.1.121;Username=postgres;Password=Code1234@;Database=Kilgharrah";
+        private readonly string _connectionString = "Host=192.168.2.111;Username=postgres;Password=Code1234@;Database=Kilgharrah";
         public DBManager()
         {
             Connection = new NpgsqlConnection(_connectionString);

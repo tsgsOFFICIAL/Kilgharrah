@@ -13,7 +13,7 @@ namespace Website.DAL
         /// </summary>
         private readonly HttpClient _client = new HttpClient();
         //private readonly string _baseAdress = "https://localhost:7156/api/";
-        private readonly string _baseAdress = "http://192.168.1.123:5000/api/";
+        private readonly string _baseAdress = "http://192.168.2.109:5000/api/";
         /// <summary>
         /// Creates a new instance of the APIManager
         /// </summary>

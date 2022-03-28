@@ -45,7 +45,7 @@ namespace Website
         /// </summary>
         public WebSocketServer()
         {
-            Ip = "192.168.1.122";
+            Ip = "192.168.2.110";
             Port = 8008;
             _listener = new TcpListener(IPAddress.Parse(Ip), Port);
             try

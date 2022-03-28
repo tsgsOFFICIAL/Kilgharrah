@@ -13,7 +13,7 @@ let game_question_index = 0; // The index for the questions
 let lang; // The language code
 let ws; // A WebSocket instance
 try {
-    ws = new WebSocket("ws://192.168.1.122:8008");
+    ws = new WebSocket("ws://192.168.2.110:8008");
 } catch (e) { }
 
 planetObjects.forEach(planetObj => {
