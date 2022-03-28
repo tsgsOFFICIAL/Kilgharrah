@@ -246,7 +246,7 @@ article {
             flex-flow: row wrap;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: 4rem;
             width: 100%;
         }
 

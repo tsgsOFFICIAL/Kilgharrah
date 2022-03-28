@@ -272,12 +272,12 @@ function showQuestion(planetIndex, questionIndex) {
                     answer.classList.add("right");
                     setTimeout(() => {
                         resolve(true);
-                    }, 500);
+                    }, 1000);
                 } else {
                     answer.classList.add("wrong");
                     setTimeout(() => {
                         reject(false);
-                    }, 500);
+                    }, 1000);
                 }
             });
 
