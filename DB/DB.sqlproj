@@ -59,5 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CreateTables.sql" />
+    <None Include="Planets ER Diagram.drawio" />
+    <None Include="Planets ER Diagram.pdf" />
   </ItemGroup>
 </Project>
