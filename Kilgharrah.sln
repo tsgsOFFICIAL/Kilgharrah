@@ -13,7 +13,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSocketServer", "WebSocke
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSocketClient", "WebSocketClient\WebSocketClient.csproj", "{DCDDCDCF-CCA6-4D9F-A45B-BE335027CB9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{285B3F4F-F683-47D3-B175-7797EA5A7634}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Website", "Website\Website.csproj", "{285B3F4F-F683-47D3-B175-7797EA5A7634}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3Dobjects", "3Dobjects", "{73AFE723-C36C-44F1-9FFB-119A94482925}"
+	ProjectSection(SolutionItems) = preProject
+		3DObjects\ArduinoMount.stl = 3DObjects\ArduinoMount.stl
+		3DObjects\MotorMount_v2.stl = 3DObjects\MotorMount_v2.stl
+		3DObjects\Motormount_v2_spring.stl = 3DObjects\Motormount_v2_spring.stl
+		3DObjects\railConnector_v2.stl = 3DObjects\railConnector_v2.stl
+		3DObjects\StepperMount.stl = 3DObjects\StepperMount.stl
+		3DObjects\wheel20mmx6mm.stl = 3DObjects\wheel20mmx6mm.stl
+		3DObjects\wheel60x15mm.stl = 3DObjects\wheel60x15mm.stl
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arduino", "Arduino", "{385ED5F7-4749-4C42-821F-E0142981630F}"
+	ProjectSection(SolutionItems) = preProject
+		Arduino\Program.ino = Arduino\Program.ino
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
